@@ -1,0 +1,31 @@
+<div class="timeline-phase">
+  <div class="timeline-marker"></div>
+  <div class="phase-header">
+    <span class="phase-level">{{ phase.level }}</span>
+    <h3 class="phase-name">{{ phase.name }}</h3>
+  </div>
+  <div class="phase-content">
+    <div class="build-card barb-card">
+      <span class="class-label">Frenzy Barbarian</span>
+      <h4>Skills</h4>
+      <ul class="skill-list">
+        {%- for skill in phase.barb.skills %}
+        <li><span class="skill-name">{{ skill.name }}</span><span class="skill-pts">{{ skill.pts }}</span></li>
+        {%- endfor %}
+      </ul>
+      <h4>Strategy</h4>
+      <p class="stat-alloc">{{ phase.barb.strategy }}</p>
+    </div>
+    <div class="build-card zon-card">
+      <span class="class-label">Java Amazon</span>
+      <h4>Skills</h4>
+      <ul class="skill-list">
+        {%- for skill in phase.zon.skills %}
+        <li><span class="skill-name">{{ skill.name }}</span><span class="skill-pts">{{ skill.pts }}</span></li>
+        {%- endfor %}
+      </ul>
+      <h4>Strategy</h4>
+      <p class="stat-alloc">{{ phase.zon.strategy }}</p>
+    </div>
+  </div>
+</div>

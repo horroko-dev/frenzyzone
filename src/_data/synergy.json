@@ -1,0 +1,31 @@
+{
+  "barb": {
+    "title": "Frenzy Barbarian",
+    "points": [
+      "Massive single-target physical DPS with dual-wield attacks",
+      "Battle Orders provides +life and +mana to both players",
+      "Natural tank with high life, defense, and life leech",
+      "Howl scatters trash mobs, letting Zon focus fire",
+      "Boss killer — Frenzy shreds act bosses and superuniques"
+    ]
+  },
+  "zon": {
+    "title": "Java Amazon",
+    "points": [
+      "Lightning Fury melts entire screens of monsters instantly",
+      "Charged Strike has highest single-target DPS in the game",
+      "Covers Lightning Immune gaps with physical jab damage",
+      "Valkyrie and Decoy provide additional tanking/distraction",
+      "Crowd control queen — clears density the Barb can't reach"
+    ]
+  },
+  "combined": {
+    "summary": "Battle Orders buffs both characters' survivability. The Barb tanks and kills bosses while the Zon devastates crowds. Together they cover physical and lightning damage types, only struggling against rare Physical + Lightning Immune combos.",
+    "stats": [
+      { "value": "2", "label": "Damage Types" },
+      { "value": "BO", "label": "Party Buff" },
+      { "value": "S+", "label": "Clear Speed" },
+      { "value": "A+", "label": "Boss Kill" }
+    ]
+  }
+}

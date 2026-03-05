@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav class="nav" id="nav">
+  <a href="#synergy">Synergy</a>
+  <a href="#leveling">Leveling</a>
+  <a href="#gear">Gear</a>
+  <a href="#tips">Tips</a>
+</nav>
+
+{{ content | safe }}
+
+<footer class="footer">
+  <p>FrenzyZone &mdash; A Diablo II Resurrected Duo Guide</p>
+  <p class="disclaimer">Not affiliated with Blizzard Entertainment. Diablo II is a trademark of Blizzard Entertainment, Inc.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

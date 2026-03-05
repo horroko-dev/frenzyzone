@@ -1,0 +1,217 @@
+{
+  "normal": {
+    "barb": {
+      "label": "Frenzy Barbarian",
+      "slots": [
+        {
+          "name": "Weapons",
+          "items": [
+            { "name": "Steel (Tir + El)", "rarity": "runeword", "note": "earliest runeword, huge early damage" },
+            { "name": "Malice (Ith + El + Eth)", "rarity": "runeword", "note": "-100 monster defense" },
+            { "name": "Crushflange", "rarity": "unique", "note": "Crushing Blow for bosses" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "FHR, FRW, must-have" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Sigon's Visor", "rarity": "set-item", "note": "with gloves for IAS" },
+            { "name": "Tarnhelm", "rarity": "unique", "note": "+skills, MF" }
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            { "name": "Sigon's Gloves + Belt combo", "rarity": "set-item", "note": "30 IAS, life leech" },
+            { "name": "+life / +resist rings & amulet", "rarity": "magic" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazon",
+      "slots": [
+        {
+          "name": "Weapon",
+          "items": [
+            { "name": "+skills / +damage rare javelin", "rarity": "rare" },
+            { "name": "The Generals Tan Do Li Ga", "rarity": "unique", "note": "if found" },
+            { "name": "+3 javelin skills blue javelin", "rarity": "magic", "note": "shop from Charsi/Fara" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "same as Barb, both need this" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Ancients' Pledge (Ral + Ort + Tal)", "rarity": "runeword", "note": "free runes from Act V quest" },
+            { "name": "Sigon's Guard", "rarity": "unique", "note": "part of set combo" }
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            { "name": "Sigon's set pieces", "rarity": "set-item", "note": "great budget option" },
+            { "name": "+mana / +resist jewelry", "rarity": "magic" }
+          ]
+        }
+      ]
+    }
+  },
+  "nightmare": {
+    "barb": {
+      "label": "Frenzy Barbarian",
+      "slots": [
+        {
+          "name": "Weapons",
+          "items": [
+            { "name": "Honor (Amn + El + Ith + Tir + Sol)", "rarity": "runeword", "note": "+1 skills, deadly strike" },
+            { "name": "Kings Grace (Amn + Ral + Thul)", "rarity": "runeword", "note": "great budget offhand" },
+            { "name": "Butcher's Pupil", "rarity": "unique", "note": "deadly strike, open wounds" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "+50 all res, huge for NM" },
+            { "name": "Lionheart (Hel + Lum + Fal)", "rarity": "runeword", "note": "stats + res + damage" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Arreat's Face", "rarity": "unique", "note": "if lucky, endgame helm" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 skills, lightning res" }
+          ]
+        },
+        {
+          "name": "Belt / Gloves / Boots",
+          "items": [
+            { "name": "Goldwrap", "rarity": "unique", "note": "IAS, MF" },
+            { "name": "Laying of Hands", "rarity": "unique", "note": "350% damage to demons" },
+            { "name": "Gore Rider", "rarity": "unique", "note": "CB, DS, OW trifecta" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazon",
+      "slots": [
+        {
+          "name": "Weapon",
+          "items": [
+            { "name": "Titan's Revenge", "rarity": "unique", "note": "THE javazon weapon, replenishes" },
+            { "name": "+skills / +IAS rare ceremonial javelin", "rarity": "rare" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+skills, FCR, all res" },
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "budget option" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Stormshield", "rarity": "unique", "note": "if you can afford the Str" },
+            { "name": "Rhyme (Shael + Eth)", "rarity": "runeword", "note": "cannot be frozen, res, MF" }
+          ]
+        },
+        {
+          "name": "Helm / Other",
+          "items": [
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 skills budget" },
+            { "name": "Razortail", "rarity": "unique", "note": "33% pierce, huge for LF" },
+            { "name": "Laying of Hands", "rarity": "set-item", "note": "20 IAS, demon damage" }
+          ]
+        }
+      ]
+    }
+  },
+  "hell": {
+    "barb": {
+      "label": "Frenzy Barbarian",
+      "slots": [
+        {
+          "name": "Weapons (Best in Slot)",
+          "items": [
+            { "name": "Grief (Eth + Tir + Lo + Mal + Ral)", "rarity": "runeword", "note": "#1 melee weapon in the game" },
+            { "name": "Lawbringer (Amn + Lem + Ko)", "rarity": "runeword", "note": "offhand, Decrepify proc" },
+            { "name": "Breath of the Dying", "rarity": "runeword", "note": "alternative main hand" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED, best DPS armor" },
+            { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "budget, Fade proc = 60 all res" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Arreat's Face", "rarity": "unique", "note": "+2 skills, 30 FHR, res, life leech" },
+            { "name": "Guillaume's Face", "rarity": "runeword", "note": "35% CB for boss killing" }
+          ]
+        },
+        {
+          "name": "Other Slots",
+          "items": [
+            { "name": "Gore Rider", "rarity": "unique", "note": "CB + DS + OW" },
+            { "name": "Laying of Hands", "rarity": "unique", "note": "350% demon damage + 20 IAS" },
+            { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 skills, IAS, deadly strike" },
+            { "name": "Verdungo's", "rarity": "unique", "note": "DR%, vita, FHR" },
+            { "name": "Raven Frost + Dual Leech ring", "rarity": "unique" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazon",
+      "slots": [
+        {
+          "name": "Weapon (Best in Slot)",
+          "items": [
+            { "name": "Titan's Revenge (Ethereal)", "rarity": "unique", "note": "replenishes, so eth is free damage" },
+            { "name": "Thunderstroke", "rarity": "unique", "note": "-15% enemy lightning res" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Spirit (Tal + Thul + Ort + Amn) in Monarch", "rarity": "runeword", "note": "+2 skills, FCR, mana" },
+            { "name": "Stormshield", "rarity": "unique", "note": "for hardcore/survivability" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Enigma (Jah + Ith + Ber)", "rarity": "runeword", "note": "Teleport for positioning" },
+            { "name": "Chains of Honor", "rarity": "unique", "note": "+2 skills, res, DR" },
+            { "name": "Treachery", "rarity": "runeword", "note": "budget, IAS + Fade" }
+          ]
+        },
+        {
+          "name": "Other Slots",
+          "items": [
+            { "name": "Griffon's Eye", "rarity": "unique", "note": "-% enemy light res, BiS helm" },
+            { "name": "Razortail", "rarity": "unique", "note": "33% pierce (100% with skills)" },
+            { "name": "War Traveler", "rarity": "unique", "note": "MF + damage" },
+            { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 skills, IAS" },
+            { "name": "+2 java / 20 IAS gloves", "rarity": "magic", "note": "crafted or shopped" }
+          ]
+        }
+      ]
+    }
+  }
+}

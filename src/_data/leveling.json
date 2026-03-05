@@ -1,0 +1,118 @@
+[
+  {
+    "level": "Levels 1 – 15",
+    "name": "Normal Acts I – II",
+    "barb": {
+      "skills": [
+        { "name": "Bash", "pts": "1 pt" },
+        { "name": "Double Swing", "pts": "6+ pts" },
+        { "name": "Howl", "pts": "1 pt" },
+        { "name": "Shout", "pts": "1 pt" }
+      ],
+      "strategy": "Pump Strength for gear. Double Swing carries hard — zero mana cost at level 9+. Lead the charge, tank hits. Use Howl to manage packs."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Jab", "pts": "1 pt" },
+        { "name": "Power Strike", "pts": "6+ pts" },
+        { "name": "Poison Javelin", "pts": "1 pt" },
+        { "name": "Inner Sight", "pts": "1 pt" }
+      ],
+      "strategy": "Power Strike is your bread and butter early. Throw normal javelins at range for safety, close in for Power Strike on elites. Save skill points after 12 for Lightning Bolt."
+    }
+  },
+  {
+    "level": "Levels 15 – 24",
+    "name": "Normal Acts III – V",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "1+ pts (lvl 24)" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Battle Orders", "pts": "1 pt (lvl 24)" },
+        { "name": "Iron Skin", "pts": "1 pt" },
+        { "name": "Increased Speed", "pts": "1 pt" }
+      ],
+      "strategy": "Transition to Frenzy at level 24 — everything changes. Battle Orders comes online at the same level, buffing both of you massively. Double Swing until then."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Bolt", "pts": "5+ pts" },
+        { "name": "Charged Strike", "pts": "1 pt (lvl 18)" },
+        { "name": "Power Strike", "pts": "Max" },
+        { "name": "Decoy", "pts": "1 pt" }
+      ],
+      "strategy": "Charged Strike at 18 is a massive power spike — bosses evaporate. Lightning Bolt handles ranged clear. Drop Decoy to tank while you throw from behind."
+    }
+  },
+  {
+    "level": "Levels 25 – 40",
+    "name": "Nightmare Acts I – III",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "10+ pts" },
+        { "name": "Battle Orders", "pts": "5+ pts" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Taunt", "pts": "1 pt" },
+        { "name": "Battle Command", "pts": "1 pt (lvl 30)" }
+      ],
+      "strategy": "Frenzy is your main skill now. Keep BO leveled — both of you benefit hugely. Battle Command at 30 gives +1 all skills. Start looking for runeword bases."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "1+ pts (lvl 30)" },
+        { "name": "Charged Strike", "pts": "10+ pts" },
+        { "name": "Valkyrie", "pts": "1 pt (lvl 30)" },
+        { "name": "Pierce", "pts": "1 pt" }
+      ],
+      "strategy": "Lightning Fury at 30 is the biggest power spike in the game. Entire screens die. Focus Charged Strike for bosses, LF for everything else. Valkyrie adds another tank body."
+    }
+  },
+  {
+    "level": "Levels 40 – 60",
+    "name": "Nightmare IV – V / Early Hell",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "Max" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Battle Orders", "pts": "10+ pts" },
+        { "name": "Sword/Axe Mastery", "pts": "10+ pts" }
+      ],
+      "strategy": "Max Frenzy, then pump synergies and mastery. You're the boss killer — let the Zon clear to the boss room, then you both unload. Keep Crushing Blow gear handy for Act bosses."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "Max" },
+        { "name": "Charged Strike", "pts": "Max" },
+        { "name": "Lightning Strike", "pts": "5+ pts (synergy)" },
+        { "name": "Valkyrie", "pts": "1+ pts" }
+      ],
+      "strategy": "Max LF first, then CS. Lightning Strike synergizes both. You're the clear speed — throw LF into packs and watch the chain lightning cascade. Titan's Revenge is your holy grail."
+    }
+  },
+  {
+    "level": "Levels 60 – 80+",
+    "name": "Hell Difficulty",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "20 pts" },
+        { "name": "Double Swing", "pts": "20 pts" },
+        { "name": "Taunt", "pts": "20 pts" },
+        { "name": "Battle Orders", "pts": "20 pts" },
+        { "name": "Sword/Axe Mastery", "pts": "20 pts" },
+        { "name": "Prereqs", "pts": "1 pt each" }
+      ],
+      "strategy": "Final build: Frenzy + 3 synergies + BO + Mastery. You handle Physical Immunes with elemental damage weapons (Grief, Lawbringer). Tank everything, leech through damage."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "20 pts" },
+        { "name": "Charged Strike", "pts": "20 pts" },
+        { "name": "Lightning Strike", "pts": "20 pts" },
+        { "name": "Power Strike", "pts": "20 pts" },
+        { "name": "Valkyrie", "pts": "1+ pts" },
+        { "name": "Pierce", "pts": "1+ pts" }
+      ],
+      "strategy": "Full lightning spec. LF + CS maxed with both synergies. Lightning Immunes? The Barb handles them — skip or let your partner kill. Cows, Chaos, Baal runs — you're the clear machine."
+    }
+  }
+]

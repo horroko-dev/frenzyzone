@@ -1,0 +1,11 @@
+<div class="gear-column {{ 'barb-gear' if side == 'barb' else 'zon-gear' }}">
+  <h3>{{ data.label }}</h3>
+  {%- for slot in data.slots %}
+  <div class="gear-slot">
+    <div class="gear-slot-name">{{ slot.name }}</div>
+    {%- for item in slot.items %}
+    <div class="gear-item {{ item.rarity }}">{{ item.name }}{% if item.note %} <span class="note">&mdash; {{ item.note }}</span>{% endif %}</div>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>

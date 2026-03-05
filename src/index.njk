@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: "FrenzyZone — D2R Duo Leveling Guide"
+---
+
+{# ========== HERO ========== #}
+<header class="hero">
+  <div class="hero-content">
+    <p class="hero-subtitle">Diablo II Resurrected &mdash; Duo Leveling Guide</p>
+    <h1 class="hero-title">
+      <span class="barb-text">Frenzy</span>
+      <span class="amp">&amp;</span><br>
+      <span class="zon-text">Javazon</span>
+    </h1>
+    <p class="hero-tagline">"Two weapons, one storm &mdash; nothing survives."</p>
+    <div class="hero-cta">
+      <a href="#synergy">Begin the Journey</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</header>
+
+<div class="divider"></div>
+
+{# ========== SYNERGY ========== #}
+<section id="synergy">
+  {% include "components/section-header.njk" ignore missing %}
+  {% set label = "Why This Duo Works" %}
+  {% set title = "Unholy Synergy" %}
+  {% set desc = "Physical devastation meets elemental fury. The Frenzy Barbarian carves through single targets and tanks the frontline while the Javazon annihilates packs with lightning and piercing javelins." %}
+  <div class="section-header">
+    <p class="section-label">{{ label }}</p>
+    <h2 class="section-title">{{ title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ desc }}</p>
+  </div>
+
+  <div class="synergy-grid">
+    <div class="synergy-card barb">
+      <h3>{{ synergy.barb.title }}</h3>
+      <ul>
+        {%- for point in synergy.barb.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="synergy-connector">
+      <span class="line"></span>
+      <span class="plus">+</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="synergy-card zon">
+      <h3>{{ synergy.zon.title }}</h3>
+      <ul>
+        {%- for point in synergy.zon.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="synergy-bottom">
+      <h3>Combined Strengths</h3>
+      <p>{{ synergy.combined.summary }}</p>
+      <div class="synergy-highlights">
+        {%- for stat in synergy.combined.stats %}
+        <div class="synergy-stat">
+          <span class="value">{{ stat.value }}</span>
+          <span class="label">{{ stat.label }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== LEVELING TIMELINE ========== #}
+<section id="leveling">
+  <div class="section-header">
+    <p class="section-label">Act by Act</p>
+    <h2 class="section-title">Leveling Path</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">From Blood Moor to the Worldstone Chamber. Follow this timeline to optimize skill allocation and progression for both characters.</p>
+  </div>
+
+  <div class="timeline">
+    {%- for phase in leveling %}
+    {% set phase = phase %}
+    {% include "components/timeline-phase.njk" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== GEAR ========== #}
+<section id="gear">
+  <div class="section-header">
+    <p class="section-label">Equipment</p>
+    <h2 class="section-title">Gear Progression</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">From rags to riches. Gear recommendations for each difficulty tier, from budget options to best-in-slot.</p>
+  </div>
+
+  <div class="gear-tabs">
+    <button class="gear-tab active" data-tab="normal">Normal</button>
+    <button class="gear-tab" data-tab="nightmare">Nightmare</button>
+    <button class="gear-tab" data-tab="hell">Hell / Endgame</button>
+  </div>
+
+  {%- for tier, tierData in gear %}
+  <div class="gear-panel{{ ' active' if loop.first }}" id="gear-{{ tier }}">
+    <div class="gear-grid">
+      {% set data = tierData.barb %}
+      {% set side = "barb" %}
+      {% include "components/gear-column.njk" %}
+      {% set data = tierData.zon %}
+      {% set side = "zon" %}
+      {% include "components/gear-column.njk" %}
+    </div>
+  </div>
+  {%- endfor %}
+</section>
+
+<div class="divider"></div>
+
+{# ========== TIPS ========== #}
+<section id="tips">
+  <div class="section-header">
+    <p class="section-label">Party Play</p>
+    <h2 class="section-title">Duo Strategies</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Coordination tips to maximize your duo's efficiency from Normal through Hell.</p>
+  </div>
+
+  <div class="tips-grid">
+    {%- for tip in tips %}
+    {% set tip = tip %}
+    {% include "components/tip-card.njk" %}
+    {%- endfor %}
+  </div>
+</section>
