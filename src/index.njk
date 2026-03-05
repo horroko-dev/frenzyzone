@@ -127,6 +127,77 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 
 <div class="divider"></div>
 
+{# ========== ATTRIBUTES ========== #}
+<section id="attributes">
+  <div class="section-header">
+    <p class="section-label">Stat Points</p>
+    <h2 class="section-title">Attribute Allocation</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Where to put your stat points. The short version: enough Strength and Dex for gear, everything else into Vitality, never touch Energy.</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = attributes.barb %}
+    {% set side = "barb" %}
+    {% include "components/stat-block.njk" %}
+    {% set data = attributes.zon %}
+    {% set side = "zon" %}
+    {% include "components/stat-block.njk" %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== MERCENARIES ========== #}
+<section id="mercs">
+  <div class="section-header">
+    <p class="section-label">Hired Help</p>
+    <h2 class="section-title">Mercenaries</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Your mercs are your third and fourth party members. Gear them well and coordinate their auras for maximum duo synergy.</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = mercs.barb %}
+    {% set side = "barb" %}
+    {% include "components/merc-card.njk" %}
+    {% set data = mercs.zon %}
+    {% set side = "zon" %}
+    {% include "components/merc-card.njk" %}
+    <div class="merc-strategy">
+      <h3>{{ mercs.duo_strategy.title }}</h3>
+      <ul>
+        {%- for point in mercs.duo_strategy.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== CHARMS ========== #}
+<section id="charms">
+  <div class="section-header">
+    <p class="section-label">Inventory</p>
+    <h2 class="section-title">Charms</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Your inventory is extra gear slots. Fill them wisely &mdash; the right charms can double your damage and survivability.</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = charms.barb %}
+    {% set side = "barb" %}
+    {% include "components/charm-card.njk" %}
+    {% set data = charms.zon %}
+    {% set side = "zon" %}
+    {% include "components/charm-card.njk" %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
 {# ========== FARMING ========== #}
 <section id="farming">
   <div class="section-header">

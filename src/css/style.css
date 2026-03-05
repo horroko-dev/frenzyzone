@@ -658,6 +658,236 @@ section {
   font-style: italic;
 }
 
+/* ========== ATTRIBUTES / MERCS / CHARMS ========== */
+.dual-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Stat blocks (attributes) */
+.stat-block {
+  background: rgba(26,23,20,0.6);
+  border: 1px solid var(--stone-mid);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.stat-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-block.barb-card { border-top: 2px solid var(--barb-primary); }
+.stat-block.zon-card { border-top: 2px solid var(--zon-primary); }
+
+.stat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.stat-row {
+  border-bottom: 1px solid rgba(58,53,48,0.4);
+  padding-bottom: 1rem;
+}
+
+.stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.stat-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.stat-value {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  color: var(--parchment);
+  margin-bottom: 0.3rem;
+}
+
+.stat-detail {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.stat-notes {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--stone-mid);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Merc cards */
+.merc-card {
+  background: rgba(26,23,20,0.6);
+  border: 1px solid var(--stone-mid);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.merc-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.merc-card.barb-card { border-top: 2px solid var(--barb-primary); }
+.merc-card.zon-card { border-top: 2px solid var(--zon-primary); }
+
+.merc-card h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.merc-card h4:first-of-type { margin-top: 0.5rem; }
+
+.merc-pick {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.merc-why {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.merc-alt p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.merc-gear {
+  margin-top: 0.5rem;
+}
+
+/* Merc duo strategy callout */
+.merc-strategy {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(232,74,35,0.05), rgba(13,11,9,0.8), rgba(107,91,255,0.05));
+  border: 1px solid var(--stone-mid);
+  padding: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.2s;
+}
+
+.merc-strategy.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.merc-strategy h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.merc-strategy ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.merc-strategy li {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.merc-strategy li::before {
+  content: '\2726';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.7rem;
+  top: 0.15rem;
+}
+
+/* Charm cards */
+.charm-card {
+  background: rgba(26,23,20,0.6);
+  border: 1px solid var(--stone-mid);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.charm-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.charm-card.barb-card { border-top: 2px solid var(--barb-primary); }
+.charm-card.zon-card { border-top: 2px solid var(--zon-primary); }
+
+.charm-group {
+  margin-bottom: 1.2rem;
+}
+
+.charm-group:last-of-type { margin-bottom: 0; }
+
+.charm-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(58,53,48,0.4);
+}
+
+.charm-group-header h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.charm-size {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-mid);
+}
+
+@media (max-width: 900px) {
+  .dual-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ========== GEAR SECTION ========== */
 .gear-tabs {
   display: flex;

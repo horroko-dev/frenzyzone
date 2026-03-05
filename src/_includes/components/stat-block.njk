@@ -1,0 +1,15 @@
+<div class="stat-block {{ 'barb-card' if side == 'barb' else 'zon-card' }}">
+  <span class="class-label">{{ data.label }}</span>
+  <div class="stat-grid">
+    {%- for key, stat in data.stats %}
+    <div class="stat-row">
+      <div class="stat-name">{{ key | capitalize }}</div>
+      <div class="stat-value">{{ stat.value }}</div>
+      <div class="stat-detail">{{ stat.detail }}</div>
+    </div>
+    {%- endfor %}
+  </div>
+  {% if data.notes %}
+  <div class="stat-notes">{{ data.notes }}</div>
+  {% endif %}
+</div>

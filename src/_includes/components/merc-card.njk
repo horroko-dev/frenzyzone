@@ -1,0 +1,23 @@
+<div class="merc-card {{ 'barb-card' if side == 'barb' else 'zon-card' }}">
+  <span class="class-label">{{ data.label }}</span>
+  <div class="merc-choice">
+    <h4>Recommended</h4>
+    <div class="merc-pick">{{ data.recommended }}</div>
+    <p class="merc-why">{{ data.why }}</p>
+  </div>
+  <div class="merc-alt">
+    <h4>Alternative</h4>
+    <p>{{ data.alternative }}</p>
+  </div>
+  <div class="merc-gear">
+    <h4>Mercenary Gear</h4>
+    {%- for slot in data.gear %}
+    <div class="gear-slot">
+      <div class="gear-slot-name">{{ slot.slot }}</div>
+      {%- for item in slot.items %}
+      <div class="gear-item {{ item.rarity }}">{{ item.name }}{% if item.note %} <span class="note">&mdash; {{ item.note }}</span>{% endif %}</div>
+      {%- endfor %}
+    </div>
+    {%- endfor %}
+  </div>
+</div>

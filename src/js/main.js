@@ -76,7 +76,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.synergy-card, .synergy-bottom, .build-card, .phase-header, .tip-card, .farm-card').forEach(el => {
+document.querySelectorAll('.synergy-card, .synergy-bottom, .build-card, .phase-header, .tip-card, .farm-card, .stat-block, .merc-card, .merc-strategy, .charm-card').forEach(el => {
   observer.observe(el);
 });
 
@@ -91,7 +91,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('visible');
   }
 
-  const sections = ['synergy', 'leveling', 'gear', 'farming', 'tips'];
+  const sections = ['synergy', 'leveling', 'gear', 'attributes', 'mercs', 'charms', 'farming', 'tips'];
   let current = '';
   sections.forEach(id => {
     const section = document.getElementById(id);

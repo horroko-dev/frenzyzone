@@ -1,0 +1,17 @@
+<div class="charm-card {{ 'barb-card' if side == 'barb' else 'zon-card' }}">
+  <span class="class-label">{{ data.label }}</span>
+  {%- for group in data.inventory %}
+  <div class="charm-group">
+    <div class="charm-group-header">
+      <h4>{{ group.slot }}</h4>
+      <span class="charm-size">{{ group.size }}</span>
+    </div>
+    {%- for item in group.items %}
+    <div class="gear-item {{ item.rarity }}">{{ item.name }}{% if item.note %} <span class="note">&mdash; {{ item.note }}</span>{% endif %}</div>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+  {% if data.notes %}
+  <div class="stat-notes">{{ data.notes }}</div>
+  {% endif %}
+</div>

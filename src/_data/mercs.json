@@ -1,0 +1,74 @@
+{
+  "barb": {
+    "label": "Frenzy Barbarian",
+    "recommended": "Act II Nightmare — Might",
+    "why": "Might aura adds flat physical damage to your Frenzy hits. Since you're dual-wielding and hitting extremely fast, every point of bonus damage is multiplied heavily. This is the #1 merc choice for Frenzy Barbs — nothing else comes close.",
+    "alternative": "Act II Nightmare — Holy Freeze for crowd control if you're dying a lot in Hell. Slower clear but much safer.",
+    "gear": [
+      {
+        "slot": "Weapon",
+        "items": [
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "Conviction aura breaks Lightning Immunes for your Zon partner — game-changing" },
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation aura = infinite mana for both characters. Budget essential." },
+          { "name": "Reaper's Toll", "rarity": "unique", "note": "Decrepify proc — massive damage amp + slow. Great before you afford Infinity." }
+        ]
+      },
+      {
+        "slot": "Armor",
+        "items": [
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED, huge merc damage and survivability" },
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade proc = 60 all res + 15% DR. Best budget option, keeps merc alive." },
+          { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "Res + DR + damage. Alternative to Fortitude." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + life leech + Str. Socket with Ral for fire res. BiS for merc damage." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Dual leech + DR%. Great for keeping merc alive." },
+          { "name": "Tal Rasha's Horadric Crest", "rarity": "set-item", "note": "Dual leech + all res. Solid budget choice." }
+        ]
+      }
+    ]
+  },
+  "zon": {
+    "label": "Java Amazon",
+    "recommended": "Act II Nightmare — Might (or Holy Freeze)",
+    "why": "If the Barb's merc already has Infinity, your merc can run Insight for Meditation (infinite mana) or use Might for extra jab damage against Lightning Immunes. Holy Freeze is also excellent — it slows everything, giving you time to throw LF safely.",
+    "alternative": "Act I Rogue — Faith (Ohm + Jah + Lem + Eld) bow gives Fanaticism aura, boosting your IAS massively. Expensive but extremely powerful for max IAS breakpoints.",
+    "gear": [
+      {
+        "slot": "Weapon",
+        "items": [
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation aura solves all mana problems. Top priority if Barb merc has Infinity." },
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "If your Barb partner's merc doesn't have it, YOUR merc should. Breaks LI." },
+          { "name": "The Reaper's Toll", "rarity": "unique", "note": "Decrepify helps your Barb deal with Physical Immunes that Decrep breaks." }
+        ]
+      },
+      {
+        "slot": "Armor",
+        "items": [
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade proc keeps merc alive. IAS helps Insight/Infinity proc more." },
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "Best damage + survivability if you can afford it." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + leech. Socket with Ral rune." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Keeps merc alive with DR% and leech." },
+          { "name": "Guillaume's Face", "rarity": "set-item", "note": "35% Crushing Blow helps merc kill bosses." }
+        ]
+      }
+    ]
+  },
+  "duo_strategy": {
+    "title": "Merc Coordination",
+    "points": [
+      "Decide who carries Infinity and who carries Insight. You need both — Infinity breaks Lightning Immunes for the Zon, Insight gives infinite mana to both characters.",
+      "Best setup: Barb's merc has Infinity (Might + Conviction = insane damage), Zon's merc has Insight (Zon needs the mana more). This way both auras benefit both players.",
+      "Budget start: Both mercs use Insight until you find your first Ber rune. The mana sustain is more important than breaking immunities early on.",
+      "Keep your mercs alive! They die constantly in Hell if undergeared. Treachery armor is cheap and the Fade proc makes them surprisingly tanky. Prioritize merc survivability over damage."
+    ]
+  }
+}

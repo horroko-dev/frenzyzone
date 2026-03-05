@@ -1,0 +1,83 @@
+{
+  "barb": {
+    "label": "Frenzy Barbarian",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 skills, +10-20 stats, +10-20 res, +5-10% XP. Always carry one." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Barbarian Torch", "rarity": "unique", "note": "+3 Barb skills, +10-20 stats, +10-20 res. Massive power boost." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Warcries skillers", "rarity": "magic", "note": "Boosts Battle Orders duration and power for both characters" },
+          { "name": "+1 Combat skillers", "rarity": "magic", "note": "Directly boosts Frenzy and Double Swing synergy damage" },
+          { "name": "+1 Masteries skillers", "rarity": "magic", "note": "Boosts weapon mastery and natural resistances" },
+          { "name": "With +life suffix", "rarity": "magic", "note": "Best suffix is +40-45 life. +FHR is also good until you hit the 86% breakpoint." }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "The holy grail small charm — fill remaining slots with these" },
+          { "name": "20 life / 11 fire res (or other single res)", "rarity": "magic", "note": "Stack whichever resistance you're lowest on" },
+          { "name": "3 max / 20 AR / 20 life", "rarity": "magic", "note": "Damage small charms if you're already res-capped" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "Until you hit 86% FHR breakpoint" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Swap in for MF runs when you don't need survivability" }
+        ]
+      }
+    ],
+    "notes": "Priority: Torch + Anni first. Then stack Warcries skillers (BO benefits both of you). Fill remaining space with life/res small charms. Carry a second set of MF charms for easy farming zones."
+  },
+  "zon": {
+    "label": "Java Amazon",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 skills, +10-20 stats, +10-20 res, +5-10% XP. Non-negotiable." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Amazon Torch", "rarity": "unique", "note": "+3 Amazon skills, +10-20 stats, +10-20 res. Huge LF and CS damage boost." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Javelin & Spear skillers", "rarity": "magic", "note": "THE priority — each one adds massive lightning damage to LF and CS" },
+          { "name": "With +life suffix", "rarity": "magic", "note": "+40-45 life is best. +FHR also valuable until 48% or 86% breakpoint." },
+          { "name": "Aim for 7-9 Java skillers", "rarity": "magic", "note": "Fill as many grand charm slots as possible with these" }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "Best all-around small charm for any build" },
+          { "name": "20 life / 11 lightning res", "rarity": "magic", "note": "Prioritize lightning res to survive Souls in WSK" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "FHR matters — getting hit-locked while throwing javelins is death" },
+          { "name": "3 max / 20 AR / 20 life", "rarity": "magic", "note": "Helps Jab damage against Lightning Immunes" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Swap set for cow runs and easy farming" }
+        ]
+      }
+    ],
+    "notes": "Java skillers are your #1 priority after Torch + Anni. Each skiller is a noticeable damage increase to Lightning Fury. Stack as many as you can (up to 9). Fill remaining slots with life/res small charms. The Zon benefits more from +skills than any other stat."
+  }
+}

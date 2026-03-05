@@ -1,0 +1,46 @@
+{
+  "barb": {
+    "label": "Frenzy Barbarian",
+    "stats": {
+      "strength": {
+        "value": "Enough for gear",
+        "detail": "Typically 103 for Arreat's Face, or 136 for Stormshield if using one. With Enigma (which adds Str) you can go lower. Don't over-invest — every extra point is wasted."
+      },
+      "dexterity": {
+        "value": "Enough for gear",
+        "detail": "Base dex is fine for most builds. If using swords, you may need ~100-136 for Phase Blades. Axes need almost no dex. Don't invest for max block — Barbs have low base block."
+      },
+      "vitality": {
+        "value": "Everything else",
+        "detail": "Dump every remaining point here. With Battle Orders on top, you'll hit 3000-4000+ life. This is your survivability — more life means more leech sustain and more room for error."
+      },
+      "energy": {
+        "value": "None (0 points)",
+        "detail": "Never put points in Energy. Frenzy costs almost nothing, and you sustain mana through leech and Battle Orders. Even early game, mana potions handle it."
+      }
+    },
+    "notes": "Strength and Dex targets depend on your final gear. Plan ahead — check what your endgame weapons and armor require before committing points. You can respec via Akara (once per difficulty) or Token of Absolution."
+  },
+  "zon": {
+    "label": "Java Amazon",
+    "stats": {
+      "strength": {
+        "value": "Enough for gear",
+        "detail": "156 for Monarch shield (Spirit), or less if using Stormshield (156) or lower-requirement shields. With Enigma or Anni + Torch providing +stats, you can reduce this. Plan around your final gear."
+      },
+      "dexterity": {
+        "value": "Enough for gear + block",
+        "detail": "If going max block with Stormshield: invest until 75% block (check a block calculator — it depends on level and shield). If using Spirit Monarch, just enough for Titan's (109 dex). Max block is recommended for Hardcore."
+      },
+      "vitality": {
+        "value": "Everything else",
+        "detail": "All remaining points go here. Javazons are squishier than Barbs, so every point of life matters. With BO from your Barb partner, you'll still reach 1500-2500 life which is very comfortable."
+      },
+      "energy": {
+        "value": "None (0 points)",
+        "detail": "Tempting early on since Lightning Fury costs mana, but don't do it. Silkweave boots, Spirit shield, and mana leech from Titan's solve all mana issues. Use mana potions in early game."
+      }
+    },
+    "notes": "The Zon's stat allocation is more flexible than the Barb's. Decide early if you're going max block or not — it changes your Dex investment massively. Softcore: skip max block, pump Vita. Hardcore: max block is worth it."
+  }
+}
