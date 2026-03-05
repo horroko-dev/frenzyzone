@@ -1,0 +1,127 @@
+[
+  {
+    "zone": "The Countess",
+    "location": "Act I — Tower Cellar Level 5",
+    "difficulty": "All",
+    "icon": "tower",
+    "targets": [
+      { "name": "Runes up to Ist (Hell)", "rarity": "runeword", "note": "Key runes for Steel, Stealth, Lore, Spirit, Smoke, Treachery" },
+      { "name": "Runes for Grief (Lo)", "rarity": "runeword", "note": "Very rare but possible from Hell Countess" },
+      { "name": "Key of Terror", "rarity": "unique", "note": "For Uber Tristram later" }
+    ],
+    "strategy": "The Barb runs ahead and tanks the Countess while the Zon throws LF at the mob pack guarding her. Countess dies fast to Frenzy. Run this on repeat early to stock up on runes for both characters' runewords.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Andariel",
+    "location": "Act I — Catacombs Level 4",
+    "difficulty": "Nightmare",
+    "icon": "boss",
+    "targets": [
+      { "name": "Titan's Revenge", "rarity": "unique", "note": "Best Javazon weapon, drops commonly here" },
+      { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+1 skills, FCR, all res armor" },
+      { "name": "Stormshield", "rarity": "unique", "note": "Best defensive shield in the game" },
+      { "name": "The Stone of Jordan", "rarity": "unique", "note": "+1 skills, massive mana" }
+    ],
+    "strategy": "Quest-bug Andariel on Nightmare for guaranteed better drops. Barb tanks with Frenzy + life leech, Zon uses Charged Strike at melee range. She melts in seconds. Reset and repeat — this is the fastest unique farming in the game.",
+    "who_benefits": "zon",
+    "priority": "essential"
+  },
+  {
+    "zone": "Mephisto",
+    "location": "Act III — Durance of Hate Level 3",
+    "difficulty": "Hell",
+    "targets": [
+      { "name": "Arreat's Face", "rarity": "unique", "note": "BiS Barb helm — +2 skills, res, leech" },
+      { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 skills, IAS, deadly strike for both" },
+      { "name": "Razortail", "rarity": "unique", "note": "33% pierce — mandatory for Zon" },
+      { "name": "War Traveler", "rarity": "unique", "note": "MF boots for both characters" },
+      { "name": "Arachnid Mesh", "rarity": "unique", "note": "+1 skills, FCR belt" }
+    ],
+    "strategy": "Moat trick still works — Barb can also just tank him directly with life leech and good res. Zon throws LF at the council on the way in, then both unload on Mephisto. Fastest boss farm for mid-tier uniques.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Secret Cow Level",
+    "location": "Act I — Wirt's Leg + Tome of Town Portal",
+    "difficulty": "Hell",
+    "icon": "cows",
+    "targets": [
+      { "name": "Rune drops (up to Ber)", "rarity": "runeword", "note": "High density = high rune chances" },
+      { "name": "Runeword bases", "rarity": "rare", "note": "Monarchs, eth elite armors, 4os flails" },
+      { "name": "Jewelery & charms", "rarity": "magic", "note": "Skillers, small charms, crafting bases" }
+    ],
+    "strategy": "This is Javazon paradise. One Lightning Fury into a cow pack kills the entire herd via chain lightning. The Barb uses BO to buff, then focuses on stragglers and picks up loot. Don't kill the Cow King if you want to re-enter. Hands down the fastest farming zone for this duo.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Chaos Sanctuary",
+    "location": "Act IV — River of Flame",
+    "difficulty": "Hell",
+    "icon": "chaos",
+    "targets": [
+      { "name": "High runes (up to Zod)", "rarity": "runeword", "note": "Best area for HR farming alongside cows" },
+      { "name": "Grand charms", "rarity": "magic", "note": "ilvl 85 — can roll +skills" },
+      { "name": "Diablo drops", "rarity": "unique", "note": "Can drop almost anything in the game" }
+    ],
+    "strategy": "Clear all three seal boss packs first. Barb tanks De Seis and Infector, Zon clears Vizier's pack with LF. For Diablo himself: Barb face-tanks with max res and life leech, Zon uses Charged Strike. Watch out for Lightning Immunes — the Barb handles those with physical damage.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "Baal Runs",
+    "location": "Act V — Throne of Destruction",
+    "difficulty": "Hell",
+    "icon": "boss",
+    "targets": [
+      { "name": "Experience (levels 85–99)", "rarity": "unique", "note": "Best XP in the game" },
+      { "name": "Griffon's Eye", "rarity": "unique", "note": "BiS Zon helm — only drops from TC87 areas" },
+      { "name": "Death's Fathom, CoA", "rarity": "unique", "note": "Other TC87 uniques from Baal" }
+    ],
+    "strategy": "Waves 1–4: Zon handles with LF, Barb picks off leftovers and tanks. Wave 5 (Lister): Barb tanks while both use single-target. Baal himself: Barb face-tanks, dodge the frost wave. Best XP zone in the game for leveling to 99.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "The Pit",
+    "location": "Act I — Tamoe Highland",
+    "difficulty": "Hell",
+    "icon": "dungeon",
+    "targets": [
+      { "name": "Any item in the game (TC87)", "rarity": "unique", "note": "Level 85 area — can drop everything" },
+      { "name": "Griffon's Eye, Death's Web", "rarity": "unique", "note": "Highest-tier uniques" },
+      { "name": "Grand charms", "rarity": "magic", "note": "ilvl 85 skillers" }
+    ],
+    "strategy": "Easy monster types, no lightning immunes in most spawns. Zon clears at incredible speed while Barb handles any physical-resistant packs. Great early Hell farm since the monsters hit relatively softly. Add MF gear here for maximum returns.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "Lower Kurast",
+    "location": "Act III — Super Chests",
+    "difficulty": "Hell",
+    "icon": "chest",
+    "targets": [
+      { "name": "Lem, Pul, Um, Mal, Ist, Gul, Vex, Ohm, Lo, Sur, Ber, Jah", "rarity": "runeword", "note": "Super chests have fixed drop patterns" }
+    ],
+    "strategy": "Solo-optimized: only works in single-player or low player counts. Pop the super chests in the two fire-hut buildings near the waypoint. No fighting needed — just open chests and reset. The Barb can do this while the Zon does Cow runs in a separate game, or run it together for companionship.",
+    "who_benefits": "both",
+    "priority": "medium"
+  },
+  {
+    "zone": "Travincal Council",
+    "location": "Act III — Travincal",
+    "difficulty": "Hell",
+    "icon": "council",
+    "targets": [
+      { "name": "High runes (up to Cham)", "rarity": "runeword", "note": "Council members have boosted rune drops" },
+      { "name": "Jewelry", "rarity": "rare", "note": "Rings, amulets — council drops lots of gold items" }
+    ],
+    "strategy": "Barb charges in and tanks all three council members. They're fire-heavy so stack fire res. Zon throws LF — chain lightning bounces between the tightly packed group. Fast runs, high rune potential. Watch for Hydras.",
+    "who_benefits": "barb",
+    "priority": "medium"
+  }
+]

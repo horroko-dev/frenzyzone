@@ -1,0 +1,31 @@
+<div class="farm-card {{ 'farm-essential' if farm.priority == 'essential' else ('farm-high' if farm.priority == 'high' else 'farm-medium') }}">
+  <div class="farm-priority-tag">{{ farm.priority }}</div>
+  <div class="farm-header">
+    <div>
+      <h3 class="farm-zone">{{ farm.zone }}</h3>
+      <p class="farm-location">{{ farm.location }}{% if farm.difficulty %} <span class="farm-diff">&mdash; {{ farm.difficulty }}</span>{% endif %}</p>
+    </div>
+    <div class="farm-benefit farm-benefit-{{ farm.who_benefits }}">
+      {% if farm.who_benefits == 'both' %}Barb + Zon
+      {% elif farm.who_benefits == 'barb' %}Barb
+      {% elif farm.who_benefits == 'zon' %}Zon{% endif %}
+    </div>
+  </div>
+  <div class="farm-body">
+    <div class="farm-targets">
+      <h4>Target Drops</h4>
+      <ul>
+        {%- for item in farm.targets %}
+        <li>
+          <span class="gear-item {{ item.rarity }}">{{ item.name }}</span>
+          {% if item.note %}<span class="farm-item-note">{{ item.note }}</span>{% endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="farm-strategy">
+      <h4>Duo Strategy</h4>
+      <p>{{ farm.strategy }}</p>
+    </div>
+  </div>
+</div>

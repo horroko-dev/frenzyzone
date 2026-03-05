@@ -127,6 +127,32 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 
 <div class="divider"></div>
 
+{# ========== FARMING ========== #}
+<section id="farming">
+  <div class="section-header">
+    <p class="section-label">Where to Farm</p>
+    <h2 class="section-title">Farming Guide</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">The best zones and bosses to farm as a Frenzy Barb + Javazon duo, ordered by priority. Get your gear, get your runes, get your levels.</p>
+  </div>
+
+  <div class="farm-filters">
+    <button class="farm-filter active" data-filter="all">All Zones</button>
+    <button class="farm-filter" data-filter="essential">Essential</button>
+    <button class="farm-filter" data-filter="high">High Priority</button>
+    <button class="farm-filter" data-filter="medium">Medium</button>
+  </div>
+
+  <div class="farm-list">
+    {%- for farm in farming %}
+    {% set farm = farm %}
+    {% include "components/farm-card.njk" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
 {# ========== TIPS ========== #}
 <section id="tips">
   <div class="section-header">

@@ -76,7 +76,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.synergy-card, .synergy-bottom, .build-card, .phase-header, .tip-card').forEach(el => {
+document.querySelectorAll('.synergy-card, .synergy-bottom, .build-card, .phase-header, .tip-card, .farm-card').forEach(el => {
   observer.observe(el);
 });
 
@@ -91,7 +91,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('visible');
   }
 
-  const sections = ['synergy', 'leveling', 'gear', 'tips'];
+  const sections = ['synergy', 'leveling', 'gear', 'farming', 'tips'];
   let current = '';
   sections.forEach(id => {
     const section = document.getElementById(id);
@@ -111,5 +111,21 @@ document.querySelectorAll('.gear-tab').forEach(tab => {
     document.querySelectorAll('.gear-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById('gear-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+/* ========== FARMING FILTERS ========== */
+document.querySelectorAll('.farm-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.farm-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.farm-card').forEach(card => {
+      if (filter === 'all') {
+        card.classList.remove('farm-hidden');
+      } else {
+        card.classList.toggle('farm-hidden', !card.classList.contains('farm-' + filter));
+      }
+    });
   });
 });

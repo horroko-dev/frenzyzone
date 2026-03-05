@@ -795,6 +795,227 @@ section {
   line-height: 1.6;
 }
 
+/* ========== FARMING SECTION ========== */
+.farm-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.farm-filter {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid var(--stone-mid);
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.farm-filter:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.farm-filter.active {
+  background: rgba(212,168,71,0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.farm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.farm-card {
+  background: linear-gradient(145deg, rgba(26,23,20,0.7), rgba(42,37,32,0.3));
+  border: 1px solid var(--stone-mid);
+  padding: 2rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.farm-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.farm-card.farm-hidden {
+  display: none;
+}
+
+.farm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.farm-essential::before {
+  background: linear-gradient(to bottom, var(--gold-bright), var(--gold));
+}
+
+.farm-high::before {
+  background: linear-gradient(to bottom, var(--barb-glow), var(--barb-primary));
+}
+
+.farm-medium::before {
+  background: linear-gradient(to bottom, var(--zon-glow), var(--zon-primary));
+}
+
+.farm-priority-tag {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--stone-mid);
+}
+
+.farm-essential .farm-priority-tag {
+  color: var(--gold-bright);
+  border-color: rgba(255,215,0,0.3);
+  background: rgba(255,215,0,0.05);
+}
+
+.farm-high .farm-priority-tag {
+  color: var(--barb-glow);
+  border-color: rgba(255,107,61,0.3);
+  background: rgba(255,107,61,0.05);
+}
+
+.farm-medium .farm-priority-tag {
+  color: var(--zon-glow);
+  border-color: rgba(139,125,255,0.3);
+  background: rgba(139,125,255,0.05);
+}
+
+.farm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-right: 5rem;
+}
+
+.farm-zone {
+  font-size: 1.2rem;
+  color: var(--parchment);
+  margin-bottom: 0.2rem;
+}
+
+.farm-location {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.farm-diff {
+  color: var(--gold);
+}
+
+.farm-benefit {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--stone-mid);
+  white-space: nowrap;
+}
+
+.farm-benefit-both {
+  background: linear-gradient(135deg, rgba(232,74,35,0.1), rgba(107,91,255,0.1));
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.farm-benefit-barb {
+  background: rgba(232,74,35,0.1);
+  border-color: var(--barb-primary);
+  color: var(--barb-glow);
+}
+
+.farm-benefit-zon {
+  background: rgba(107,91,255,0.1);
+  border-color: var(--zon-primary);
+  color: var(--zon-glow);
+}
+
+.farm-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.farm-body h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(58,53,48,0.4);
+}
+
+.farm-targets ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.farm-targets li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.farm-item-note {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-style: italic;
+  padding-left: 0.5rem;
+}
+
+.farm-strategy p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .farm-body {
+    grid-template-columns: 1fr;
+  }
+  .farm-header {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .farm-card {
+    padding: 1.5rem;
+  }
+}
+
 /* ========== FOOTER ========== */
 .footer {
   position: relative;
