@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrenzyZone — D2R Duo Leveling Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --barb-primary: #e84a23;
+  --barb-glow: #ff6b3d;
+  --barb-dark: #8b1a0e;
+  --barb-ember: #ff4500;
+  --zon-primary: #6b5bff;
+  --zon-glow: #8b7dff;
+  --zon-dark: #2a1a6b;
+  --zon-lightning: #00d4ff;
+  --gold: #d4a847;
+  --gold-bright: #ffd700;
+  --bone: #c8b89a;
+  --stone: #1a1714;
+  --stone-light: #2a2520;
+  --stone-mid: #3a3530;
+  --parchment: #d4c5a9;
+  --text: #c8b89a;
+  --text-dim: #8a7e6a;
+  --bg: #0d0b09;
+  --unique-gold: #c7b377;
+  --set-green: #00c400;
+  --runeword-gold: #ffd700;
+  --magic-blue: #6888ff;
+  --rare-yellow: #ffff00;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--stone-mid) var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--barb-dark);
+  color: var(--gold-bright);
+}
+
+/* ========== NOISE OVERLAY ========== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.display-font {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+/* ========== PARTICLE CANVAS ========== */
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(232, 74, 35, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 50%, rgba(107, 91, 255, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, var(--bg), transparent);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: var(--text-dim);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.3s ease forwards;
+}
+
+.hero-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s ease forwards;
+}
+
+.hero-title .barb-text {
+  background: linear-gradient(135deg, var(--barb-glow), var(--barb-primary), var(--barb-ember));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(232, 74, 35, 0.4));
+}
+
+.hero-title .amp {
+  color: var(--gold);
+  -webkit-text-fill-color: var(--gold);
+  font-size: 0.6em;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 20px rgba(212, 168, 71, 0.3));
+}
+
+.hero-title .zon-text {
+  background: linear-gradient(135deg, var(--zon-lightning), var(--zon-primary), var(--zon-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(107, 91, 255, 0.4));
+}
+
+.hero-tagline {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--parchment);
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.8s ease forwards;
+}
+
+.hero-cta {
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fadeUp 1s 1.1s ease forwards;
+}
+
+.hero-cta a {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  padding: 0.8rem 2.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,74,35,0.2), rgba(107,91,255,0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-cta a:hover {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+  box-shadow: 0 0 30px rgba(212,168,71,0.2);
+}
+
+.hero-cta a:hover::before { opacity: 1; }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 1s 1.5s ease forwards;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  margin: 0 auto;
+  animation: scrollPulse 2s ease infinite;
+}
+
+/* ========== NAVIGATION ========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(to bottom, rgba(13,11,9,0.95), transparent);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.nav.visible { transform: translateY(0); }
+
+.nav a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover { color: var(--gold); }
+.nav a:hover::after { transform: scaleX(1); }
+.nav a.active { color: var(--gold); }
+.nav a.active::after { transform: scaleX(1); }
+
+/* ========== SECTIONS ========== */
+section {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.section-rule {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 1.5rem auto;
+}
+
+.section-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ========== DIVIDERS ========== */
+.divider {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--stone-mid), transparent);
+}
+
+.divider::before {
+  content: '\2726';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  font-size: 1rem;
+  background: var(--bg);
+  padding: 0 1rem;
+}
+
+/* ========== SYNERGY SECTION ========== */
+.synergy-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.synergy-card {
+  background: linear-gradient(145deg, rgba(26,23,20,0.8), rgba(42,37,32,0.4));
+  border: 1px solid var(--stone-mid);
+  padding: 2.5rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.synergy-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.synergy-card.barb { border-top: 2px solid var(--barb-primary); }
+.synergy-card.zon { border-top: 2px solid var(--zon-primary); }
+
+.synergy-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.synergy-card.barb h3 { color: var(--barb-glow); }
+.synergy-card.zon h3 { color: var(--zon-glow); }
+
+.synergy-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.synergy-card li {
+  padding-left: 1.2rem;
+  position: relative;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.synergy-card.barb li::before {
+  content: '\2694';
+  position: absolute;
+  left: 0;
+  color: var(--barb-primary);
+}
+
+.synergy-card.zon li::before {
+  content: '\26A1';
+  position: absolute;
+  left: 0;
+  color: var(--zon-lightning);
+}
+
+.synergy-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  min-height: 200px;
+}
+
+.synergy-connector .plus {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(212,168,71,0.4);
+}
+
+.synergy-connector .line {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--barb-primary), var(--gold), var(--zon-primary));
+}
+
+.synergy-bottom {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(232,74,35,0.05), rgba(13,11,9,0.8), rgba(107,91,255,0.05));
+  border: 1px solid var(--stone-mid);
+  padding: 2.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.3s;
+}
+
+.synergy-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.synergy-bottom h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.synergy-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.synergy-stat {
+  text-align: center;
+}
+
+.synergy-stat .value {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  color: var(--gold-bright);
+  display: block;
+}
+
+.synergy-stat .label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--stone-mid) 5%,
+    var(--barb-dark) 30%,
+    var(--gold) 50%,
+    var(--zon-dark) 70%,
+    var(--stone-mid) 95%,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+.timeline-phase {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--gold);
+  background: var(--bg);
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline-marker:hover,
+.timeline-marker.active {
+  background: var(--gold);
+  box-shadow: 0 0 20px rgba(212,168,71,0.5);
+}
+
+.timeline-marker::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(212,168,71,0.3);
+}
+
+.phase-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.phase-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.phase-level {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.phase-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--parchment);
+  margin-top: 0.3rem;
+}
+
+.phase-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+
+.build-card {
+  background: rgba(26,23,20,0.6);
+  border: 1px solid var(--stone-mid);
+  padding: 2rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.build-card.zon-card {
+  transform: translateX(30px);
+}
+
+.build-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.build-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.build-card.barb-card::before {
+  background: linear-gradient(to right, var(--barb-primary), transparent);
+}
+
+.build-card.zon-card::before {
+  background: linear-gradient(to left, var(--zon-primary), transparent);
+}
+
+.build-card .class-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.build-card.barb-card .class-label { color: var(--barb-glow); }
+.build-card.zon-card .class-label { color: var(--zon-glow); }
+
+.skill-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.skill-list li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(58,53,48,0.5);
+}
+
+.skill-list li:last-child { border-bottom: none; }
+
+.skill-name { color: var(--parchment); }
+
+.skill-pts {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.build-card h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stat-alloc {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+/* ========== GEAR SECTION ========== */
+.gear-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.gear-tab {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid var(--stone-mid);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gear-tab:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.gear-tab.active {
+  background: rgba(212,168,71,0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.gear-panel {
+  display: none;
+}
+
+.gear-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.gear-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.gear-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--stone-mid);
+}
+
+.gear-column.barb-gear h3 { color: var(--barb-glow); }
+.gear-column.zon-gear h3 { color: var(--zon-glow); }
+
+.gear-slot {
+  margin-bottom: 1.5rem;
+}
+
+.gear-slot-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.gear-item {
+  font-size: 0.95rem;
+  padding: 0.2rem 0;
+}
+
+.gear-item.unique { color: var(--unique-gold); }
+.gear-item.set-item { color: var(--set-green); }
+.gear-item.runeword { color: var(--runeword-gold); }
+.gear-item.magic { color: var(--magic-blue); }
+.gear-item.rare { color: var(--rare-yellow); }
+.gear-item .note { color: var(--text-dim); font-size: 0.8rem; font-style: italic; }
+
+/* ========== TIPS SECTION ========== */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tip-card {
+  background: linear-gradient(145deg, rgba(26,23,20,0.7), rgba(42,37,32,0.3));
+  border: 1px solid var(--stone-mid);
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.tip-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--barb-primary), var(--gold), var(--zon-primary));
+}
+
+.tip-number {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: var(--stone-mid);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.tip-card h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--parchment);
+}
+
+.tip-card p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--stone-mid);
+  margin-top: 2rem;
+}
+
+.footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+}
+
+.footer .disclaimer {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--stone-mid);
+  margin-top: 1rem;
+  letter-spacing: 0;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .synergy-grid {
+    grid-template-columns: 1fr;
+  }
+  .synergy-connector {
+    flex-direction: row;
+    min-height: auto;
+    padding: 1rem 0;
+  }
+  .synergy-connector .line {
+    width: auto;
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, var(--barb-primary), var(--gold), var(--zon-primary));
+  }
+  .phase-content {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  .timeline::before {
+    left: 1rem;
+  }
+  .timeline-marker {
+    left: 1rem;
+  }
+  .gear-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+  }
+  .nav a {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  section { padding: 4rem 1rem; }
+  .phase-content { padding: 0 0.5rem; }
+  .build-card { padding: 1.5rem; }
+  .synergy-highlights { gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <a href="#synergy">Synergy</a>
+  <a href="#leveling">Leveling</a>
+  <a href="#gear">Gear</a>
+  <a href="#tips">Tips</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <p class="hero-subtitle">Diablo II Resurrected &mdash; Duo Leveling Guide</p>
+    <h1 class="hero-title">
+      <span class="barb-text">Frenzy</span>
+      <span class="amp">&amp;</span><br>
+      <span class="zon-text">Javazon</span>
+    </h1>
+    <p class="hero-tagline">"Two weapons, one storm &mdash; nothing survives."</p>
+    <div class="hero-cta">
+      <a href="#synergy">Begin the Journey</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</header>
+
+<div class="divider"></div>
+
+<!-- SYNERGY -->
+<section id="synergy">
+  <div class="section-header">
+    <p class="section-label">Why This Duo Works</p>
+    <h2 class="section-title">Unholy Synergy</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Physical devastation meets elemental fury. The Frenzy Barbarian carves through single targets and tanks the frontline while the Javazon annihilates packs with lightning and piercing javelins.</p>
+  </div>
+
+  <div class="synergy-grid">
+    <div class="synergy-card barb">
+      <h3>Frenzy Barbarian</h3>
+      <ul>
+        <li>Massive single-target physical DPS with dual-wield attacks</li>
+        <li>Battle Orders provides +life and +mana to both players</li>
+        <li>Natural tank with high life, defense, and life leech</li>
+        <li>Howl scatters trash mobs, letting Zon focus fire</li>
+        <li>Boss killer &mdash; Frenzy shreds act bosses and superuniques</li>
+      </ul>
+    </div>
+
+    <div class="synergy-connector">
+      <span class="line"></span>
+      <span class="plus">+</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="synergy-card zon">
+      <h3>Java Amazon</h3>
+      <ul>
+        <li>Lightning Fury melts entire screens of monsters instantly</li>
+        <li>Charged Strike has highest single-target DPS in the game</li>
+        <li>Covers Lightning Immune gaps with physical jab damage</li>
+        <li>Valkyrie and Decoy provide additional tanking/distraction</li>
+        <li>Crowd control queen &mdash; clears density the Barb can't reach</li>
+      </ul>
+    </div>
+
+    <div class="synergy-bottom">
+      <h3>Combined Strengths</h3>
+      <p>Battle Orders buffs both characters' survivability. The Barb tanks and kills bosses while the Zon devastates crowds. Together they cover physical and lightning damage types, only struggling against rare Physical + Lightning Immune combos.</p>
+      <div class="synergy-highlights">
+        <div class="synergy-stat">
+          <span class="value">2</span>
+          <span class="label">Damage Types</span>
+        </div>
+        <div class="synergy-stat">
+          <span class="value">BO</span>
+          <span class="label">Party Buff</span>
+        </div>
+        <div class="synergy-stat">
+          <span class="value">S+</span>
+          <span class="label">Clear Speed</span>
+        </div>
+        <div class="synergy-stat">
+          <span class="value">A+</span>
+          <span class="label">Boss Kill</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LEVELING TIMELINE -->
+<section id="leveling">
+  <div class="section-header">
+    <p class="section-label">Act by Act</p>
+    <h2 class="section-title">Leveling Path</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">From Blood Moor to the Worldstone Chamber. Follow this timeline to optimize skill allocation and progression for both characters.</p>
+  </div>
+
+  <div class="timeline">
+
+    <!-- PHASE 1 -->
+    <div class="timeline-phase">
+      <div class="timeline-marker"></div>
+      <div class="phase-header">
+        <span class="phase-level">Levels 1 &ndash; 15</span>
+        <h3 class="phase-name">Normal Acts I &ndash; II</h3>
+      </div>
+      <div class="phase-content">
+        <div class="build-card barb-card">
+          <span class="class-label">Frenzy Barbarian</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Bash</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Double Swing</span><span class="skill-pts">6+ pts</span></li>
+            <li><span class="skill-name">Howl</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Shout</span><span class="skill-pts">1 pt</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Pump Strength for gear. Double Swing carries hard &mdash; zero mana cost at level 9+. Lead the charge, tank hits. Use Howl to manage packs.</p>
+        </div>
+        <div class="build-card zon-card">
+          <span class="class-label">Java Amazon</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Jab</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Power Strike</span><span class="skill-pts">6+ pts</span></li>
+            <li><span class="skill-name">Poison Javelin</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Inner Sight</span><span class="skill-pts">1 pt</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Power Strike is your bread and butter early. Throw normal javelins at range for safety, close in for Power Strike on elites. Save skill points after 12 for Lightning Bolt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="timeline-phase">
+      <div class="timeline-marker"></div>
+      <div class="phase-header">
+        <span class="phase-level">Levels 15 &ndash; 24</span>
+        <h3 class="phase-name">Normal Acts III &ndash; V</h3>
+      </div>
+      <div class="phase-content">
+        <div class="build-card barb-card">
+          <span class="class-label">Frenzy Barbarian</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Frenzy</span><span class="skill-pts">1+ pts (lvl 24)</span></li>
+            <li><span class="skill-name">Double Swing</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Battle Orders</span><span class="skill-pts">1 pt (lvl 24)</span></li>
+            <li><span class="skill-name">Iron Skin</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Increased Speed</span><span class="skill-pts">1 pt</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Transition to Frenzy at level 24 &mdash; everything changes. Battle Orders comes online at the same level, buffing both of you massively. Double Swing until then.</p>
+        </div>
+        <div class="build-card zon-card">
+          <span class="class-label">Java Amazon</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Lightning Bolt</span><span class="skill-pts">5+ pts</span></li>
+            <li><span class="skill-name">Charged Strike</span><span class="skill-pts">1 pt (lvl 18)</span></li>
+            <li><span class="skill-name">Power Strike</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Decoy</span><span class="skill-pts">1 pt</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Charged Strike at 18 is a massive power spike &mdash; bosses evaporate. Lightning Bolt handles ranged clear. Drop Decoy to tank while you throw from behind.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="timeline-phase">
+      <div class="timeline-marker"></div>
+      <div class="phase-header">
+        <span class="phase-level">Levels 25 &ndash; 40</span>
+        <h3 class="phase-name">Nightmare Acts I &ndash; III</h3>
+      </div>
+      <div class="phase-content">
+        <div class="build-card barb-card">
+          <span class="class-label">Frenzy Barbarian</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Frenzy</span><span class="skill-pts">10+ pts</span></li>
+            <li><span class="skill-name">Battle Orders</span><span class="skill-pts">5+ pts</span></li>
+            <li><span class="skill-name">Double Swing</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Taunt</span><span class="skill-pts">1 pt</span></li>
+            <li><span class="skill-name">Battle Command</span><span class="skill-pts">1 pt (lvl 30)</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Frenzy is your main skill now. Keep BO leveled &mdash; both of you benefit hugely. Battle Command at 30 gives +1 all skills. Start looking for runeword bases.</p>
+        </div>
+        <div class="build-card zon-card">
+          <span class="class-label">Java Amazon</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Lightning Fury</span><span class="skill-pts">1+ pts (lvl 30)</span></li>
+            <li><span class="skill-name">Charged Strike</span><span class="skill-pts">10+ pts</span></li>
+            <li><span class="skill-name">Valkyrie</span><span class="skill-pts">1 pt (lvl 30)</span></li>
+            <li><span class="skill-name">Pierce</span><span class="skill-pts">1 pt</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Lightning Fury at 30 is the biggest power spike in the game. Entire screens die. Focus Charged Strike for bosses, LF for everything else. Valkyrie adds another tank body.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="timeline-phase">
+      <div class="timeline-marker"></div>
+      <div class="phase-header">
+        <span class="phase-level">Levels 40 &ndash; 60</span>
+        <h3 class="phase-name">Nightmare IV &ndash; V / Early Hell</h3>
+      </div>
+      <div class="phase-content">
+        <div class="build-card barb-card">
+          <span class="class-label">Frenzy Barbarian</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Frenzy</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Double Swing</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Battle Orders</span><span class="skill-pts">10+ pts</span></li>
+            <li><span class="skill-name">Sword/Axe Mastery</span><span class="skill-pts">10+ pts</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Max Frenzy, then pump synergies and mastery. You're the boss killer &mdash; let the Zon clear to the boss room, then you both unload. Keep Crushing Blow gear handy for Act bosses.</p>
+        </div>
+        <div class="build-card zon-card">
+          <span class="class-label">Java Amazon</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Lightning Fury</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Charged Strike</span><span class="skill-pts">Max</span></li>
+            <li><span class="skill-name">Lightning Strike</span><span class="skill-pts">5+ pts (synergy)</span></li>
+            <li><span class="skill-name">Valkyrie</span><span class="skill-pts">1+ pts</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Max LF first, then CS. Lightning Strike synergizes both. You're the clear speed &mdash; throw LF into packs and watch the chain lightning cascade. Titan's Revenge is your holy grail.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 5 -->
+    <div class="timeline-phase">
+      <div class="timeline-marker"></div>
+      <div class="phase-header">
+        <span class="phase-level">Levels 60 &ndash; 80+</span>
+        <h3 class="phase-name">Hell Difficulty</h3>
+      </div>
+      <div class="phase-content">
+        <div class="build-card barb-card">
+          <span class="class-label">Frenzy Barbarian</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Frenzy</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Double Swing</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Taunt</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Battle Orders</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Sword/Axe Mastery</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Prereqs</span><span class="skill-pts">1 pt each</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Final build: Frenzy + 3 synergies + BO + Mastery. You handle Physical Immunes with elemental damage weapons (Grief, Lawbringer). Tank everything, leech through damage.</p>
+        </div>
+        <div class="build-card zon-card">
+          <span class="class-label">Java Amazon</span>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li><span class="skill-name">Lightning Fury</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Charged Strike</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Lightning Strike</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Power Strike</span><span class="skill-pts">20 pts</span></li>
+            <li><span class="skill-name">Valkyrie</span><span class="skill-pts">1+ pts</span></li>
+            <li><span class="skill-name">Pierce</span><span class="skill-pts">1+ pts</span></li>
+          </ul>
+          <h4>Strategy</h4>
+          <p class="stat-alloc">Full lightning spec. LF + CS maxed with both synergies. Lightning Immunes? The Barb handles them &mdash; skip or let your partner kill. Cows, Chaos, Baal runs &mdash; you're the clear machine.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GEAR -->
+<section id="gear">
+  <div class="section-header">
+    <p class="section-label">Equipment</p>
+    <h2 class="section-title">Gear Progression</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">From rags to riches. Gear recommendations for each difficulty tier, from budget options to best-in-slot.</p>
+  </div>
+
+  <div class="gear-tabs">
+    <button class="gear-tab active" data-tab="normal">Normal</button>
+    <button class="gear-tab" data-tab="nightmare">Nightmare</button>
+    <button class="gear-tab" data-tab="hell">Hell / Endgame</button>
+  </div>
+
+  <!-- NORMAL -->
+  <div class="gear-panel active" id="gear-normal">
+    <div class="gear-grid">
+      <div class="gear-column barb-gear">
+        <h3>Frenzy Barbarian</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapons</div>
+          <div class="gear-item runeword">Steel (Tir + El) <span class="note">&mdash; earliest runeword, huge early damage</span></div>
+          <div class="gear-item runeword">Malice (Ith + El + Eth) <span class="note">&mdash; -100 monster defense</span></div>
+          <div class="gear-item unique">Crushflange <span class="note">&mdash; Crushing Blow for bosses</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item runeword">Stealth (Tal + Eth) <span class="note">&mdash; FHR, FRW, must-have</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Helm</div>
+          <div class="gear-item set-item">Sigon's Visor <span class="note">&mdash; with gloves for IAS</span></div>
+          <div class="gear-item unique">Tarnhelm <span class="note">&mdash; +skills, MF</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Other</div>
+          <div class="gear-item set-item">Sigon's Gloves + Belt combo <span class="note">&mdash; 30 IAS, life leech</span></div>
+          <div class="gear-item magic">+life / +resist rings & amulet</div>
+        </div>
+      </div>
+      <div class="gear-column zon-gear">
+        <h3>Java Amazon</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapon</div>
+          <div class="gear-item rare">+skills / +damage rare javelin</div>
+          <div class="gear-item unique">The Generals Tan Do Li Ga <span class="note">&mdash; if found</span></div>
+          <div class="gear-item magic">+3 javelin skills blue javelin <span class="note">&mdash; shop from Charsi/Fara</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item runeword">Stealth (Tal + Eth) <span class="note">&mdash; same as Barb, both need this</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Shield</div>
+          <div class="gear-item runeword">Ancients' Pledge (Ral + Ort + Tal) <span class="note">&mdash; free runes from Act V quest</span></div>
+          <div class="gear-item unique">Sigon's Guard <span class="note">&mdash; part of set combo</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Other</div>
+          <div class="gear-item set-item">Sigon's set pieces <span class="note">&mdash; great budget option</span></div>
+          <div class="gear-item magic">+mana / +resist jewelry</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NIGHTMARE -->
+  <div class="gear-panel" id="gear-nightmare">
+    <div class="gear-grid">
+      <div class="gear-column barb-gear">
+        <h3>Frenzy Barbarian</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapons</div>
+          <div class="gear-item runeword">Honor (Amn + El + Ith + Tir + Sol) <span class="note">&mdash; +1 skills, deadly strike</span></div>
+          <div class="gear-item runeword">Kings Grace (Amn + Ral + Thul) <span class="note">&mdash; great budget offhand</span></div>
+          <div class="gear-item unique">Butcher's Pupil <span class="note">&mdash; deadly strike, open wounds</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item runeword">Smoke (Nef + Lum) <span class="note">&mdash; +50 all res, huge for NM</span></div>
+          <div class="gear-item runeword">Lionheart (Hel + Lum + Fal) <span class="note">&mdash; stats + res + damage</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Helm</div>
+          <div class="gear-item unique">Arreat's Face <span class="note">&mdash; if lucky, endgame helm</span></div>
+          <div class="gear-item runeword">Lore (Ort + Sol) <span class="note">&mdash; +1 skills, lightning res</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Belt / Gloves / Boots</div>
+          <div class="gear-item unique">Goldwrap <span class="note">&mdash; IAS, MF</span></div>
+          <div class="gear-item unique">Laying of Hands <span class="note">&mdash; 350% damage to demons</span></div>
+          <div class="gear-item unique">Gore Rider <span class="note">&mdash; CB, DS, OW trifecta</span></div>
+        </div>
+      </div>
+      <div class="gear-column zon-gear">
+        <h3>Java Amazon</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapon</div>
+          <div class="gear-item unique">Titan's Revenge <span class="note">&mdash; THE javazon weapon, replenishes</span></div>
+          <div class="gear-item rare">+skills / +IAS rare ceremonial javelin</div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item unique">Skin of the Vipermagi <span class="note">&mdash; +skills, FCR, all res</span></div>
+          <div class="gear-item runeword">Smoke (Nef + Lum) <span class="note">&mdash; budget option</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Shield</div>
+          <div class="gear-item unique">Stormshield <span class="note">&mdash; if you can afford the Str</span></div>
+          <div class="gear-item runeword">Rhyme (Shael + Eth) <span class="note">&mdash; cannot be frozen, res, MF</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Helm / Other</div>
+          <div class="gear-item runeword">Lore (Ort + Sol) <span class="note">&mdash; +1 skills budget</span></div>
+          <div class="gear-item unique">Razortail <span class="note">&mdash; 33% pierce, huge for LF</span></div>
+          <div class="gear-item set-item">Laying of Hands <span class="note">&mdash; 20 IAS, demon damage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HELL / ENDGAME -->
+  <div class="gear-panel" id="gear-hell">
+    <div class="gear-grid">
+      <div class="gear-column barb-gear">
+        <h3>Frenzy Barbarian</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapons (Best in Slot)</div>
+          <div class="gear-item runeword">Grief (Eth + Tir + Lo + Mal + Ral) <span class="note">&mdash; #1 melee weapon in the game</span></div>
+          <div class="gear-item runeword">Lawbringer (Amn + Lem + Ko) <span class="note">&mdash; offhand, Decrepify proc</span></div>
+          <div class="gear-item runeword">Breath of the Dying <span class="note">&mdash; alternative main hand</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item runeword">Fortitude (El + Sol + Dol + Lo) <span class="note">&mdash; 300% ED, best DPS armor</span></div>
+          <div class="gear-item runeword">Treachery (Shael + Thul + Lem) <span class="note">&mdash; budget, Fade proc = 60 all res</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Helm</div>
+          <div class="gear-item unique">Arreat's Face <span class="note">&mdash; +2 skills, 30 FHR, res, life leech</span></div>
+          <div class="gear-item runeword">Guillaume's Face <span class="note">&mdash; 35% CB for boss killing</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Other Slots</div>
+          <div class="gear-item unique">Gore Rider <span class="note">&mdash; CB + DS + OW</span></div>
+          <div class="gear-item unique">Laying of Hands <span class="note">&mdash; 350% demon damage + 20 IAS</span></div>
+          <div class="gear-item unique">Highlord's Wrath <span class="note">&mdash; +1 skills, IAS, deadly strike</span></div>
+          <div class="gear-item unique">Verdungo's <span class="note">&mdash; DR%, vita, FHR</span></div>
+          <div class="gear-item unique">Raven Frost + Dual Leech ring</div>
+        </div>
+      </div>
+      <div class="gear-column zon-gear">
+        <h3>Java Amazon</h3>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Weapon (Best in Slot)</div>
+          <div class="gear-item unique">Titan's Revenge (Ethereal) <span class="note">&mdash; replenishes, so eth is free damage</span></div>
+          <div class="gear-item unique">Thunderstroke <span class="note">&mdash; -15% enemy lightning res</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Shield</div>
+          <div class="gear-item runeword">Spirit (Tal + Thul + Ort + Amn) in Monarch <span class="note">&mdash; +2 skills, FCR, mana</span></div>
+          <div class="gear-item unique">Stormshield <span class="note">&mdash; for hardcore/survivability</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Armor</div>
+          <div class="gear-item runeword">Enigma (Jah + Ith + Ber) <span class="note">&mdash; Teleport for positioning</span></div>
+          <div class="gear-item unique">Chains of Honor <span class="note">&mdash; +2 skills, res, DR</span></div>
+          <div class="gear-item runeword">Treachery <span class="note">&mdash; budget, IAS + Fade</span></div>
+        </div>
+        <div class="gear-slot">
+          <div class="gear-slot-name">Other Slots</div>
+          <div class="gear-item unique">Griffon's Eye <span class="note">&mdash; -% enemy light res, BiS helm</span></div>
+          <div class="gear-item unique">Razortail <span class="note">&mdash; 33% pierce (100% with skills)</span></div>
+          <div class="gear-item unique">War Traveler <span class="note">&mdash; MF + damage</span></div>
+          <div class="gear-item unique">Highlord's Wrath <span class="note">&mdash; +1 skills, IAS</span></div>
+          <div class="gear-item magic">+2 java / 20 IAS gloves <span class="note">&mdash; crafted or shopped</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TIPS -->
+<section id="tips">
+  <div class="section-header">
+    <p class="section-label">Party Play</p>
+    <h2 class="section-title">Duo Strategies</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">Coordination tips to maximize your duo's efficiency from Normal through Hell.</p>
+  </div>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <span class="tip-number">I</span>
+      <h3>The Barb Leads, the Zon Clears</h3>
+      <p>Let the Barbarian run ahead to draw aggro and tank. The Javazon follows 1-2 screens behind, throwing Lightning Fury into the packs that swarm the Barb. This prevents the Zon from getting surrounded.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-number">II</span>
+      <h3>Battle Orders is Non-Negotiable</h3>
+      <p>Always rebuff BO before dangerous areas. The Javazon benefits massively &mdash; she's naturally squishy, and BO can double her life pool. Barb should cast BC first, then BO for maximum duration.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-number">III</span>
+      <h3>Splitting Immunities</h3>
+      <p>Lightning Immune? The Barb handles it with physical damage. Physical Immune? Extremely rare, but the Zon's lightning cuts through. The only nightmare: dual-immune Physical + Lightning. Skip those.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-number">IV</span>
+      <h3>Boss Kill Protocol</h3>
+      <p>For act bosses: Barb tanks and uses Frenzy with Crushing Blow gear. Zon uses Charged Strike at melee range &mdash; it's the highest single-target DPS skill in the game. Bosses melt in seconds.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-number">V</span>
+      <h3>Optimal Farming Zones</h3>
+      <p>Cows: Zon paradise &mdash; LF one-shots entire herds. Chaos Sanctuary: Barb tanks Diablo, Zon clears seals. Baal waves: perfect duo content, rotate tanking and clearing by wave type.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-number">VI</span>
+      <h3>Exp Sharing Strategy</h3>
+      <p>Stay within 2 screens of each other for shared XP. In 2-player games, monsters have 50% more HP but you gain full XP. The faster clear speed more than makes up for the HP increase.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>FrenzyZone &mdash; A Diablo II Resurrected Duo Guide</p>
+  <p class="disclaimer">Not affiliated with Blizzard Entertainment. Diablo II is a trademark of Blizzard Entertainment, Inc.</p>
+</footer>
+
+<script>
+/* ========== PARTICLE SYSTEM ========== */
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+let mouseX = 0, mouseY = 0;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+class Ember {
+  constructor() {
+    this.reset();
+  }
+  reset() {
+    this.x = Math.random() * canvas.width;
+    this.y = canvas.height + 10;
+    this.size = Math.random() * 3 + 0.5;
+    this.speedY = -(Math.random() * 0.8 + 0.2);
+    this.speedX = (Math.random() - 0.5) * 0.3;
+    this.life = 1;
+    this.decay = Math.random() * 0.003 + 0.001;
+    this.wobble = Math.random() * Math.PI * 2;
+    this.wobbleSpeed = Math.random() * 0.02 + 0.01;
+    // Randomly choose barb or zon color
+    if (Math.random() > 0.5) {
+      this.r = 255; this.g = Math.floor(Math.random() * 100 + 50); this.b = 0;
+    } else {
+      this.r = Math.floor(Math.random() * 50 + 100); this.g = Math.floor(Math.random() * 50 + 80); this.b = 255;
+    }
+  }
+  update() {
+    this.wobble += this.wobbleSpeed;
+    this.x += this.speedX + Math.sin(this.wobble) * 0.3;
+    this.y += this.speedY;
+    this.life -= this.decay;
+    if (this.life <= 0 || this.y < -10) this.reset();
+  }
+  draw() {
+    ctx.globalAlpha = this.life * 0.6;
+    ctx.fillStyle = `rgb(${this.r},${this.g},${this.b})`;
+    ctx.shadowBlur = this.size * 4;
+    ctx.shadowColor = `rgb(${this.r},${this.g},${this.b})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size * this.life, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+// Create particles
+for (let i = 0; i < 60; i++) {
+  const p = new Ember();
+  p.y = Math.random() * canvas.height; // Start scattered
+  particles.push(p);
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.shadowBlur = 0;
+  particles.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  ctx.globalAlpha = 1;
+  ctx.shadowBlur = 0;
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+/* ========== SCROLL ANIMATIONS ========== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.synergy-card, .synergy-bottom, .build-card, .phase-header, .tip-card').forEach(el => {
+  observer.observe(el);
+});
+
+/* ========== NAVIGATION ========== */
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY > 300) {
+    nav.classList.add('visible');
+  } else {
+    nav.classList.remove('visible');
+  }
+  lastScroll = scrollY;
+
+  // Update active nav link
+  const sections = ['synergy', 'leveling', 'gear', 'tips'];
+  let current = '';
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    if (section && scrollY >= section.offsetTop - 200) {
+      current = id;
+    }
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+/* ========== GEAR TABS ========== */
+document.querySelectorAll('.gear-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.gear-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.gear-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('gear-' + tab.dataset.tab).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
