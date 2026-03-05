@@ -6,6 +6,10 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== HERO ========== #}
 <header class="hero">
   <div class="hero-content">
+    <div class="hero-icons">
+      <svg class="hero-class-icon barb-icon"><use href="#icon-barb"/></svg>
+      <svg class="hero-class-icon zon-icon"><use href="#icon-zon"/></svg>
+    </div>
     <p class="hero-subtitle">Diablo II Resurrected &mdash; Duo Leveling Guide</p>
     <h1 class="hero-title">
       <span class="barb-text">Frenzy</span>
@@ -29,6 +33,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
   {% set title = "Unholy Synergy" %}
   {% set desc = "Physical devastation meets elemental fury. The Frenzy Barbarian carves through single targets and tanks the frontline while the Javazon annihilates packs with lightning and piercing javelins." %}
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-star"/></svg>
     <p class="section-label">{{ label }}</p>
     <h2 class="section-title">{{ title }}</h2>
     <div class="section-rule"></div>
@@ -37,7 +42,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 
   <div class="synergy-grid">
     <div class="synergy-card barb">
-      <h3>{{ synergy.barb.title }}</h3>
+      <h3><svg class="class-icon"><use href="#icon-barb"/></svg>{{ synergy.barb.title }}</h3>
       <ul>
         {%- for point in synergy.barb.points %}
         <li>{{ point }}</li>
@@ -52,7 +57,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
     </div>
 
     <div class="synergy-card zon">
-      <h3>{{ synergy.zon.title }}</h3>
+      <h3><svg class="class-icon"><use href="#icon-zon"/></svg>{{ synergy.zon.title }}</h3>
       <ul>
         {%- for point in synergy.zon.points %}
         <li>{{ point }}</li>
@@ -80,6 +85,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== LEVELING TIMELINE ========== #}
 <section id="leveling">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-scroll"/></svg>
     <p class="section-label">Act by Act</p>
     <h2 class="section-title">Leveling Path</h2>
     <div class="section-rule"></div>
@@ -99,6 +105,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== GEAR ========== #}
 <section id="gear">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-weapon"/></svg>
     <p class="section-label">Equipment</p>
     <h2 class="section-title">Gear Progression</h2>
     <div class="section-rule"></div>
@@ -130,6 +137,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== ATTRIBUTES ========== #}
 <section id="attributes">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-strength"/></svg>
     <p class="section-label">Stat Points</p>
     <h2 class="section-title">Attribute Allocation</h2>
     <div class="section-rule"></div>
@@ -151,6 +159,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== MERCENARIES ========== #}
 <section id="mercs">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-armor"/></svg>
     <p class="section-label">Hired Help</p>
     <h2 class="section-title">Mercenaries</h2>
     <div class="section-rule"></div>
@@ -180,6 +189,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== CHARMS ========== #}
 <section id="charms">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-charm"/></svg>
     <p class="section-label">Inventory</p>
     <h2 class="section-title">Charms</h2>
     <div class="section-rule"></div>
@@ -201,6 +211,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== FARMING ========== #}
 <section id="farming">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-map"/></svg>
     <p class="section-label">Where to Farm</p>
     <h2 class="section-title">Farming Guide</h2>
     <div class="section-rule"></div>
@@ -227,6 +238,7 @@ title: "FrenzyZone — D2R Duo Leveling Guide"
 {# ========== TIPS ========== #}
 <section id="tips">
   <div class="section-header">
+    <svg class="section-icon"><use href="#icon-campfire"/></svg>
     <p class="section-label">Party Play</p>
     <h2 class="section-title">Duo Strategies</h2>
     <div class="section-rule"></div>

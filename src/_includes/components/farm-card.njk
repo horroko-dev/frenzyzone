@@ -1,30 +1,30 @@
 <div class="farm-card {{ 'farm-essential' if farm.priority == 'essential' else ('farm-high' if farm.priority == 'high' else 'farm-medium') }}">
-  <div class="farm-priority-tag">{{ farm.priority }}</div>
+  <div class="farm-priority-tag">{% if farm.priority == 'essential' %}<svg class="icon icon-sm"><use href="#icon-star"/></svg> {% endif %}{{ farm.priority }}</div>
   <div class="farm-header">
     <div>
-      <h3 class="farm-zone">{{ farm.zone }}</h3>
+      <h3 class="farm-zone"><svg class="slot-icon"><use href="#icon-{% if farm.icon == 'boss' %}skull{% elif farm.icon == 'chest' %}chest{% elif farm.icon == 'dungeon' %}helm{% elif farm.icon == 'council' %}crown{% elif farm.icon == 'cows' %}map{% elif farm.icon == 'chaos' %}campfire{% elif farm.icon == 'tower' %}armor{% else %}map{% endif %}"/></svg>{{ farm.zone }}</h3>
       <p class="farm-location">{{ farm.location }}{% if farm.difficulty %} <span class="farm-diff">&mdash; {{ farm.difficulty }}</span>{% endif %}</p>
     </div>
     <div class="farm-benefit farm-benefit-{{ farm.who_benefits }}">
-      {% if farm.who_benefits == 'both' %}Barb + Zon
-      {% elif farm.who_benefits == 'barb' %}Barb
-      {% elif farm.who_benefits == 'zon' %}Zon{% endif %}
+      {% if farm.who_benefits == 'both' %}<svg class="icon icon-sm"><use href="#icon-barb"/></svg> + <svg class="icon icon-sm"><use href="#icon-zon"/></svg>
+      {% elif farm.who_benefits == 'barb' %}<svg class="icon icon-sm"><use href="#icon-barb"/></svg> Barb
+      {% elif farm.who_benefits == 'zon' %}<svg class="icon icon-sm"><use href="#icon-zon"/></svg> Zon{% endif %}
     </div>
   </div>
   <div class="farm-body">
     <div class="farm-targets">
-      <h4>Target Drops</h4>
+      <h4><svg class="slot-icon"><use href="#icon-chest"/></svg>Target Drops</h4>
       <ul>
         {%- for item in farm.targets %}
         <li>
-          <span class="gear-item {{ item.rarity }}">{{ item.name }}</span>
+          <span class="gear-item {{ item.rarity }}">{% if item.rarity == 'runeword' %}<svg class="slot-icon"><use href="#icon-rune"/></svg>{% elif item.rarity == 'unique' %}<svg class="slot-icon"><use href="#icon-star"/></svg>{% endif %}{{ item.name }}</span>
           {% if item.note %}<span class="farm-item-note">{{ item.note }}</span>{% endif %}
         </li>
         {%- endfor %}
       </ul>
     </div>
     <div class="farm-strategy">
-      <h4>Duo Strategy</h4>
+      <h4><svg class="slot-icon"><use href="#icon-barb"/></svg><svg class="slot-icon"><use href="#icon-zon"/></svg>Duo Strategy</h4>
       <p>{{ farm.strategy }}</p>
     </div>
   </div>

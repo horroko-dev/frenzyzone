@@ -47,6 +47,90 @@ body {
   color: var(--gold-bright);
 }
 
+/* ========== ICONS ========== */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.icon-sm { width: 0.85em; height: 0.85em; }
+.icon-md { width: 1.2em; height: 1.2em; }
+.icon-lg { width: 1.6em; height: 1.6em; }
+.icon-xl { width: 2.2em; height: 2.2em; }
+.icon-2xl { width: 3rem; height: 3rem; }
+
+.section-icon {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto 1rem;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.class-icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 0.3rem;
+}
+
+.barb-card .class-icon,
+.barb-gear .class-icon { color: var(--barb-glow); }
+.zon-card .class-icon,
+.zon-gear .class-icon { color: var(--zon-glow); }
+
+.slot-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  margin-right: 0.3rem;
+  color: var(--text-dim);
+  opacity: 0.7;
+}
+
+.stat-icon {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -0.25em;
+  margin-right: 0.4rem;
+}
+
+.stat-icon.str { color: var(--barb-glow); }
+.stat-icon.dex { color: var(--zon-lightning); }
+.stat-icon.vit { color: var(--set-green); }
+.stat-icon.nrg { color: var(--magic-blue); }
+
+.nav-icon {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.1em;
+  margin-right: 0.2rem;
+  opacity: 0.7;
+}
+
+/* Decorative rune corners */
+.rune-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0.15;
+  color: var(--gold);
+}
+
+.rune-corner.tl { top: 6px; left: 6px; }
+.rune-corner.tr { top: 6px; right: 6px; transform: scaleX(-1); }
+.rune-corner.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.rune-corner.br { bottom: 6px; right: 6px; transform: scale(-1); }
+
 /* ========== NOISE OVERLAY ========== */
 body::before {
   content: '';
@@ -79,6 +163,32 @@ h1, h2, h3, h4 {
   z-index: 0;
   pointer-events: none;
 }
+
+/* ========== HERO ICONS ========== */
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.1s ease forwards;
+}
+
+.hero-class-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  opacity: 0.4;
+  filter: drop-shadow(0 0 15px currentColor);
+  transition: all 0.4s ease;
+}
+
+.hero-class-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.barb-icon { color: var(--barb-glow); }
+.zon-icon { color: var(--zon-lightning); }
 
 /* ========== HERO ========== */
 .hero {
@@ -1001,6 +1111,17 @@ section {
   right: 0;
   height: 1px;
   background: linear-gradient(to right, var(--barb-primary), var(--gold), var(--zon-primary));
+}
+
+.tip-icon-wrap {
+  margin-bottom: 1rem;
+}
+
+.tip-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--gold);
+  opacity: 0.5;
 }
 
 .tip-number {

@@ -11,17 +11,18 @@
 </head>
 <body>
 
+{% include "components/icons.njk" %}
 <canvas id="particles"></canvas>
 
 <nav class="nav" id="nav">
-  <a href="#synergy">Synergy</a>
-  <a href="#leveling">Leveling</a>
-  <a href="#gear">Gear</a>
-  <a href="#attributes">Stats</a>
-  <a href="#mercs">Mercs</a>
-  <a href="#charms">Charms</a>
-  <a href="#farming">Farming</a>
-  <a href="#tips">Tips</a>
+  <a href="#synergy"><svg class="nav-icon"><use href="#icon-star"/></svg>Synergy</a>
+  <a href="#leveling"><svg class="nav-icon"><use href="#icon-scroll"/></svg>Leveling</a>
+  <a href="#gear"><svg class="nav-icon"><use href="#icon-weapon"/></svg>Gear</a>
+  <a href="#attributes"><svg class="nav-icon"><use href="#icon-strength"/></svg>Stats</a>
+  <a href="#mercs"><svg class="nav-icon"><use href="#icon-armor"/></svg>Mercs</a>
+  <a href="#charms"><svg class="nav-icon"><use href="#icon-charm"/></svg>Charms</a>
+  <a href="#farming"><svg class="nav-icon"><use href="#icon-map"/></svg>Farming</a>
+  <a href="#tips"><svg class="nav-icon"><use href="#icon-campfire"/></svg>Tips</a>
 </nav>
 
 {{ content | safe }}

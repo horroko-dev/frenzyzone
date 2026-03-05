@@ -1,31 +1,37 @@
 [
   {
     "numeral": "I",
+    "icon": "armor",
     "title": "The Barb Leads, the Zon Clears",
     "body": "Let the Barbarian run ahead to draw aggro and tank. The Javazon follows 1-2 screens behind, throwing Lightning Fury into the packs that swarm the Barb. This prevents the Zon from getting surrounded."
   },
   {
     "numeral": "II",
+    "icon": "crown",
     "title": "Battle Orders is Non-Negotiable",
     "body": "Always rebuff BO before dangerous areas. The Javazon benefits massively — she's naturally squishy, and BO can double her life pool. Barb should cast BC first, then BO for maximum duration."
   },
   {
     "numeral": "III",
+    "icon": "shield",
     "title": "Splitting Immunities",
     "body": "Lightning Immune? The Barb handles it with physical damage. Physical Immune? Extremely rare, but the Zon's lightning cuts through. The only nightmare: dual-immune Physical + Lightning. Skip those."
   },
   {
     "numeral": "IV",
+    "icon": "skull",
     "title": "Boss Kill Protocol",
     "body": "For act bosses: Barb tanks and uses Frenzy with Crushing Blow gear. Zon uses Charged Strike at melee range — it's the highest single-target DPS skill in the game. Bosses melt in seconds."
   },
   {
     "numeral": "V",
+    "icon": "map",
     "title": "Optimal Farming Zones",
     "body": "Cows: Zon paradise — LF one-shots entire herds. Chaos Sanctuary: Barb tanks Diablo, Zon clears seals. Baal waves: perfect duo content, rotate tanking and clearing by wave type."
   },
   {
     "numeral": "VI",
+    "icon": "star",
     "title": "Exp Sharing Strategy",
     "body": "Stay within 2 screens of each other for shared XP. In 2-player games, monsters have 50% more HP but you gain full XP. The faster clear speed more than makes up for the HP increase."
   }

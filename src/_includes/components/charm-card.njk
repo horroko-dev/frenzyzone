@@ -1,9 +1,9 @@
 <div class="charm-card {{ 'barb-card' if side == 'barb' else 'zon-card' }}">
-  <span class="class-label">{{ data.label }}</span>
+  <span class="class-label"><svg class="class-icon"><use href="#icon-{{ 'barb' if side == 'barb' else 'zon' }}"/></svg>{{ data.label }}</span>
   {%- for group in data.inventory %}
   <div class="charm-group">
     <div class="charm-group-header">
-      <h4>{{ group.slot }}</h4>
+      <h4><svg class="slot-icon"><use href="#icon-charm"/></svg>{{ group.slot }}</h4>
       <span class="charm-size">{{ group.size }}</span>
     </div>
     {%- for item in group.items %}
