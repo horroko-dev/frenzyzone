@@ -266,7 +266,7 @@ body.divorce-zon .heart-broken {
 .synergy-bottom-affair { display: none; }
 .farm-strategy-affair { display: none; }
 .merc-strategy-affair { display: none; }
-.tips-grid-affair { display: none; }
+.tips-grid.tips-grid-affair { display: none; }
 
 /* Necro cards/gear hidden by default */
 .necro-card,
