@@ -42,5 +42,27 @@
       }
     },
     "notes": "The Zon's stat allocation is more flexible than the Barb's. Decide early if you're going max block or not — it changes your Dex investment massively. Softcore: skip max block, pump Vita. Hardcore: max block is worth it."
+  },
+  "necro": {
+    "label": "Manfred the Necromancer",
+    "stats": {
+      "strength": {
+        "value": "Enough for gear",
+        "detail": "Typically 156 for a Monarch shield (Spirit) or as low as 58 for Homunculus. With Enigma adding +Str, you can plan lower base strength. Target your final shield choice and stop there."
+      },
+      "dexterity": {
+        "value": "Minimal",
+        "detail": "Just enough to equip gear — most summoner necro equipment has no dex requirement. Don't invest for max block; your skeleton army is your defense, not a shield block chance."
+      },
+      "vitality": {
+        "value": "Everything else",
+        "detail": "Dump every remaining point here. Summoner necros lack Battle Orders, so raw vitality is your main life pool. With Homunculus or Spirit providing +life and your minions tanking, you'll be comfortable at 1500-2000+ life."
+      },
+      "energy": {
+        "value": "None (0 points)",
+        "detail": "Never invest in Energy. Spirit shield provides +112 mana, and between Spirit, Silkweave boots, and mana potions you'll never run dry. Corpse Explosion costs are manageable with basic mana sustain."
+      }
+    },
+    "notes": "Summoner necros have simple stat allocation. Hit your Strength requirement for Spirit Monarch (156) or Homunculus (58), ignore Dex and Energy, and pour everything into Vitality. If you find Enigma later, the +Str lets you respec and move even more points into Vita."
   }
 }

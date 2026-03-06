@@ -19,6 +19,15 @@
         { "name": "Inner Sight", "pts": "1 pt" }
       ],
       "strategy": "Power Strike is your bread and butter early. Throw normal javelins at range for safety, close in for Power Strike on elites. Save skill points after 12 for Lightning Bolt."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "6+ pts" },
+        { "name": "Skeleton Mastery", "pts": "3+ pts" },
+        { "name": "Amplify Damage", "pts": "1 pt" },
+        { "name": "Teeth", "pts": "1 pt" }
+      ],
+      "strategy": "Let skeletons tank everything while you stay back and cast Amplify Damage on packs. Amp doubles physical damage for the whole party. Teeth fills gaps early but your army is the real weapon."
     }
   },
   {
@@ -42,6 +51,16 @@
         { "name": "Decoy", "pts": "1 pt" }
       ],
       "strategy": "Charged Strike at 18 is a massive power spike — bosses evaporate. Lightning Bolt handles ranged clear. Drop Decoy to tank while you throw from behind."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Corpse Explosion", "pts": "1 pt" },
+        { "name": "Clay Golem", "pts": "1 pt" },
+        { "name": "Golem Mastery", "pts": "1+ pts" },
+        { "name": "Summon Resist", "pts": "1+ pts" },
+        { "name": "Raise Skeleton", "pts": "continued" }
+      ],
+      "strategy": "Corpse Explosion starts chaining now — one corpse equals a screen clear. Skeletons create the first kill, CE does the rest. Clay Golem slows bosses. Summon Resist keeps your army alive."
     }
   },
   {
@@ -65,6 +84,15 @@
         { "name": "Pierce", "pts": "1 pt" }
       ],
       "strategy": "Lightning Fury at 30 is the biggest power spike in the game. Entire screens die. Focus Charged Strike for bosses, LF for everything else. Valkyrie adds another tank body."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "Max" },
+        { "name": "Skeleton Mastery", "pts": "10+ pts" },
+        { "name": "Decrepify", "pts": "1 pt" },
+        { "name": "Lower Resist", "pts": "1 pt (lvl 30)" }
+      ],
+      "strategy": "Lower Resist at 30 helps the Zon's lightning damage massively — huge team value. Decrepify slows dangerous bosses and breaks Physical Immunes. Army is getting strong, keep pumping Skeleton Mastery."
     }
   },
   {
@@ -87,6 +115,14 @@
         { "name": "Valkyrie", "pts": "1+ pts" }
       ],
       "strategy": "Max LF first, then CS. Lightning Strike synergizes both. You're the clear speed — throw LF into packs and watch the chain lightning cascade. Titan's Revenge is your holy grail."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Corpse Explosion", "pts": "Max" },
+        { "name": "Skeleton Mastery", "pts": "continued" },
+        { "name": "Revive", "pts": "1 pt" }
+      ],
+      "strategy": "CE is your main clear now — skeletons create the first corpse, then CE chain reaction wipes the screen. Revive adds extra meat shields from strong monster types. Keep cursing with Amp Damage for physical or Lower Resist for the Zon."
     }
   },
   {
@@ -113,6 +149,21 @@
         { "name": "Pierce", "pts": "1+ pts" }
       ],
       "strategy": "Full lightning spec. LF + CS maxed with both synergies. Lightning Immunes? The Barb handles them — skip or let your partner kill. Cows, Chaos, Baal runs — you're the clear machine."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "20 pts" },
+        { "name": "Skeleton Mastery", "pts": "20 pts" },
+        { "name": "Corpse Explosion", "pts": "20 pts" },
+        { "name": "Revive", "pts": "1+ pts" },
+        { "name": "Lower Resist", "pts": "1+ pts" },
+        { "name": "Amplify Damage", "pts": "1 pt" },
+        { "name": "Decrepify", "pts": "1 pt" },
+        { "name": "Clay Golem", "pts": "1 pt" },
+        { "name": "Golem Mastery", "pts": "1+ pts" },
+        { "name": "Summon Resist", "pts": "1+ pts" }
+      ],
+      "strategy": "Full summoner build. Skeletons and Revives form an unstoppable army, CE clears entire screens in seconds. Lower Resist supports the Zon's lightning, Amp Damage supports the Barb's physical. Decrepify for dangerous bosses. You are the force multiplier."
     }
   }
 ]

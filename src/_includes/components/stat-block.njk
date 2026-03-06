@@ -1,5 +1,5 @@
-<div class="stat-block {{ 'barb-card' if side == 'barb' else 'zon-card' }}">
-  <span class="class-label"><svg class="class-icon"><use href="#icon-{{ 'barb' if side == 'barb' else 'zon' }}"/></svg>{{ data.label }}</span>
+<div class="stat-block {{ side }}-card">
+  <span class="class-label"><svg class="class-icon"><use href="#icon-{{ side }}"/></svg>{{ data.label }}</span>
   <div class="stat-grid">
     {%- for key, stat in data.stats %}
     <div class="stat-row">

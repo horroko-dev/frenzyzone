@@ -79,5 +79,44 @@
       }
     ],
     "notes": "Java skillers are your #1 priority after Torch + Anni. Each skiller is a noticeable damage increase to Lightning Fury. Stack as many as you can (up to 9). Fill remaining slots with life/res small charms. The Zon benefits more from +skills than any other stat."
+  },
+  "necro": {
+    "label": "Manfred the Necromancer",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 skills, +10-20 stats, +10-20 res, +5-10% XP. Essential for every build." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Necromancer Torch", "rarity": "unique", "note": "+3 Necromancer skills, +10-20 stats, +10-20 res. Boosts skeletons, revives, CE, and curses all at once." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Summoning skillers", "rarity": "magic", "note": "Top priority — each one adds more skeleton damage, skeleton life, and revive count. Stack as many as possible." },
+          { "name": "+1 Poison & Bone skillers", "rarity": "magic", "note": "Increases Corpse Explosion radius. 1-2 of these noticeably improve CE clear speed." },
+          { "name": "With +life suffix", "rarity": "magic", "note": "+40-45 life is the best suffix. Necros have no Battle Orders, so extra life from charms matters even more." }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "Best all-around small charm — fill remaining inventory with these" },
+          { "name": "20 life / 11 fire res (or other single res)", "rarity": "magic", "note": "Stack whichever resistance you're short on to hit max in Hell" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "Faster Hit Recovery keeps you alive if something reaches you through your army" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Swap set for easy farming — summoner necro can MF safely since minions do the work" }
+        ]
+      }
+    ],
+    "notes": "Torch + Anni first, then stack Summoning skillers to maximize skeleton army power. Mix in 1-2 Poison & Bone skillers to widen Corpse Explosion radius for faster clear. Fill remaining space with life/res small charms — without Battle Orders, every point of life and resistance from charms is critical."
   }
 }

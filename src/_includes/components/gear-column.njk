@@ -1,5 +1,5 @@
-<div class="gear-column {{ 'barb-gear' if side == 'barb' else 'zon-gear' }}">
-  <h3><svg class="class-icon"><use href="#icon-{{ 'barb' if side == 'barb' else 'zon' }}"/></svg>{{ data.label }}</h3>
+<div class="gear-column {{ side }}-gear">
+  <h3><svg class="class-icon"><use href="#icon-{{ side }}"/></svg>{{ data.label }}</h3>
   {%- for slot in data.slots %}
   <div class="gear-slot">
     <div class="gear-slot-name">{% set slotLower = slot.name | lower %}<svg class="slot-icon"><use href="#icon-{% if 'weapon' in slotLower or 'sword' in slotLower %}weapon{% elif 'armor' in slotLower %}armor{% elif 'helm' in slotLower %}helm{% elif 'shield' in slotLower %}shield{% elif 'boot' in slotLower %}boots{% elif 'glove' in slotLower %}gloves{% elif 'belt' in slotLower %}belt{% elif 'amulet' in slotLower %}amulet{% elif 'ring' in slotLower %}ring{% else %}chest{% endif %}"/></svg>{{ slot.name }}</div>

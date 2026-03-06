@@ -19,6 +19,16 @@
       "Crowd control queen — clears density the Barb can't reach"
     ]
   },
+  "necro": {
+    "title": "Manfred the Necromancer",
+    "points": [
+      "Army of skeletons and revives provides a wall of meat shields that absorb damage for the whole party",
+      "Corpse Explosion chains off initial kills to obliterate entire screens — scales with monster HP in multiplayer",
+      "Amplify Damage and Decrepify curses shred physical resistance and cripple dangerous bosses",
+      "Lower Resist curse reduces enemy lightning resistance, dramatically boosting the Javazon's Lightning Fury and Charged Strike damage",
+      "Safe backline playstyle — the necro directs minions and casts curses from a distance, rarely in harm's way"
+    ]
+  },
   "combined": {
     "summary": "Battle Orders buffs both characters' survivability. The Barb tanks and kills bosses while the Zon devastates crowds. Together they cover physical and lightning damage types, only struggling against rare Physical + Lightning Immune combos.",
     "stats": [
@@ -26,6 +36,15 @@
       { "value": "BO", "label": "Party Buff" },
       { "value": "S+", "label": "Clear Speed" },
       { "value": "A+", "label": "Boss Kill" }
+    ]
+  },
+  "combined_affair": {
+    "summary": "Lower Resist + Infinity Conviction obliterates lightning resistance, turning Lightning Fury into a nuke. The skeleton army creates endless corpses for Corpse Explosion chains while the Zon fires from safety. Curses amplify everything — nothing survives the storm of bones and lightning.",
+    "stats": [
+      { "value": "3", "label": "Damage Types" },
+      { "value": "CE", "label": "Screen Clear" },
+      { "value": "S+", "label": "Clear Speed" },
+      { "value": "LR", "label": "Curse Synergy" }
     ]
   }
 }

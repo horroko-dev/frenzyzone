@@ -114,25 +114,37 @@ document.querySelectorAll('.gear-tab').forEach(tab => {
   });
 });
 
-/* ========== DIVORCE MODE ========== */
+/* ========== DIVORCE / AFFAIR MODE ========== */
+function clearModes() {
+  document.querySelectorAll('.divorce-btn').forEach(b => b.classList.remove('active'));
+  document.body.classList.remove('divorce-barb', 'divorce-zon', 'affair');
+  document.querySelectorAll('.hero-line').forEach(l => l.classList.remove('divorce-hidden'));
+}
+
 document.querySelectorAll('.divorce-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const mode = btn.dataset.mode;
     const isActive = btn.classList.contains('active');
 
-    document.querySelectorAll('.divorce-btn').forEach(b => b.classList.remove('active'));
-    document.body.classList.remove('divorce-barb', 'divorce-zon');
-    document.querySelectorAll('.hero-line').forEach(l => l.classList.remove('divorce-hidden'));
+    clearModes();
 
     if (!isActive) {
       btn.classList.add('active');
-      document.body.classList.add('divorce-' + mode);
-      if (mode === 'barb') {
-        document.querySelector('.hero-line-zon').classList.add('divorce-hidden');
-        document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
-      } else {
+
+      if (mode === 'affair') {
+        document.body.classList.add('affair');
         document.querySelector('.hero-line-barb').classList.add('divorce-hidden');
-        document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
+      } else {
+        document.body.classList.add('divorce-' + mode);
+        if (mode === 'barb') {
+          document.querySelector('.hero-line-zon').classList.add('divorce-hidden');
+          document.querySelector('.hero-line-necro').classList.add('divorce-hidden');
+          document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
+        } else {
+          document.querySelector('.hero-line-barb').classList.add('divorce-hidden');
+          document.querySelector('.hero-line-necro').classList.add('divorce-hidden');
+          document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
+        }
       }
     }
   });

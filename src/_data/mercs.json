@@ -62,6 +62,38 @@
       }
     ]
   },
+  "necro": {
+    "label": "Manfred the Necromancer",
+    "recommended": "Act II Nightmare — Might",
+    "why": "Might aura boosts the damage of your entire skeleton army and revives. Since you have 10+ minions all benefiting from the aura, the total damage increase is enormous. The Might aura also stacks with Amplify Damage curse for devastating physical output.",
+    "alternative": "Act II Nightmare — Holy Freeze for crowd control. Slows enemies so your skeletons survive longer and Corpse Explosion has time to chain. Excellent for Hardcore or undergeared progression.",
+    "gear": [
+      {
+        "slot": "Weapon",
+        "items": [
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "Conviction aura stacks with Lower Resist curse — together they obliterate lightning resistance for the Zon partner. Game-changing duo synergy." },
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation aura solves mana issues for Corpse Explosion spam. Essential budget option before Infinity." },
+          { "name": "Reaper's Toll", "rarity": "unique", "note": "Decrepify proc stacks with your curses. Great transitional weapon but you'll want Infinity for the Zon synergy." }
+        ]
+      },
+      {
+        "slot": "Armor",
+        "items": [
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade proc gives 60 all res + 15% DR. Best budget option and keeps merc alive through Hell." },
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED and massive defense. Best if merc survivability is already handled." },
+          { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "All res + DR + damage. Luxury alternative." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + life leech + Str. Socket with Ral for fire res. Best merc damage helm." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Dual leech + DR%. Keeps merc alive in dangerous areas." },
+          { "name": "Tal Rasha's Horadric Crest", "rarity": "set-item", "note": "Dual leech + all res. Solid budget choice." }
+        ]
+      }
+    ]
+  },
   "duo_strategy": {
     "title": "Merc Coordination",
     "points": [
@@ -69,6 +101,15 @@
       "Best setup: Barb's merc has Infinity (Might + Conviction = insane damage), Zon's merc has Insight (Zon needs the mana more). This way both auras benefit both players.",
       "Budget start: Both mercs use Insight until you find your first Ber rune. The mana sustain is more important than breaking immunities early on.",
       "Keep your mercs alive! They die constantly in Hell if undergeared. Treachery armor is cheap and the Fade proc makes them surprisingly tanky. Prioritize merc survivability over damage."
+    ]
+  },
+  "duo_strategy_affair": {
+    "title": "Merc Coordination",
+    "points": [
+      "Manfred's merc should carry Infinity — Conviction aura stacks with Lower Resist curse for devastating double-dip on lightning resistance reduction. The Zon's Lightning Fury obliterates even former Lightning Immunes.",
+      "Zon's merc runs Insight for Meditation aura — Corpse Explosion spam is mana-hungry, and this solves it for both characters.",
+      "Budget start: Both mercs use Insight until you find Ber runes. Mana sustain for CE spam matters more than breaking immunities early.",
+      "The Necro's skeleton army actually helps keep mercs alive — monsters attack skeletons instead of the merc. Still, Treachery armor is essential for Hell difficulty survivability."
     ]
   }
 }

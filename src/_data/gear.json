@@ -65,6 +65,38 @@
           ]
         }
       ]
+    },
+    "necro": {
+      "label": "Manfred the Necromancer",
+      "slots": [
+        {
+          "name": "Weapons",
+          "items": [
+            { "name": "Teeth wand / +Raise Skeleton wand", "rarity": "magic", "note": "shop from Drognan for +summoning skills" },
+            { "name": "+skills wand", "rarity": "magic", "note": "any wand with +Skeleton Mastery or +Amplify Damage" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "FCR, FHR, FRW — essential for all casters" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Rhyme (Shael + Eth)", "rarity": "runeword", "note": "cannot be frozen, resist all, MF" },
+            { "name": "Preserved Head with +summoning skills", "rarity": "magic", "note": "necro-only shield base" }
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            { "name": "+skills / +mana gear", "rarity": "magic", "note": "prioritize anything with +necro skills" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 skills helm, easy to make" }
+          ]
+        }
+      ]
     }
   },
   "nightmare": {
@@ -133,6 +165,40 @@
             { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 skills budget" },
             { "name": "Razortail", "rarity": "unique", "note": "33% pierce, huge for LF" },
             { "name": "Laying of Hands", "rarity": "set-item", "note": "20 IAS, demon damage" }
+          ]
+        }
+      ]
+    },
+    "necro": {
+      "label": "Manfred the Necromancer",
+      "slots": [
+        {
+          "name": "Weapon",
+          "items": [
+            { "name": "White (Dol + Io)", "rarity": "runeword", "note": "in +Raise Skeleton / +Skeleton Mastery wand base — huge skill boost" },
+            { "name": "Arm of King Leoric", "rarity": "unique", "note": "+2-3 summoning skills, great for the army" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "+50 all res, keeps you alive" },
+            { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+1 skills, FCR, all res" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Homunculus", "rarity": "unique", "note": "+2 necro skills, block, mana regen" },
+            { "name": "Spirit (Tal + Thul + Ort + Amn)", "rarity": "runeword", "note": "+2 skills in a Monarch or necro head" }
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            { "name": "Trang-Oul's Claws", "rarity": "set-item", "note": "25% FCR, +2 curses" },
+            { "name": "Trang-Oul's Girth", "rarity": "set-item", "note": "cannot be frozen, replenish life" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 skills budget helm" }
           ]
         }
       ]
@@ -209,6 +275,43 @@
             { "name": "War Traveler", "rarity": "unique", "note": "MF + damage" },
             { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 skills, IAS" },
             { "name": "+2 java / 20 IAS gloves", "rarity": "magic", "note": "crafted or shopped" }
+          ]
+        }
+      ]
+    },
+    "necro": {
+      "label": "Manfred the Necromancer",
+      "slots": [
+        {
+          "name": "Weapon",
+          "items": [
+            { "name": "Heart of the Oak (Ko + Vex + Pul + Thul)", "rarity": "runeword", "note": "+3 skills, FCR, res — top caster weapon" },
+            { "name": "Beast (Ber + Tir + Um + Mal + Lum)", "rarity": "runeword", "note": "Fanaticism aura makes skeletons attack insanely fast" },
+            { "name": "Arm of King Leoric", "rarity": "unique", "note": "budget option, +summoning skills" }
+          ]
+        },
+        {
+          "name": "Shield",
+          "items": [
+            { "name": "Homunculus", "rarity": "unique", "note": "+2 necro skills, high block, mana regen" },
+            { "name": "Spirit (Tal + Thul + Ort + Amn) in Monarch", "rarity": "runeword", "note": "+2 skills, FCR, mana" }
+          ]
+        },
+        {
+          "name": "Armor",
+          "items": [
+            { "name": "Enigma (Jah + Ith + Ber)", "rarity": "runeword", "note": "Teleport repositions your entire army instantly — game-changing" },
+            { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "+2 skills, res, DR — if no Enigma" }
+          ]
+        },
+        {
+          "name": "Other Slots",
+          "items": [
+            { "name": "Mara's Kaleidoscope", "rarity": "unique", "note": "+2 skills, +20-30 all res" },
+            { "name": "Arachnid Mesh", "rarity": "unique", "note": "+1 skills, 20% FCR" },
+            { "name": "Trang-Oul's Claws", "rarity": "set-item", "note": "25% FCR, +2 curses, +fire resist" },
+            { "name": "Shako (Harlequin Crest)", "rarity": "unique", "note": "+2 skills, life, mana, DR" },
+            { "name": "Marrowwalk", "rarity": "unique", "note": "+Skeleton Mastery charges, Str, Dex" }
           ]
         }
       ]
