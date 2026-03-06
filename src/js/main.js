@@ -114,6 +114,30 @@ document.querySelectorAll('.gear-tab').forEach(tab => {
   });
 });
 
+/* ========== DIVORCE MODE ========== */
+document.querySelectorAll('.divorce-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const mode = btn.dataset.mode;
+    const isActive = btn.classList.contains('active');
+
+    document.querySelectorAll('.divorce-btn').forEach(b => b.classList.remove('active'));
+    document.body.classList.remove('divorce-barb', 'divorce-zon');
+    document.querySelectorAll('.hero-line').forEach(l => l.classList.remove('divorce-hidden'));
+
+    if (!isActive) {
+      btn.classList.add('active');
+      document.body.classList.add('divorce-' + mode);
+      if (mode === 'barb') {
+        document.querySelector('.hero-line-zon').classList.add('divorce-hidden');
+        document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
+      } else {
+        document.querySelector('.hero-line-barb').classList.add('divorce-hidden');
+        document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
+      }
+    }
+  });
+});
+
 /* ========== FARMING FILTERS ========== */
 document.querySelectorAll('.farm-filter').forEach(btn => {
   btn.addEventListener('click', () => {
