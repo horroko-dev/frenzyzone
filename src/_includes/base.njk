@@ -72,11 +72,11 @@
     },
     "heroIcons": { "left": "barb", "right": null },
     "watermark": "watermark-axe",
-    "tagline": "{{ i18n[locale].taglines.barb }}",
+    "tagline": "{{ i18n[locale].taglines.barb | safe }}",
     "synergyHeader": {
-      "label": "{{ synergy.header.default.label }}",
-      "title": "{{ synergy.header.default.title }}",
-      "desc": "{{ synergy.header.default.desc }}"
+      "label": "{{ synergy.header.default.label | safe }}",
+      "title": "{{ synergy.header.default.title | safe }}",
+      "desc": "{{ synergy.header.default.desc | safe }}"
     },
     "synergyCards": ["barb"],
     "synergyBottom": false
@@ -90,11 +90,11 @@
     },
     "heroIcons": { "left": null, "right": "zon" },
     "watermark": "watermark-javelin",
-    "tagline": "{{ i18n[locale].taglines.zon }}",
+    "tagline": "{{ i18n[locale].taglines.zon | safe }}",
     "synergyHeader": {
-      "label": "{{ synergy.header.default.label }}",
-      "title": "{{ synergy.header.default.title }}",
-      "desc": "{{ synergy.header.default.desc }}"
+      "label": "{{ synergy.header.default.label | safe }}",
+      "title": "{{ synergy.header.default.title | safe }}",
+      "desc": "{{ synergy.header.default.desc | safe }}"
     },
     "synergyCards": ["zon"],
     "synergyBottom": false
@@ -108,42 +108,42 @@
     },
     "heroIcons": { "left": "barb", "right": "zon" },
     "watermark": "watermark-weapons",
-    "tagline": "{{ i18n[locale].taglines.default }}",
+    "tagline": "{{ i18n[locale].taglines.default | safe }}",
     "synergyHeader": {
-      "label": "{{ synergy.header.default.label }}",
-      "title": "{{ synergy.header.default.title }}",
-      "desc": "{{ synergy.header.default.desc }}"
+      "label": "{{ synergy.header.default.label | safe }}",
+      "title": "{{ synergy.header.default.title | safe }}",
+      "desc": "{{ synergy.header.default.desc | safe }}"
     },
     "synergyCards": ["barb", "zon"],
     "synergyBottom": true,
     "synergy": {
-      "title": "{{ synergy.combined.title }}",
-      "summary": "{{ synergy.combined.summary }}",
+      "title": "{{ synergy.combined.title | safe }}",
+      "summary": "{{ synergy.combined.summary | safe }}",
       "stats": [
         {%- for stat in synergy.combined.stats %}
-        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        { "value": "{{ stat.value | safe }}", "label": "{{ stat.label | safe }}" }{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "mercStrategy": {
-      "title": "{{ mercs.duo_strategy.title }}",
+      "title": "{{ mercs.duo_strategy.title | safe }}",
       "points": [
         {%- for point in mercs.duo_strategy.points %}
-        "{{ point }}"{{ "," if not loop.last }}
+        "{{ point | safe }}"{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "farmStrategies": {
       {%- for farm in farming %}
-      "{{ farm.zone }}": {
-        "text": "{{ farm.strategy }}",
+      "{{ farm.zone | safe }}": {
+        "text": "{{ farm.strategy | safe }}",
         "icons": ["barb", "zon"]
       }{{ "," if not loop.last }}
       {%- endfor %}
     },
     "tips": [
       {%- for tip in tips.default %}
-      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title | safe }}", "body": "{{ tip.body | safe }}" }{{ "," if not loop.last }}
       {%- endfor %}
     ]
   },
@@ -156,42 +156,42 @@
     },
     "heroIcons": { "left": "necro", "right": "zon" },
     "watermark": "watermark-affair",
-    "tagline": "{{ i18n[locale].taglines.affair }}",
+    "tagline": "{{ i18n[locale].taglines.affair | safe }}",
     "synergyHeader": {
-      "label": "{{ synergy.header.affair.label }}",
-      "title": "{{ synergy.header.affair.title }}",
-      "desc": "{{ synergy.header.affair.desc }}"
+      "label": "{{ synergy.header.affair.label | safe }}",
+      "title": "{{ synergy.header.affair.title | safe }}",
+      "desc": "{{ synergy.header.affair.desc | safe }}"
     },
     "synergyCards": ["necro", "zon"],
     "synergyBottom": true,
     "synergy": {
-      "title": "{{ synergy.combined_affair.title }}",
-      "summary": "{{ synergy.combined_affair.summary }}",
+      "title": "{{ synergy.combined_affair.title | safe }}",
+      "summary": "{{ synergy.combined_affair.summary | safe }}",
       "stats": [
         {%- for stat in synergy.combined_affair.stats %}
-        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        { "value": "{{ stat.value | safe }}", "label": "{{ stat.label | safe }}" }{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "mercStrategy": {
-      "title": "{{ mercs.duo_strategy_affair.title }}",
+      "title": "{{ mercs.duo_strategy_affair.title | safe }}",
       "points": [
         {%- for point in mercs.duo_strategy_affair.points %}
-        "{{ point }}"{{ "," if not loop.last }}
+        "{{ point | safe }}"{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "farmStrategies": {
       {%- for farm in farming %}
-      "{{ farm.zone }}": {
-        "text": "{{ farm.strategy_affair }}",
+      "{{ farm.zone | safe }}": {
+        "text": "{{ farm.strategy_affair | safe }}",
         "icons": ["necro", "zon"]
       }{{ "," if not loop.last }}
       {%- endfor %}
     },
     "tips": [
       {%- for tip in tips.affair %}
-      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title | safe }}", "body": "{{ tip.body | safe }}" }{{ "," if not loop.last }}
       {%- endfor %}
     ]
   },
@@ -204,42 +204,42 @@
     },
     "heroIcons": { "left": "barb", "right": "necro" },
     "watermark": "watermark-rainbow",
-    "tagline": "{{ i18n[locale].taglines.rainbow }}",
+    "tagline": "{{ i18n[locale].taglines.rainbow | safe }}",
     "synergyHeader": {
-      "label": "{{ synergy.header.rainbow.label }}",
-      "title": "{{ synergy.header.rainbow.title }}",
-      "desc": "{{ synergy.header.rainbow.desc }}"
+      "label": "{{ synergy.header.rainbow.label | safe }}",
+      "title": "{{ synergy.header.rainbow.title | safe }}",
+      "desc": "{{ synergy.header.rainbow.desc | safe }}"
     },
     "synergyCards": ["barb", "necro"],
     "synergyBottom": true,
     "synergy": {
-      "title": "{{ synergy.combined_rainbow.title }}",
-      "summary": "{{ synergy.combined_rainbow.summary }}",
+      "title": "{{ synergy.combined_rainbow.title | safe }}",
+      "summary": "{{ synergy.combined_rainbow.summary | safe }}",
       "stats": [
         {%- for stat in synergy.combined_rainbow.stats %}
-        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        { "value": "{{ stat.value | safe }}", "label": "{{ stat.label | safe }}" }{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "mercStrategy": {
-      "title": "{{ mercs.duo_strategy_rainbow.title }}",
+      "title": "{{ mercs.duo_strategy_rainbow.title | safe }}",
       "points": [
         {%- for point in mercs.duo_strategy_rainbow.points %}
-        "{{ point }}"{{ "," if not loop.last }}
+        "{{ point | safe }}"{{ "," if not loop.last }}
         {%- endfor %}
       ]
     },
     "farmStrategies": {
       {%- for farm in farming %}
-      "{{ farm.zone }}": {
-        "text": "{{ farm.strategy_rainbow }}",
+      "{{ farm.zone | safe }}": {
+        "text": "{{ farm.strategy_rainbow | safe }}",
         "icons": ["barb", "necro"]
       }{{ "," if not loop.last }}
       {%- endfor %}
     },
     "tips": [
       {%- for tip in tips.rainbow %}
-      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title | safe }}", "body": "{{ tip.body | safe }}" }{{ "," if not loop.last }}
       {%- endfor %}
     ]
   }
