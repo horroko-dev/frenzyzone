@@ -23,13 +23,9 @@
         {%- endfor %}
       </ul>
     </div>
-    <div class="farm-strategy farm-strategy-default">
-      <h4><svg class="slot-icon"><use href="#icon-barb"/></svg><svg class="slot-icon"><use href="#icon-zon"/></svg>Duo Strategy</h4>
+    <div class="farm-strategy" data-farm-zone="{{ farm.zone }}">
+      <h4><svg class="slot-icon farm-icon-1"><use href="#icon-barb"/></svg><svg class="slot-icon farm-icon-2"><use href="#icon-zon"/></svg>Duo Strategy</h4>
       <p>{{ farm.strategy }}</p>
-    </div>
-    <div class="farm-strategy farm-strategy-affair">
-      <h4><svg class="slot-icon"><use href="#icon-necro"/></svg><svg class="slot-icon"><use href="#icon-zon"/></svg>Duo Strategy</h4>
-      <p>{{ farm.strategy_affair }}</p>
     </div>
   </div>
 </div>

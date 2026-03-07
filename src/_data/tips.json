@@ -74,5 +74,43 @@
       "title": "Corpse Explosion Scaling",
       "body": "CE deals 60-100% of monster max HP in a radius. In 2-player games, monsters have 50% more HP — which means CE hits even harder. One corpse from a Zon LF kill can chain-react an entire screen. This duo scales beautifully."
     }
+  ],
+  "rainbow": [
+    {
+      "numeral": "I",
+      "icon": "armor",
+      "title": "Barb Tanks, Skeletons Swarm",
+      "body": "The Frenzy Barbarian charges into packs and draws aggro with massive life, defense, and life leech. While enemies focus the Barb, Manfred's skeleton army flanks from behind and shreds them with physical damage. Two walls of meat — one alive, one undead."
+    },
+    {
+      "numeral": "II",
+      "icon": "crown",
+      "title": "Battle Orders Buffs the Dead",
+      "body": "Battle Orders doesn't just buff your duo — it buffs the entire skeleton army, the golem, and revives. Every summon gets doubled life and mana. A BO'd skeleton army is nearly unkillable. Cast BC first for the +skills, then BO for maximum effect."
+    },
+    {
+      "numeral": "III",
+      "icon": "shield",
+      "title": "Amplify Damage + Frenzy",
+      "body": "Amplify Damage removes 100% of enemy physical resistance. Frenzy deals pure physical damage. Together, everything takes double physical damage from the Barb's attacks AND the skeleton army. Even Physical Immunes can be broken by Amp. This combo is absurd."
+    },
+    {
+      "numeral": "IV",
+      "icon": "skull",
+      "title": "Boss Kill: Crushing Blow + Corpse Explosion",
+      "body": "For act bosses: Barb face-tanks with Crushing Blow gear (Goblin Toe, Guillaume's) to shred boss HP percentage-based. Manfred casts Decrepify to slow the boss and boost physical damage. Once adds die, Corpse Explosion finishes the job. Bosses don't stand a chance."
+    },
+    {
+      "numeral": "V",
+      "icon": "map",
+      "title": "Physical Devastation + CE Chains",
+      "body": "Frenzy kills the first monster. Corpse Explosion chains the rest. Every zone plays the same: Barb generates the first corpse with raw physical power, Manfred detonates it for 60-100% of monster max HP in a radius. In 2-player games, monsters have 50% more HP — CE hits even harder."
+    },
+    {
+      "numeral": "VI",
+      "icon": "star",
+      "title": "Experience Sharing Strategy",
+      "body": "Stay within 2 screens for shared XP. In 2-player games, monster HP increases by 50% but your combined physical output more than compensates. The Barb kills bosses, the Necro clears density — both characters level at peak efficiency with zero downtime."
+    }
   ]
 }

@@ -27,11 +27,199 @@
 
 {{ content | safe }}
 
+<div class="watermark" data-mode-target="watermark" aria-hidden="true">
+  <svg><use href="#icon-watermark-weapons"/></svg>
+</div>
+
 <footer class="footer">
   <p>FrenzyZone &mdash; A Diablo II Resurrected Duo Guide</p>
   <p class="disclaimer">Not affiliated with Blizzard Entertainment. Diablo II is a trademark of Blizzard Entertainment, Inc.</p>
 </footer>
 
+<script type="application/json" id="mode-data">
+{
+  "barb": {
+    "heroLines": {
+      "barb": { "visible": true, "order": 1 },
+      "necro": { "visible": false, "order": 2 },
+      "mid": { "visible": false, "order": 3 },
+      "zon": { "visible": false, "order": 4 }
+    },
+    "heroIcons": { "left": "barb", "right": null },
+    "watermark": "watermark-axe",
+    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "synergyHeader": {
+      "label": "{{ synergy.header.default.label }}",
+      "title": "{{ synergy.header.default.title }}",
+      "desc": "{{ synergy.header.default.desc }}"
+    },
+    "synergyCards": ["barb"],
+    "synergyBottom": false
+  },
+  "zon": {
+    "heroLines": {
+      "barb": { "visible": false, "order": 1 },
+      "necro": { "visible": false, "order": 2 },
+      "mid": { "visible": false, "order": 3 },
+      "zon": { "visible": true, "order": 4 }
+    },
+    "heroIcons": { "left": null, "right": "zon" },
+    "watermark": "watermark-javelin",
+    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "synergyHeader": {
+      "label": "{{ synergy.header.default.label }}",
+      "title": "{{ synergy.header.default.title }}",
+      "desc": "{{ synergy.header.default.desc }}"
+    },
+    "synergyCards": ["zon"],
+    "synergyBottom": false
+  },
+  "default": {
+    "heroLines": {
+      "barb": { "visible": true, "order": 1 },
+      "necro": { "visible": false, "order": 2 },
+      "mid": { "visible": true, "order": 3 },
+      "zon": { "visible": true, "order": 4 }
+    },
+    "heroIcons": { "left": "barb", "right": "zon" },
+    "watermark": "watermark-weapons",
+    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "synergyHeader": {
+      "label": "{{ synergy.header.default.label }}",
+      "title": "{{ synergy.header.default.title }}",
+      "desc": "{{ synergy.header.default.desc }}"
+    },
+    "synergyCards": ["barb", "zon"],
+    "synergyBottom": true,
+    "synergy": {
+      "title": "Combined Strengths",
+      "summary": "{{ synergy.combined.summary }}",
+      "stats": [
+        {%- for stat in synergy.combined.stats %}
+        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "mercStrategy": {
+      "title": "{{ mercs.duo_strategy.title }}",
+      "points": [
+        {%- for point in mercs.duo_strategy.points %}
+        "{{ point }}"{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "farmStrategies": {
+      {%- for farm in farming %}
+      "{{ farm.zone }}": {
+        "text": "{{ farm.strategy }}",
+        "icons": ["barb", "zon"]
+      }{{ "," if not loop.last }}
+      {%- endfor %}
+    },
+    "tips": [
+      {%- for tip in tips.default %}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      {%- endfor %}
+    ]
+  },
+  "affair": {
+    "heroLines": {
+      "barb": { "visible": false, "order": 1 },
+      "necro": { "visible": true, "order": 1 },
+      "mid": { "visible": true, "order": 2 },
+      "zon": { "visible": true, "order": 3 }
+    },
+    "heroIcons": { "left": "necro", "right": "zon" },
+    "watermark": "watermark-affair",
+    "tagline": "&ldquo;The dead rise, the lightning strikes &mdash; Manfred sends his regards.&rdquo;",
+    "synergyHeader": {
+      "label": "{{ synergy.header.affair.label }}",
+      "title": "{{ synergy.header.affair.title }}",
+      "desc": "{{ synergy.header.affair.desc }}"
+    },
+    "synergyCards": ["necro", "zon"],
+    "synergyBottom": true,
+    "synergy": {
+      "title": "Unholy Union",
+      "summary": "{{ synergy.combined_affair.summary }}",
+      "stats": [
+        {%- for stat in synergy.combined_affair.stats %}
+        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "mercStrategy": {
+      "title": "{{ mercs.duo_strategy_affair.title }}",
+      "points": [
+        {%- for point in mercs.duo_strategy_affair.points %}
+        "{{ point }}"{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "farmStrategies": {
+      {%- for farm in farming %}
+      "{{ farm.zone }}": {
+        "text": "{{ farm.strategy_affair }}",
+        "icons": ["necro", "zon"]
+      }{{ "," if not loop.last }}
+      {%- endfor %}
+    },
+    "tips": [
+      {%- for tip in tips.affair %}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      {%- endfor %}
+    ]
+  },
+  "rainbow": {
+    "heroLines": {
+      "barb": { "visible": true, "order": 1 },
+      "necro": { "visible": true, "order": 3 },
+      "mid": { "visible": true, "order": 2 },
+      "zon": { "visible": false, "order": 4 }
+    },
+    "heroIcons": { "left": "barb", "right": "necro" },
+    "watermark": "watermark-rainbow",
+    "tagline": "&ldquo;Two warriors, one battlefield &mdash; love is the deadliest weapon.&rdquo;",
+    "synergyHeader": {
+      "label": "{{ synergy.header.rainbow.label }}",
+      "title": "{{ synergy.header.rainbow.title }}",
+      "desc": "{{ synergy.header.rainbow.desc }}"
+    },
+    "synergyCards": ["barb", "necro"],
+    "synergyBottom": true,
+    "synergy": {
+      "title": "Power of Love",
+      "summary": "{{ synergy.combined_rainbow.summary }}",
+      "stats": [
+        {%- for stat in synergy.combined_rainbow.stats %}
+        { "value": "{{ stat.value }}", "label": "{{ stat.label }}" }{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "mercStrategy": {
+      "title": "{{ mercs.duo_strategy_rainbow.title }}",
+      "points": [
+        {%- for point in mercs.duo_strategy_rainbow.points %}
+        "{{ point }}"{{ "," if not loop.last }}
+        {%- endfor %}
+      ]
+    },
+    "farmStrategies": {
+      {%- for farm in farming %}
+      "{{ farm.zone }}": {
+        "text": "{{ farm.strategy_rainbow }}",
+        "icons": ["barb", "necro"]
+      }{{ "," if not loop.last }}
+      {%- endfor %}
+    },
+    "tips": [
+      {%- for tip in tips.rainbow %}
+      { "numeral": "{{ tip.numeral }}", "icon": "{{ tip.icon }}", "title": "{{ tip.title }}", "body": "{{ tip.body }}" }{{ "," if not loop.last }}
+      {%- endfor %}
+    ]
+  }
+}
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

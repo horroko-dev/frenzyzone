@@ -111,5 +111,14 @@
       "Budget start: Both mercs use Insight until you find Ber runes. Mana sustain for CE spam matters more than breaking immunities early.",
       "The Necro's skeleton army actually helps keep mercs alive — monsters attack skeletons instead of the merc. Still, Treachery armor is essential for Hell difficulty survivability."
     ]
+  },
+  "duo_strategy_rainbow": {
+    "title": "Merc Coordination",
+    "points": [
+      "Both the Barb and Manfred want Might mercs — stack two Might auras with the Barb's own Frenzy damage and the skeleton army for overwhelming physical output. One merc carries Infinity only if you need to break Physical Immunes via Amplify Damage + Conviction combo.",
+      "Best setup: Barb's merc carries Insight for Meditation aura (Frenzy eats mana fast with BO upkeep), Manfred's merc carries a second Might aura to double-buff the skeleton army. Two Might auras don't stack, but if one merc dies the other keeps the aura rolling.",
+      "Budget start: Both mercs use Insight until you can afford better. The mana sustain fuels Battle Orders rebuffing and Corpse Explosion spam — both are critical for this duo's engine to run smoothly.",
+      "Merc survivability is a non-issue with this duo. The skeleton army absorbs almost all incoming damage, meaning mercs rarely get hit. Even undergeared mercs survive comfortably — the bone wall protects everyone."
+    ]
   }
 }

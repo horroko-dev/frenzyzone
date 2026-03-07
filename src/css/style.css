@@ -51,6 +51,29 @@ body {
   color: var(--gold-bright);
 }
 
+/* ========== WATERMARK ========== */
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80vw, 600px);
+  height: min(80vw, 600px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  color: var(--barb-primary);
+}
+
+.watermark svg {
+  width: 100%;
+  height: 100%;
+}
+
+body.affair .watermark {
+  color: var(--necro-primary);
+}
+
 /* ========== ICONS ========== */
 .icon {
   display: inline-block;
@@ -182,9 +205,10 @@ h1, h2, h3, h4 {
   animation: fadeUp 1s 0.1s ease forwards;
 }
 
-.barb-icon, .necro-icon { grid-column: 1; grid-row: 1; }
+.hero-class-icon { display: none; }
+[data-hero-icon][data-hero-slot="left"] { display: block; grid-column: 1; grid-row: 1; }
+[data-hero-icon][data-hero-slot="right"] { display: block; grid-column: 3; grid-row: 1; }
 .hero-heart { grid-column: 2; grid-row: 1; }
-.zon-icon { grid-column: 3; grid-row: 1; }
 
 .hero-class-icon {
   width: 3.5rem;
@@ -201,7 +225,7 @@ h1, h2, h3, h4 {
 
 .barb-icon { color: var(--barb-glow); }
 .zon-icon { color: var(--zon-lightning); }
-.necro-icon { color: var(--necro-glow); display: none; }
+.necro-icon { color: var(--necro-glow); }
 
 .hero-heart {
   position: relative;
@@ -261,17 +285,15 @@ body.divorce-zon .heart-broken {
   filter: drop-shadow(0 0 30px rgba(74, 232, 74, 0.4));
 }
 
-/* Affair elements hidden by default */
-.hero-tagline-affair { display: none; }
-.synergy-bottom-affair { display: none; }
-.farm-strategy-affair { display: none; }
-.merc-strategy-affair { display: none; }
-.tips-grid.tips-grid-affair { display: none; }
+.heart-rainbow { opacity: 0; transform: scale(0.8); }
 
 /* Necro cards/gear hidden by default */
 .necro-card,
-.necro-gear,
-.synergy-card.necro {
+.necro-gear {
+  display: none;
+}
+
+.synergy-hidden {
   display: none;
 }
 
@@ -335,6 +357,9 @@ body.divorce-zon .heart-broken {
   margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeUp 1s 0.5s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-title .barb-text {
@@ -547,6 +572,14 @@ section {
   align-items: stretch;
 }
 
+.synergy-grid.synergy-grid-single {
+  grid-template-columns: 1fr;
+}
+
+.synergy-grid-single .synergy-connector {
+  display: none;
+}
+
 .synergy-card {
   background: linear-gradient(145deg, rgba(26,23,20,0.8), rgba(42,37,32,0.4));
   border: 1px solid var(--stone-mid);
@@ -562,9 +595,12 @@ section {
   transform: translateY(0);
 }
 
-.synergy-card.barb { border-top: 2px solid var(--barb-primary); grid-column: 1; grid-row: 1; }
-.synergy-card.zon { border-top: 2px solid var(--zon-primary); grid-column: 3; grid-row: 1; }
-.synergy-card.necro { border-top: 2px solid var(--necro-primary); grid-column: 1; grid-row: 1; }
+.synergy-card.barb { border-top: 2px solid var(--barb-primary); }
+.synergy-card.zon { border-top: 2px solid var(--zon-primary); }
+.synergy-card.necro { border-top: 2px solid var(--necro-primary); }
+
+.synergy-card[data-synergy-slot="left"] { grid-column: 1; grid-row: 1; }
+.synergy-card[data-synergy-slot="right"] { grid-column: 3; grid-row: 1; }
 
 .synergy-card h3 {
   font-size: 1.3rem;
@@ -1592,6 +1628,7 @@ section {
 .divorce-btn[data-mode="barb"] .divorce-icon { color: var(--barb-glow); }
 .divorce-btn[data-mode="zon"] .divorce-icon { color: var(--zon-lightning); }
 .divorce-btn[data-mode="affair"] .divorce-icon { color: var(--necro-glow); }
+.divorce-btn[data-mode="rainbow"] .divorce-icon { width: 1.2em; height: 1.2em; }
 
 /* ========== DIVORCE MODE: HERO LINES ========== */
 .hero-line {
@@ -1612,6 +1649,12 @@ section {
   margin: 0;
 }
 
+.hero-line-necro.hero-line-visible {
+  max-height: 1.3em;
+  opacity: 1;
+  margin: initial;
+}
+
 .hero-line.divorce-hidden {
   max-height: 0;
   opacity: 0;
@@ -1620,26 +1663,13 @@ section {
 
 /* ========== DIVORCE MODE: HIDE ZON (Male Edition) ========== */
 body.divorce-barb .zon-card,
-body.divorce-barb .zon-gear,
-body.divorce-barb .synergy-card.zon,
-body.divorce-barb .synergy-connector,
-body.divorce-barb .synergy-bottom {
+body.divorce-barb .zon-gear {
   display: none;
-}
-
-body.divorce-barb .hero-icons .zon-icon {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 body.divorce-barb .dual-panel,
 body.divorce-barb .gear-grid,
 body.divorce-barb .phase-content {
-  grid-template-columns: 1fr;
-}
-
-body.divorce-barb .synergy-grid {
   grid-template-columns: 1fr;
 }
 
@@ -1655,26 +1685,13 @@ body.divorce-barb .timeline-marker {
 
 /* ========== DIVORCE MODE: HIDE BARB (Female Edition) ========== */
 body.divorce-zon .barb-card,
-body.divorce-zon .barb-gear,
-body.divorce-zon .synergy-card.barb,
-body.divorce-zon .synergy-connector,
-body.divorce-zon .synergy-bottom {
+body.divorce-zon .barb-gear {
   display: none;
-}
-
-body.divorce-zon .hero-icons .barb-icon {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 body.divorce-zon .dual-panel,
 body.divorce-zon .gear-grid,
 body.divorce-zon .phase-content {
-  grid-template-columns: 1fr;
-}
-
-body.divorce-zon .synergy-grid {
   grid-template-columns: 1fr;
 }
 
@@ -1690,73 +1707,20 @@ body.divorce-zon .timeline-marker {
 
 /* ========== AFFAIR MODE (Manfred + Javazon) ========== */
 body.affair .barb-card,
-body.affair .barb-gear,
-body.affair .synergy-card.barb,
-body.affair .synergy-bottom-default {
+body.affair .barb-gear {
   display: none;
 }
 
-body.affair .synergy-bottom-affair {
-  display: block;
-  grid-column: 1 / -1;
-  grid-row: 2;
-}
-
-body.affair .farm-strategy-default { display: none; }
-body.affair .farm-strategy-affair { display: block; }
-
-body.affair .merc-strategy-default { display: none; }
-body.affair .merc-strategy-affair {
-  display: block;
-  grid-column: 1 / -1;
-}
-
-body.affair .tips-grid-default { display: none; }
-body.affair .tips-grid-affair { display: grid; }
-
 body.affair .necro-card,
-body.affair .necro-gear,
-body.affair .synergy-card.necro {
+body.affair .necro-gear {
   display: block;
 }
-
-body.affair .synergy-card.necro {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-body.affair .synergy-card.necro.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-body.affair .hero-icons .barb-icon {
-  opacity: 0;
-  visibility: hidden;
-}
-
-body.affair .hero-icons .necro-icon {
-  display: block;
-}
-
-body.affair .hero-line-necro {
-  max-height: 1.3em;
-  opacity: 1;
-}
-
 
 body.affair .hero-title .amp {
   color: #d4a847;
   -webkit-text-fill-color: #d4a847;
 }
 
-body.affair .hero-tagline-default { display: none; }
-body.affair .hero-tagline-affair {
-  display: block;
-  opacity: 0;
-  animation: fadeUp 1s 0.8s ease forwards;
-}
 
 /* Affair: skull replaces heart */
 body.affair .heart-whole {
@@ -1798,6 +1762,95 @@ body.affair .hero::after {
 
 body.affair .divider::before {
   background: var(--bg);
+}
+
+/* ========== RAINBOW MODE ========== */
+body.rainbow .zon-card,
+body.rainbow .zon-gear {
+  display: none;
+}
+
+body.rainbow .necro-card,
+body.rainbow .necro-gear {
+  display: block;
+}
+
+
+
+
+/* Rainbow: flag replaces heart */
+body.rainbow .heart-whole {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+body.rainbow .heart-rainbow {
+  opacity: 0.9;
+  transform: scale(1);
+}
+
+
+/* Rainbow: color scheme */
+body.rainbow {
+  --bg: #0a0a12;
+  --stone: #12121a;
+  --stone-light: #1a1a25;
+  --stone-mid: #2a2a35;
+}
+
+body.rainbow .hero-title .barb-text {
+  background: linear-gradient(135deg, #e40303, #ff8c00, #ffed00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(255, 140, 0, 0.4));
+}
+
+body.rainbow .hero-title .necro-text {
+  background: linear-gradient(135deg, #008026, #004dff, #750787);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(0, 77, 255, 0.4));
+}
+
+body.rainbow .hero-title .amp {
+  background: linear-gradient(135deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.3));
+}
+
+body.rainbow .section-rule,
+body.rainbow .divider::before {
+  background: linear-gradient(90deg, transparent, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787, transparent);
+}
+
+body.rainbow .hero::before {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(228, 3, 3, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 237, 0, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 50%, rgba(117, 7, 135, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
+}
+
+body.rainbow .hero-cta a {
+  background: linear-gradient(135deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+  color: #fff;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+body.rainbow .hero-cta a:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 30px rgba(255, 140, 0, 0.3);
+}
+
+body.rainbow .synergy-bottom {
+  border-image: linear-gradient(135deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787) 1;
+  border-width: 2px;
+  border-style: solid;
 }
 
 /* ========== ANIMATIONS ========== */

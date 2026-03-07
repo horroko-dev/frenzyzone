@@ -17,7 +17,7 @@ class Ember {
   reset() {
     this.x = Math.random() * canvas.width;
     this.y = canvas.height + 10;
-    this.size = Math.random() * 3 + 0.5;
+    this.size = Math.random() * 3.5 + 0.8;
     this.speedY = -(Math.random() * 0.8 + 0.2);
     this.speedX = (Math.random() - 0.5) * 0.3;
     this.life = 1;
@@ -38,7 +38,7 @@ class Ember {
     if (this.life <= 0 || this.y < -10) this.reset();
   }
   draw() {
-    ctx.globalAlpha = this.life * 0.6;
+    ctx.globalAlpha = this.life * 0.75;
     ctx.fillStyle = `rgb(${this.r},${this.g},${this.b})`;
     ctx.shadowBlur = this.size * 4;
     ctx.shadowColor = `rgb(${this.r},${this.g},${this.b})`;
@@ -48,7 +48,7 @@ class Ember {
   }
 }
 
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 80; i++) {
   const p = new Ember();
   p.y = Math.random() * canvas.height;
   particles.push(p);
@@ -114,11 +114,169 @@ document.querySelectorAll('.gear-tab').forEach(tab => {
   });
 });
 
+/* ========== MODE DATA ========== */
+const MODE_DATA = JSON.parse(document.getElementById('mode-data').textContent);
+
+function applyModeContent(mode) {
+  const data = MODE_DATA[mode];
+  if (!data) return;
+
+  // Hero icons — left/right positioning
+  const icons = data.heroIcons;
+  document.querySelectorAll('[data-hero-icon]').forEach(el => {
+    el.removeAttribute('data-hero-slot');
+  });
+  if (icons.left) {
+    const el = document.querySelector('[data-hero-icon="' + icons.left + '"]');
+    if (el) el.setAttribute('data-hero-slot', 'left');
+  }
+  if (icons.right) {
+    const el = document.querySelector('[data-hero-icon="' + icons.right + '"]');
+    if (el) el.setAttribute('data-hero-slot', 'right');
+  }
+
+  // Watermark
+  const watermark = document.querySelector('[data-mode-target="watermark"]');
+  if (watermark) {
+    watermark.querySelector('use').setAttribute('href', '#icon-' + data.watermark);
+  }
+
+  // Hero lines — visibility and order
+  const heroLines = data.heroLines;
+  document.querySelectorAll('.hero-line').forEach(l => {
+    l.classList.remove('divorce-hidden', 'hero-line-visible');
+    l.style.order = '';
+  });
+  Object.entries(heroLines).forEach(([key, cfg]) => {
+    const el = document.querySelector('.hero-line-' + key);
+    if (!el) return;
+    if (!cfg.visible) {
+      el.classList.add('divorce-hidden');
+    } else if (key === 'necro') {
+      el.classList.add('hero-line-visible');
+    }
+    el.style.order = cfg.order;
+  });
+
+  // Synergy header
+  const synergyHeader = document.querySelector('[data-mode-target="synergyHeader"]');
+  if (synergyHeader) {
+    const sh = data.synergyHeader;
+    synergyHeader.querySelector('.section-label').textContent = sh.label;
+    synergyHeader.querySelector('.section-title').textContent = sh.title;
+    synergyHeader.querySelector('.section-desc').textContent = sh.desc;
+  }
+
+  // Synergy cards and grid layout
+  const visibleCards = data.synergyCards;
+  const synergyGrid = document.querySelector('.synergy-grid');
+  const connector = document.querySelector('[data-mode-target="synergyConnector"]');
+  const isSingle = visibleCards.length === 1;
+
+  document.querySelectorAll('[data-synergy-card]').forEach(card => {
+    const name = card.dataset.synergyCard;
+    const show = visibleCards.includes(name);
+    card.classList.toggle('synergy-hidden', !show);
+    card.removeAttribute('data-synergy-slot');
+    if (show) {
+      const idx = visibleCards.indexOf(name);
+      card.setAttribute('data-synergy-slot', idx === 0 ? 'left' : 'right');
+      if (!card.classList.contains('visible')) {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          card.classList.add('visible');
+        } else {
+          observer.observe(card);
+        }
+      }
+    }
+  });
+
+  if (connector) connector.classList.toggle('synergy-hidden', isSingle);
+  if (synergyGrid) synergyGrid.classList.toggle('synergy-grid-single', isSingle);
+
+  // Tagline
+  const tagline = document.querySelector('[data-mode-target="tagline"]');
+  if (tagline) {
+    tagline.innerHTML = data.tagline;
+    // Re-trigger fade animation
+    tagline.style.animation = 'none';
+    tagline.offsetHeight; // force reflow
+    tagline.style.animation = '';
+    if (mode !== 'default') {
+      tagline.style.animation = 'fadeUp 1s 0.8s ease forwards';
+      tagline.style.opacity = '0';
+    } else {
+      tagline.style.animation = '';
+      tagline.style.opacity = '';
+    }
+  }
+
+  // Synergy bottom
+  const synergyBottom = document.querySelector('[data-mode-target="synergy"]');
+  if (synergyBottom) {
+    synergyBottom.classList.toggle('synergy-hidden', !data.synergyBottom);
+    if (data.synergy) {
+      const syn = data.synergy;
+      synergyBottom.querySelector('h3').textContent = syn.title;
+      synergyBottom.querySelector('p').textContent = syn.summary;
+      const highlights = synergyBottom.querySelector('.synergy-highlights');
+      highlights.innerHTML = syn.stats.map(s =>
+        `<div class="synergy-stat"><span class="value">${s.value}</span><span class="label">${s.label}</span></div>`
+      ).join('');
+    }
+  }
+
+  // Merc strategy
+  const mercStrategy = document.querySelector('[data-mode-target="mercStrategy"]');
+  if (mercStrategy) {
+    const merc = data.mercStrategy;
+    mercStrategy.querySelector('h3').textContent = merc.title;
+    mercStrategy.querySelector('ul').innerHTML = merc.points.map(p => `<li>${p}</li>`).join('');
+  }
+
+  // Farm strategies
+  document.querySelectorAll('[data-farm-zone]').forEach(el => {
+    const zone = el.dataset.farmZone;
+    const farmData = data.farmStrategies[zone];
+    if (farmData) {
+      el.querySelector('p').textContent = farmData.text;
+      const icon1 = el.querySelector('.farm-icon-1 use');
+      const icon2 = el.querySelector('.farm-icon-2 use');
+      if (icon1) icon1.setAttribute('href', '#icon-' + farmData.icons[0]);
+      if (icon2) icon2.setAttribute('href', '#icon-' + farmData.icons[1]);
+    }
+  });
+
+  // Tips grid
+  const tipsGrid = document.querySelector('[data-mode-target="tips"]');
+  if (tipsGrid) {
+    tipsGrid.innerHTML = data.tips.map(tip =>
+      `<div class="tip-card">
+        <div class="tip-icon-wrap"><svg class="tip-icon"><use href="#icon-${tip.icon}"/></svg></div>
+        <span class="tip-number">${tip.numeral}</span>
+        <h3>${tip.title}</h3>
+        <p>${tip.body}</p>
+      </div>`
+    ).join('');
+    // Re-observe new tip cards for scroll animation
+    tipsGrid.querySelectorAll('.tip-card').forEach(el => {
+      // If tips section is already in viewport, show immediately
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  }
+}
+
 /* ========== DIVORCE / AFFAIR MODE ========== */
 function clearModes() {
   document.querySelectorAll('.divorce-btn').forEach(b => b.classList.remove('active'));
-  document.body.classList.remove('divorce-barb', 'divorce-zon', 'affair');
-  document.querySelectorAll('.hero-line').forEach(l => l.classList.remove('divorce-hidden'));
+  document.body.classList.remove('divorce-barb', 'divorce-zon', 'affair', 'rainbow');
+  applyModeContent('default');
 }
 
 document.querySelectorAll('.divorce-btn').forEach(btn => {
@@ -133,19 +291,12 @@ document.querySelectorAll('.divorce-btn').forEach(btn => {
 
       if (mode === 'affair') {
         document.body.classList.add('affair');
-        document.querySelector('.hero-line-barb').classList.add('divorce-hidden');
+      } else if (mode === 'rainbow') {
+        document.body.classList.add('rainbow');
       } else {
         document.body.classList.add('divorce-' + mode);
-        if (mode === 'barb') {
-          document.querySelector('.hero-line-zon').classList.add('divorce-hidden');
-          document.querySelector('.hero-line-necro').classList.add('divorce-hidden');
-          document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
-        } else {
-          document.querySelector('.hero-line-barb').classList.add('divorce-hidden');
-          document.querySelector('.hero-line-necro').classList.add('divorce-hidden');
-          document.querySelector('.hero-line-mid').classList.add('divorce-hidden');
-        }
       }
+      applyModeContent(mode);
     }
   });
 });

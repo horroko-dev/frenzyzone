@@ -1,4 +1,21 @@
 {
+  "header": {
+    "default": {
+      "label": "Why This Duo Works",
+      "title": "Unholy Synergy",
+      "desc": "Physical devastation meets elemental fury. The Frenzy Barbarian carves through single targets and tanks the frontline while the Javazon annihilates packs with lightning and piercing javelins."
+    },
+    "affair": {
+      "label": "Why This Duo Works",
+      "title": "Unholy Alliance",
+      "desc": "The dead rise and the lightning strikes. Manfred's skeleton army creates an endless wall of corpses while the Javazon turns them into chain lightning and explosions."
+    },
+    "rainbow": {
+      "label": "Why This Duo Works",
+      "title": "Bond of Steel & Bone",
+      "desc": "Raw physical devastation from two directions. The Frenzy Barbarian carves through the frontline while Manfred's army of the dead swarms from behind — cursed, buffed, and unstoppable."
+    }
+  },
   "barb": {
     "title": "Frenzy Barbarian",
     "points": [
@@ -45,6 +62,14 @@
       { "value": "CE", "label": "Screen Clear" },
       { "value": "S+", "label": "Clear Speed" },
       { "value": "LR", "label": "Curse Synergy" }
+    ]
+  },
+  "combined_rainbow": {
+    "summary": "Amplify Damage doubles Frenzy's already massive physical output while Battle Orders turns the skeleton army into an unkillable meat wall. The Barb generates the first corpse, Corpse Explosion chains the rest — pure physical devastation from two directions. Curses, warcries, and an army of the dead make this duo an unstoppable force of bone and steel.",
+    "stats": [
+      { "value": "Amp", "label": "Damage Curse" },
+      { "value": "BO", "label": "Army Buff" },
+      { "value": "CE", "label": "Screen Clear" }
     ]
   }
 }
