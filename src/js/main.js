@@ -301,6 +301,13 @@ document.querySelectorAll('.divorce-btn').forEach(btn => {
   });
 });
 
+/* ========== LANGUAGE SWITCHER ========== */
+document.querySelectorAll('.lang-link').forEach(link => {
+  link.addEventListener('click', () => {
+    localStorage.setItem('fz-lang', link.dataset.lang);
+  });
+});
+
 /* ========== FARMING FILTERS ========== */
 document.querySelectorAll('.farm-filter').forEach(btn => {
   btn.addEventListener('click', () => {

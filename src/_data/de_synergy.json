@@ -1,0 +1,78 @@
+{
+  "header": {
+    "default": {
+      "label": "Warum dieses Duo funktioniert",
+      "title": "Unheilige Synergie",
+      "desc": "Physische Verwüstung trifft auf elementare Wut. Der Frenzy Barbarian mäht Einzelziele nieder und tankt die Frontlinie, während die Javazon ganze Horden mit Lightning und durchbohrenden Speeren vernichtet."
+    },
+    "affair": {
+      "label": "Warum dieses Duo funktioniert",
+      "title": "Unheilige Allianz",
+      "desc": "Die Toten erheben sich und der Blitz schlägt ein. Manfreds Skelettarmee erschafft eine endlose Wand aus Leichen, während die Javazon sie in Kettenblitze und Explosionen verwandelt."
+    },
+    "rainbow": {
+      "label": "Warum dieses Duo funktioniert",
+      "title": "Band aus Stahl & Knochen",
+      "desc": "Rohe physische Verwüstung aus zwei Richtungen. Der Frenzy Barbarian mäht die Frontlinie nieder, während Manfreds Armee der Toten von hinten schwärmt — verflucht, gebufft und unaufhaltsam."
+    }
+  },
+  "barb": {
+    "title": "Frenzy Barbarian",
+    "points": [
+      "Massiver physischer Einzelziel-DPS mit Dual-Wield-Angriffen",
+      "Battle Orders gibt beiden Spielern +Leben und +Mana",
+      "Natürlicher Tank mit hohem Leben, Verteidigung und Life Leech",
+      "Howl zerstreut Trashmobs, damit die Zon gezielt feuern kann",
+      "Bosskiller — Frenzy zerlegt Akt-Bosse und Superuniques"
+    ]
+  },
+  "zon": {
+    "title": "Java Amazon",
+    "points": [
+      "Lightning Fury schmilzt ganze Bildschirme voller Monster sofort weg",
+      "Charged Strike hat den höchsten Einzelziel-DPS im ganzen Spiel",
+      "Überbrückt Lightning Immune Lücken mit physischem Jab-Schaden",
+      "Valkyrie und Decoy bieten zusätzliches Tanken und Ablenkung",
+      "Crowd-Control-Königin — räumt Dichte weg, die der Barb nicht erreicht"
+    ]
+  },
+  "necro": {
+    "title": "Manfred der Nekromant",
+    "points": [
+      "Die Armee aus Skeletten und Revives bildet eine Wand aus Fleischschilden, die Schaden für die ganze Gruppe abfängt",
+      "Corpse Explosion kettet sich von ersten Kills aus und vernichtet ganze Bildschirme — skaliert mit Monster-HP im Multiplayer",
+      "Amplify Damage und Decrepify Flüche zerfetzen physische Resistenzen und verkrüppeln gefährliche Bosse",
+      "Lower Resist Fluch senkt die Lightning-Resistenz der Gegner und verstärkt den Lightning Fury und Charged Strike Schaden der Javazon drastisch",
+      "Sicherer Backline-Spielstil — der Nekro dirigiert Diener und wirkt Flüche aus der Distanz, selten in Gefahr"
+    ]
+  },
+  "combined": {
+    "title": "Kombinierte Stärken",
+    "summary": "Battle Orders bufft die Überlebensfähigkeit beider Charaktere. Der Barb tankt und erledigt Bosse, während die Zon Horden dezimiert. Zusammen decken sie physischen und Lightning-Schaden ab und kämpfen nur gegen seltene Physical + Lightning Immune Kombos.",
+    "stats": [
+      { "value": "2", "label": "Schadensarten" },
+      { "value": "BO", "label": "Gruppenbuff" },
+      { "value": "S+", "label": "Clearspeed" },
+      { "value": "A+", "label": "Bosskill" }
+    ]
+  },
+  "combined_affair": {
+    "title": "Unheilige Allianz",
+    "summary": "Lower Resist + Infinity Conviction vernichtet Lightning-Resistenzen und macht Lightning Fury zur Atombombe. Die Skelettarmee erzeugt endlose Leichen für Corpse Explosion Ketten, während die Zon aus sicherer Entfernung feuert. Flüche verstärken alles — nichts überlebt den Sturm aus Knochen und Blitzen.",
+    "stats": [
+      { "value": "3", "label": "Schadensarten" },
+      { "value": "CE", "label": "Flächenräumung" },
+      { "value": "S+", "label": "Clearspeed" },
+      { "value": "LR", "label": "Fluchsynergie" }
+    ]
+  },
+  "combined_rainbow": {
+    "title": "Kraft der Liebe",
+    "summary": "Amplify Damage verdoppelt Frenzys ohnehin massiven physischen Output, während Battle Orders die Skelettarmee in eine untötbare Fleischwand verwandelt. Der Barb erzeugt die erste Leiche, Corpse Explosion kettet den Rest — pure physische Verwüstung aus zwei Richtungen. Flüche, Warcries und eine Armee der Toten machen dieses Duo zu einer unaufhaltsamen Macht aus Knochen und Stahl.",
+    "stats": [
+      { "value": "Amp", "label": "Schadensfluch" },
+      { "value": "BO", "label": "Armeebuff" },
+      { "value": "CE", "label": "Flächenräumung" }
+    ]
+  }
+}

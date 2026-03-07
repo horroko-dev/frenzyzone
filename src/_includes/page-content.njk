@@ -1,0 +1,299 @@
+{# ========== HERO ========== #}
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-icons">
+      <svg class="hero-class-icon barb-icon" data-hero-icon="barb" data-hero-slot="left"><use href="#icon-barb"/></svg>
+      <svg class="hero-class-icon necro-icon" data-hero-icon="necro"><use href="#icon-necro"/></svg>
+      <div class="hero-heart">
+        <svg class="heart-icon heart-whole"><use href="#icon-heart"/></svg>
+        <svg class="heart-icon heart-broken"><use href="#icon-heart-broken"/></svg>
+        <svg class="heart-icon heart-affair"><use href="#icon-heart-arrow"/></svg>
+        <svg class="heart-icon heart-rainbow"><use href="#icon-rainbow-flag"/></svg>
+      </div>
+      <svg class="hero-class-icon zon-icon" data-hero-icon="zon" data-hero-slot="right"><use href="#icon-zon"/></svg>
+    </div>
+    <p class="hero-subtitle">{{ i18n[locale].subtitle | safe }}</p>
+    <h1 class="hero-title">
+      <span class="hero-line hero-line-barb"><span class="barb-text">Frenzy</span></span>
+      <span class="hero-line hero-line-necro"><span class="necro-text">Manfred</span></span>
+      <span class="hero-line hero-line-mid"><span class="amp">&amp;</span></span>
+      <span class="hero-line hero-line-zon"><span class="zon-text">Javazon</span></span>
+    </h1>
+    <p class="hero-tagline" data-mode-target="tagline">{{ i18n[locale].taglines.default | safe }}</p>
+    <div class="hero-cta">
+      <a href="#synergy">{{ i18n[locale].beginJourney }}</a>
+    </div>
+    <div class="divorce-toggle">
+      <p class="divorce-label">{{ i18n[locale].divorceMode }}</p>
+      <div class="divorce-buttons">
+        <button class="divorce-btn" data-mode="barb" title="{{ i18n[locale].divorceMode }}: {{ i18n[locale].maleEdition }}">
+          <svg class="divorce-icon"><use href="#icon-barb"/></svg>
+          <span>{{ i18n[locale].maleEdition }}</span>
+        </button>
+        <button class="divorce-btn" data-mode="zon" title="{{ i18n[locale].divorceMode }}: {{ i18n[locale].femaleEdition }}">
+          <svg class="divorce-icon"><use href="#icon-zon"/></svg>
+          <span>{{ i18n[locale].femaleEdition }}</span>
+        </button>
+      </div>
+      <p class="divorce-label">{{ i18n[locale].crossover }}</p>
+      <div class="divorce-buttons">
+        <button class="divorce-btn affair-btn" data-mode="affair" title="{{ i18n[locale].affairWithManfred }}">
+          <svg class="divorce-icon"><use href="#icon-necro"/></svg>
+          <span>{{ i18n[locale].affairWithManfred }}</span>
+        </button>
+        <button class="divorce-btn rainbow-btn" data-mode="rainbow" title="{{ i18n[locale].rainbowMode }}">
+          <svg class="divorce-icon"><use href="#icon-rainbow-flag"/></svg>
+          <span>{{ i18n[locale].rainbowMode }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</header>
+
+<div class="divider"></div>
+
+{# ========== SYNERGY ========== #}
+<section id="synergy">
+  {% include "components/section-header.njk" ignore missing %}
+  <div class="section-header" data-mode-target="synergyHeader">
+    <svg class="section-icon"><use href="#icon-star"/></svg>
+    <p class="section-label">{{ synergy.header.default.label }}</p>
+    <h2 class="section-title">{{ synergy.header.default.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ synergy.header.default.desc }}</p>
+  </div>
+
+  <div class="synergy-grid">
+    <div class="synergy-card barb" data-synergy-card="barb" data-synergy-slot="left">
+      <h3><svg class="class-icon"><use href="#icon-barb"/></svg>{{ synergy.barb.title }}</h3>
+      <ul>
+        {%- for point in synergy.barb.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="synergy-card necro synergy-hidden" data-synergy-card="necro">
+      <h3><svg class="class-icon"><use href="#icon-necro"/></svg>{{ synergy.necro.title }}</h3>
+      <ul>
+        {%- for point in synergy.necro.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="synergy-connector" data-mode-target="synergyConnector">
+      <span class="line"></span>
+      <span class="plus">+</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="synergy-card zon" data-synergy-card="zon" data-synergy-slot="right">
+      <h3><svg class="class-icon"><use href="#icon-zon"/></svg>{{ synergy.zon.title }}</h3>
+      <ul>
+        {%- for point in synergy.zon.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="synergy-bottom" data-mode-target="synergy">
+      <h3>{{ synergy.combined.title }}</h3>
+      <p>{{ synergy.combined.summary }}</p>
+      <div class="synergy-highlights">
+        {%- for stat in synergy.combined.stats %}
+        <div class="synergy-stat">
+          <span class="value">{{ stat.value }}</span>
+          <span class="label">{{ stat.label }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== LEVELING TIMELINE ========== #}
+<section id="leveling">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-scroll"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.leveling.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.leveling.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.leveling.desc | safe }}</p>
+  </div>
+
+  <div class="timeline">
+    {%- for phase in leveling %}
+    {% set phase = phase %}
+    {% include "components/timeline-phase.njk" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== GEAR ========== #}
+<section id="gear">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-weapon"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.gear.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.gear.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.gear.desc | safe }}</p>
+  </div>
+
+  <div class="gear-tabs">
+    <button class="gear-tab active" data-tab="normal">{{ i18n[locale].gearTabs.normal }}</button>
+    <button class="gear-tab" data-tab="nightmare">{{ i18n[locale].gearTabs.nightmare }}</button>
+    <button class="gear-tab" data-tab="hell">{{ i18n[locale].gearTabs.hell | safe }}</button>
+  </div>
+
+  {%- for tier, tierData in gear %}
+  <div class="gear-panel{{ ' active' if loop.first }}" id="gear-{{ tier }}">
+    <div class="gear-grid">
+      {% set data = tierData.barb %}
+      {% set side = "barb" %}
+      {% include "components/gear-column.njk" %}
+      {% set data = tierData.necro %}
+      {% set side = "necro" %}
+      {% include "components/gear-column.njk" %}
+      {% set data = tierData.zon %}
+      {% set side = "zon" %}
+      {% include "components/gear-column.njk" %}
+    </div>
+  </div>
+  {%- endfor %}
+</section>
+
+<div class="divider"></div>
+
+{# ========== ATTRIBUTES ========== #}
+<section id="attributes">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-strength"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.attributes.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.attributes.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.attributes.desc | safe }}</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = attributes.barb %}
+    {% set side = "barb" %}
+    {% include "components/stat-block.njk" %}
+    {% set data = attributes.necro %}
+    {% set side = "necro" %}
+    {% include "components/stat-block.njk" %}
+    {% set data = attributes.zon %}
+    {% set side = "zon" %}
+    {% include "components/stat-block.njk" %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== MERCENARIES ========== #}
+<section id="mercs">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-armor"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.mercs.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.mercs.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.mercs.desc | safe }}</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = mercs.barb %}
+    {% set side = "barb" %}
+    {% include "components/merc-card.njk" %}
+    {% set data = mercs.necro %}
+    {% set side = "necro" %}
+    {% include "components/merc-card.njk" %}
+    {% set data = mercs.zon %}
+    {% set side = "zon" %}
+    {% include "components/merc-card.njk" %}
+    <div class="merc-strategy" data-mode-target="mercStrategy">
+      <h3>{{ mercs.duo_strategy.title }}</h3>
+      <ul>
+        {%- for point in mercs.duo_strategy.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== CHARMS ========== #}
+<section id="charms">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-charm"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.charms.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.charms.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.charms.desc | safe }}</p>
+  </div>
+
+  <div class="dual-panel">
+    {% set data = charms.barb %}
+    {% set side = "barb" %}
+    {% include "components/charm-card.njk" %}
+    {% set data = charms.necro %}
+    {% set side = "necro" %}
+    {% include "components/charm-card.njk" %}
+    {% set data = charms.zon %}
+    {% set side = "zon" %}
+    {% include "components/charm-card.njk" %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== FARMING ========== #}
+<section id="farming">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-map"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.farming.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.farming.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.farming.desc | safe }}</p>
+  </div>
+
+  <div class="farm-filters">
+    <button class="farm-filter active" data-filter="all">{{ i18n[locale].farmFilters.all }}</button>
+    <button class="farm-filter" data-filter="essential">{{ i18n[locale].farmFilters.essential }}</button>
+    <button class="farm-filter" data-filter="high">{{ i18n[locale].farmFilters.high }}</button>
+    <button class="farm-filter" data-filter="medium">{{ i18n[locale].farmFilters.medium }}</button>
+  </div>
+
+  <div class="farm-list">
+    {%- for farm in farming %}
+    {% set farm = farm %}
+    {% include "components/farm-card.njk" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="divider"></div>
+
+{# ========== TIPS ========== #}
+<section id="tips">
+  <div class="section-header">
+    <svg class="section-icon"><use href="#icon-campfire"/></svg>
+    <p class="section-label">{{ i18n[locale].sections.tips.label }}</p>
+    <h2 class="section-title">{{ i18n[locale].sections.tips.title }}</h2>
+    <div class="section-rule"></div>
+    <p class="section-desc">{{ i18n[locale].sections.tips.desc | safe }}</p>
+  </div>
+
+  <div class="tips-grid" data-mode-target="tips">
+    {%- for tip in tips.default %}
+    {% set tip = tip %}
+    {% include "components/tip-card.njk" %}
+    {%- endfor %}
+  </div>
+</section>

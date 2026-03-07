@@ -2,7 +2,7 @@
   <h3><svg class="class-icon"><use href="#icon-{{ side }}"/></svg>{{ data.label }}</h3>
   {%- for slot in data.slots %}
   <div class="gear-slot">
-    <div class="gear-slot-name">{% set slotLower = slot.name | lower %}<svg class="slot-icon"><use href="#icon-{% if 'weapon' in slotLower or 'sword' in slotLower %}weapon{% elif 'armor' in slotLower %}armor{% elif 'helm' in slotLower %}helm{% elif 'shield' in slotLower %}shield{% elif 'boot' in slotLower %}boots{% elif 'glove' in slotLower %}gloves{% elif 'belt' in slotLower %}belt{% elif 'amulet' in slotLower %}amulet{% elif 'ring' in slotLower %}ring{% else %}chest{% endif %}"/></svg>{{ slot.name }}</div>
+    <div class="gear-slot-name">{% set slotLower = slot.name | lower %}<svg class="slot-icon"><use href="#icon-{% if 'weapon' in slotLower or 'waffe' in slotLower %}weapon{% elif 'armor' in slotLower or 'rüstung' in slotLower or 'rstung' in slotLower %}armor{% elif 'helm' in slotLower %}helm{% elif 'shield' in slotLower or 'schild' in slotLower %}shield{% elif 'boot' in slotLower or 'stiefel' in slotLower %}boots{% elif 'glove' in slotLower or 'handschuh' in slotLower %}gloves{% elif 'belt' in slotLower or 'gürtel' in slotLower or 'grtel' in slotLower %}belt{% elif 'amulet' in slotLower %}amulet{% elif 'ring' in slotLower %}ring{% else %}chest{% endif %}"/></svg>{{ slot.name }}</div>
     {%- for item in slot.items %}
     <div class="gear-item {{ item.rarity }}">{% if item.rarity == 'runeword' %}<svg class="slot-icon"><use href="#icon-rune"/></svg>{% endif %}{{ item.name }}{% if item.note %} <span class="note">&mdash; {{ item.note }}</span>{% endif %}</div>
     {%- endfor %}

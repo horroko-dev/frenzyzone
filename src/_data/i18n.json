@@ -1,0 +1,200 @@
+{
+  "en": {
+    "subtitle": "Diablo II Resurrected &mdash; Duo Leveling Guide",
+    "beginJourney": "Begin the Journey",
+    "divorceMode": "Divorce Mode",
+    "maleEdition": "Male Edition",
+    "femaleEdition": "Female Edition",
+    "crossover": "Crossover",
+    "affairWithManfred": "Affair with Manfred",
+    "rainbowMode": "Rainbow Mode",
+    "nav": {
+      "synergy": "Synergy",
+      "leveling": "Leveling",
+      "gear": "Gear",
+      "stats": "Stats",
+      "mercs": "Mercs",
+      "charms": "Charms",
+      "farming": "Farming",
+      "tips": "Tips"
+    },
+    "sections": {
+      "leveling": {
+        "label": "Act by Act",
+        "title": "Leveling Path",
+        "desc": "From Blood Moor to the Worldstone Chamber. Follow this timeline to optimize skill allocation and progression for both characters."
+      },
+      "gear": {
+        "label": "Equipment",
+        "title": "Gear Progression",
+        "desc": "From rags to riches. Gear recommendations for each difficulty tier, from budget options to best-in-slot."
+      },
+      "attributes": {
+        "label": "Stat Points",
+        "title": "Attribute Allocation",
+        "desc": "Where to put your stat points. The short version: enough Strength and Dex for gear, everything else into Vitality, never touch Energy."
+      },
+      "mercs": {
+        "label": "Hired Help",
+        "title": "Mercenaries",
+        "desc": "Your mercs are your third and fourth party members. Gear them well and coordinate their auras for maximum duo synergy."
+      },
+      "charms": {
+        "label": "Inventory",
+        "title": "Charms",
+        "desc": "Your inventory is extra gear slots. Fill them wisely — the right charms can double your damage and survivability."
+      },
+      "farming": {
+        "label": "Where to Farm",
+        "title": "Farming Guide",
+        "desc": "The best zones and bosses to farm as a Frenzy Barb + Javazon duo, ordered by priority. Get your gear, get your runes, get your levels."
+      },
+      "tips": {
+        "label": "Party Play",
+        "title": "Duo Strategies",
+        "desc": "Coordination tips to maximize your duo's efficiency from Normal through Hell."
+      }
+    },
+    "gearTabs": {
+      "normal": "Normal",
+      "nightmare": "Nightmare",
+      "hell": "Hell / Endgame"
+    },
+    "farmFilters": {
+      "all": "All Zones",
+      "essential": "Essential",
+      "high": "High Priority",
+      "medium": "Medium"
+    },
+    "components": {
+      "skills": "Skills",
+      "strategy": "Strategy",
+      "recommended": "Recommended",
+      "alternative": "Alternative",
+      "mercGear": "Mercenary Gear",
+      "targetDrops": "Target Drops",
+      "duoStrategy": "Duo Strategy"
+    },
+    "classes": {
+      "barb": "Frenzy Barbarian",
+      "necro": "Manfred the Necromancer",
+      "zon": "Java Amazon"
+    },
+    "stats": {
+      "strength": "Strength",
+      "dexterity": "Dexterity",
+      "vitality": "Vitality",
+      "energy": "Energy"
+    },
+    "taglines": {
+      "default": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+      "barb": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+      "zon": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+      "affair": "&ldquo;The dead rise, the lightning strikes &mdash; Manfred sends his regards.&rdquo;",
+      "rainbow": "&ldquo;Two warriors, one battlefield &mdash; love is the deadliest weapon.&rdquo;"
+    },
+    "footer": {
+      "site": "FrenzyZone &mdash; A Diablo II Resurrected Duo Guide",
+      "disclaimer": "Not affiliated with Blizzard Entertainment. Diablo II is a trademark of Blizzard Entertainment, Inc."
+    }
+  },
+  "de": {
+    "subtitle": "Diablo II Resurrected &mdash; Duo Leveling-Guide",
+    "beginJourney": "Auf ins Abenteuer",
+    "divorceMode": "Scheidungsmodus",
+    "maleEdition": "Männer-Edition",
+    "femaleEdition": "Frauen-Edition",
+    "crossover": "Crossover",
+    "affairWithManfred": "Affäre mit Manfred",
+    "rainbowMode": "Regenbogen-Modus",
+    "nav": {
+      "synergy": "Synergie",
+      "leveling": "Leveling",
+      "gear": "Ausrüstung",
+      "stats": "Attribute",
+      "mercs": "Söldner",
+      "charms": "Charms",
+      "farming": "Farming",
+      "tips": "Tipps"
+    },
+    "sections": {
+      "leveling": {
+        "label": "Akt für Akt",
+        "title": "Leveling-Pfad",
+        "desc": "Von Blood Moor bis zur Worldstone Chamber. Folge dieser Timeline, um Skill-Verteilung und Fortschritt für beide Charaktere zu optimieren."
+      },
+      "gear": {
+        "label": "Ausrüstung",
+        "title": "Gear-Progression",
+        "desc": "Vom Anfänger zum Endgame. Ausrüstungsempfehlungen für jede Schwierigkeitsstufe, von Budget-Optionen bis Best-in-Slot."
+      },
+      "attributes": {
+        "label": "Attributpunkte",
+        "title": "Attribut-Verteilung",
+        "desc": "Wohin mit den Stat-Punkten? Kurzfassung: Genug Strength und Dex für die Ausrüstung, alles andere in Vitality, niemals Energy."
+      },
+      "mercs": {
+        "label": "Angeheuerte Hilfe",
+        "title": "Söldner",
+        "desc": "Eure Söldner sind das dritte und vierte Gruppenmitglied. Rüstet sie gut aus und koordiniert ihre Auren für maximale Duo-Synergie."
+      },
+      "charms": {
+        "label": "Inventar",
+        "title": "Charms",
+        "desc": "Euer Inventar sind zusätzliche Ausrüstungsslots. Füllt sie klug — die richtigen Charms können euren Schaden und eure Überlebensfähigkeit verdoppeln."
+      },
+      "farming": {
+        "label": "Wo farmen",
+        "title": "Farming-Guide",
+        "desc": "Die besten Zonen und Bosse zum Farmen als Frenzy Barb + Javazon Duo, nach Priorität geordnet. Holt euch Ausrüstung, Runen und Level."
+      },
+      "tips": {
+        "label": "Gruppenspiel",
+        "title": "Duo-Strategien",
+        "desc": "Koordinations-Tipps, um die Effizienz eures Duos von Normal bis Hölle zu maximieren."
+      }
+    },
+    "gearTabs": {
+      "normal": "Normal",
+      "nightmare": "Alptraum",
+      "hell": "Hölle / Endgame"
+    },
+    "farmFilters": {
+      "all": "Alle Zonen",
+      "essential": "Essentiell",
+      "high": "Hohe Priorität",
+      "medium": "Mittel"
+    },
+    "components": {
+      "skills": "Skills",
+      "strategy": "Strategie",
+      "recommended": "Empfohlen",
+      "alternative": "Alternative",
+      "mercGear": "Söldner-Ausrüstung",
+      "targetDrops": "Gesuchte Drops",
+      "duoStrategy": "Duo-Strategie"
+    },
+    "classes": {
+      "barb": "Frenzy Barbar",
+      "necro": "Manfred der Nekromant",
+      "zon": "Java Amazone"
+    },
+    "stats": {
+      "strength": "Stärke",
+      "dexterity": "Geschick",
+      "vitality": "Vitalität",
+      "energy": "Energie"
+    },
+    "taglines": {
+      "default": "&ldquo;Zwei Waffen, ein Sturm &mdash; nichts überlebt.&rdquo;",
+      "barb": "&ldquo;Zwei Waffen, ein Sturm &mdash; nichts überlebt.&rdquo;",
+      "zon": "&ldquo;Zwei Waffen, ein Sturm &mdash; nichts überlebt.&rdquo;",
+      "affair": "&ldquo;Die Toten erheben sich, der Blitz schlägt ein &mdash; Manfred lässt grüßen.&rdquo;",
+      "rainbow": "&ldquo;Zwei Krieger, ein Schlachtfeld &mdash; Liebe ist die tödlichste Waffe.&rdquo;"
+    },
+    "footer": {
+      "site": "FrenzyZone &mdash; Ein Diablo II Resurrected Duo-Guide",
+      "disclaimer": "Nicht affiliiert mit Blizzard Entertainment. Diablo II ist eine Marke von Blizzard Entertainment, Inc."
+    }
+  }
+}

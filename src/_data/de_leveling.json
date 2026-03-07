@@ -1,0 +1,169 @@
+[
+  {
+    "level": "Level 1 – 15",
+    "name": "Normal Akte I – II",
+    "barb": {
+      "skills": [
+        { "name": "Bash", "pts": "1 pt" },
+        { "name": "Double Swing", "pts": "6+ pts" },
+        { "name": "Howl", "pts": "1 pt" },
+        { "name": "Shout", "pts": "1 pt" }
+      ],
+      "strategy": "Stärke für Ausrüstung hochpumpen. Double Swing trägt hart — ab Level 9+ keine Manakosten mehr. Immer vorne rein, Schaden einstecken. Howl nutzen, um Gruppen zu kontrollieren."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Jab", "pts": "1 pt" },
+        { "name": "Power Strike", "pts": "6+ pts" },
+        { "name": "Poison Javelin", "pts": "1 pt" },
+        { "name": "Inner Sight", "pts": "1 pt" }
+      ],
+      "strategy": "Power Strike ist früh dein Brot und Butter. Normale Speere auf Distanz werfen für Sicherheit, dann mit Power Strike auf Elitegegner reingehen. Skillpunkte nach 12 für Lightning Bolt aufsparen."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "6+ pts" },
+        { "name": "Skeleton Mastery", "pts": "3+ pts" },
+        { "name": "Amplify Damage", "pts": "1 pt" },
+        { "name": "Teeth", "pts": "1 pt" }
+      ],
+      "strategy": "Skelette tanken alles, während du hinten bleibst und Amplify Damage auf Gruppen wirfst. Amp verdoppelt den physischen Schaden für die ganze Gruppe. Teeth füllt früh Lücken, aber deine Armee ist die wahre Waffe."
+    }
+  },
+  {
+    "level": "Level 15 – 24",
+    "name": "Normal Akte III – V",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "1+ pts (lvl 24)" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Battle Orders", "pts": "1 pt (lvl 24)" },
+        { "name": "Iron Skin", "pts": "1 pt" },
+        { "name": "Increased Speed", "pts": "1 pt" }
+      ],
+      "strategy": "Umstieg auf Frenzy ab Level 24 — alles ändert sich. Battle Orders kommt auf demselben Level und bufft euch beide massiv. Bis dahin Double Swing nutzen."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Bolt", "pts": "5+ pts" },
+        { "name": "Charged Strike", "pts": "1 pt (lvl 18)" },
+        { "name": "Power Strike", "pts": "Max" },
+        { "name": "Decoy", "pts": "1 pt" }
+      ],
+      "strategy": "Charged Strike ab 18 ist ein gewaltiger Powerspike — Bosse schmelzen dahin. Lightning Bolt übernimmt den Fernkampf-Clear. Decoy aufstellen zum Tanken, während du von hinten wirfst."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Corpse Explosion", "pts": "1 pt" },
+        { "name": "Clay Golem", "pts": "1 pt" },
+        { "name": "Golem Mastery", "pts": "1+ pts" },
+        { "name": "Summon Resist", "pts": "1+ pts" },
+        { "name": "Raise Skeleton", "pts": "continued" }
+      ],
+      "strategy": "Corpse Explosion fängt jetzt an zu zünden — eine Leiche räumt den ganzen Bildschirm ab. Skelette erzeugen den ersten Kill, CE erledigt den Rest. Clay Golem verlangsamt Bosse. Summon Resist hält deine Armee am Leben."
+    }
+  },
+  {
+    "level": "Level 25 – 40",
+    "name": "Alptraum Akte I – III",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "10+ pts" },
+        { "name": "Battle Orders", "pts": "5+ pts" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Taunt", "pts": "1 pt" },
+        { "name": "Battle Command", "pts": "1 pt (lvl 30)" }
+      ],
+      "strategy": "Frenzy ist jetzt dein Hauptskill. BO weiter leveln — ihr beide profitiert enorm davon. Battle Command ab 30 gibt +1 auf alle Skills. Anfangen, nach Runeword-Basen zu suchen."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "1+ pts (lvl 30)" },
+        { "name": "Charged Strike", "pts": "10+ pts" },
+        { "name": "Valkyrie", "pts": "1 pt (lvl 30)" },
+        { "name": "Pierce", "pts": "1 pt" }
+      ],
+      "strategy": "Lightning Fury ab 30 ist der größte Powerspike im ganzen Spiel. Ganze Bildschirme sterben. Charged Strike für Bosse, LF für alles andere. Valkyrie bringt einen weiteren Tank ins Spiel."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "Max" },
+        { "name": "Skeleton Mastery", "pts": "10+ pts" },
+        { "name": "Decrepify", "pts": "1 pt" },
+        { "name": "Lower Resist", "pts": "1 pt (lvl 30)" }
+      ],
+      "strategy": "Lower Resist ab 30 hilft dem Blitzschaden der Zon massiv — riesiger Teamwert. Decrepify verlangsamt gefährliche Bosse und bricht Physical Immunes. Die Armee wird stark, weiter Skeleton Mastery hochpumpen."
+    }
+  },
+  {
+    "level": "Level 40 – 60",
+    "name": "Alptraum IV – V / Frühe Hölle",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "Max" },
+        { "name": "Double Swing", "pts": "Max" },
+        { "name": "Battle Orders", "pts": "10+ pts" },
+        { "name": "Sword/Axe Mastery", "pts": "10+ pts" }
+      ],
+      "strategy": "Frenzy maxen, dann Synergien und Mastery hochpumpen. Du bist der Bosskiller — lass die Zon zum Bossraum clearen, dann haut ihr beide gemeinsam drauf. Crushing-Blow-Ausrüstung für Aktbosse bereithalten."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "Max" },
+        { "name": "Charged Strike", "pts": "Max" },
+        { "name": "Lightning Strike", "pts": "5+ pts (synergy)" },
+        { "name": "Valkyrie", "pts": "1+ pts" }
+      ],
+      "strategy": "Zuerst LF maxen, dann CS. Lightning Strike ist Synergie für beides. Du bist die Clearspeed — LF in Gruppen werfen und der Kettenblitz-Kaskade zusehen. Titan's Revenge ist dein heiliger Gral."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Corpse Explosion", "pts": "Max" },
+        { "name": "Skeleton Mastery", "pts": "continued" },
+        { "name": "Revive", "pts": "1 pt" }
+      ],
+      "strategy": "CE ist jetzt dein Hauptclear — Skelette erzeugen die erste Leiche, dann wischt die CE-Kettenreaktion den Bildschirm. Revive bringt extra Fleischschilder aus starken Monstertypen. Weiter mit Amp Damage für physischen Schaden oder Lower Resist für die Zon fluchen."
+    }
+  },
+  {
+    "level": "Level 60 – 80+",
+    "name": "Hölle",
+    "barb": {
+      "skills": [
+        { "name": "Frenzy", "pts": "20 pts" },
+        { "name": "Double Swing", "pts": "20 pts" },
+        { "name": "Taunt", "pts": "20 pts" },
+        { "name": "Battle Orders", "pts": "20 pts" },
+        { "name": "Sword/Axe Mastery", "pts": "20 pts" },
+        { "name": "Prereqs", "pts": "1 pt each" }
+      ],
+      "strategy": "Finaler Build: Frenzy + 3 Synergien + BO + Mastery. Physical Immunes mit Elementarschadenswaffen brechen (Grief, Lawbringer). Alles tanken, durch Schaden leechen."
+    },
+    "zon": {
+      "skills": [
+        { "name": "Lightning Fury", "pts": "20 pts" },
+        { "name": "Charged Strike", "pts": "20 pts" },
+        { "name": "Lightning Strike", "pts": "20 pts" },
+        { "name": "Power Strike", "pts": "20 pts" },
+        { "name": "Valkyrie", "pts": "1+ pts" },
+        { "name": "Pierce", "pts": "1+ pts" }
+      ],
+      "strategy": "Volle Blitzspezialisierung. LF + CS gemaxt mit beiden Synergien. Lightning Immunes? Der Barbar kümmert sich darum — überspringen oder vom Partner killen lassen. Kühe, Chaos, Baal-Runs — du bist die Clearmaschine."
+    },
+    "necro": {
+      "skills": [
+        { "name": "Raise Skeleton", "pts": "20 pts" },
+        { "name": "Skeleton Mastery", "pts": "20 pts" },
+        { "name": "Corpse Explosion", "pts": "20 pts" },
+        { "name": "Revive", "pts": "1+ pts" },
+        { "name": "Lower Resist", "pts": "1+ pts" },
+        { "name": "Amplify Damage", "pts": "1 pt" },
+        { "name": "Decrepify", "pts": "1 pt" },
+        { "name": "Clay Golem", "pts": "1 pt" },
+        { "name": "Golem Mastery", "pts": "1+ pts" },
+        { "name": "Summon Resist", "pts": "1+ pts" }
+      ],
+      "strategy": "Voller Beschwörer-Build. Skelette und Revives bilden eine unaufhaltsame Armee, CE räumt ganze Bildschirme in Sekunden ab. Lower Resist unterstützt den Blitzschaden der Zon, Amp Damage unterstützt den physischen Schaden des Barbaren. Decrepify für gefährliche Bosse. Du bist der Kraftmultiplikator."
+    }
+  }
+]

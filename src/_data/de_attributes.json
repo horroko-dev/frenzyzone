@@ -1,0 +1,68 @@
+{
+  "barb": {
+    "label": "Frenzy Barbar",
+    "stats": {
+      "strength": {
+        "value": "Genug für Ausrüstung",
+        "detail": "Typischerweise 103 für Arreat's Face, oder 136 für Stormshield falls verwendet. Mit Enigma (das Str hinzufügt) kannst du niedriger gehen. Nicht zu viel investieren — jeder zusätzliche Punkt ist verschwendet."
+      },
+      "dexterity": {
+        "value": "Genug für Ausrüstung",
+        "detail": "Basis-Dex reicht für die meisten Builds. Bei Schwert-Builds brauchst du eventuell ~100-136 für Phase Blades. Äxte brauchen kaum Dex. Investiere nicht für Max Block — Barbaren haben einen niedrigen Basis-Blockwert."
+      },
+      "vitality": {
+        "value": "Alles andere",
+        "detail": "Stecke jeden verbleibenden Punkt hier rein. Mit Battle Orders obendrauf erreichst du 3000-4000+ Leben. Das ist deine Überlebensfähigkeit — mehr Leben bedeutet mehr Leech-Sustain und mehr Spielraum für Fehler."
+      },
+      "energy": {
+        "value": "Keine (0 Punkte)",
+        "detail": "Investiere niemals Punkte in Energy. Frenzy kostet fast nichts, und du erhältst Mana durch Leech und Battle Orders. Selbst im frühen Spiel reichen Manatränke aus."
+      }
+    },
+    "notes": "Stärke- und Dex-Zielwerte hängen von deiner endgültigen Ausrüstung ab. Plane voraus — prüfe, was deine Endgame-Waffen und -Rüstung erfordern, bevor du Punkte vergibst. Du kannst per Akara (einmal pro Schwierigkeit) oder Token of Absolution umskillen."
+  },
+  "zon": {
+    "label": "Java Amazone",
+    "stats": {
+      "strength": {
+        "value": "Genug für Ausrüstung",
+        "detail": "156 für Monarch-Schild (Spirit), oder weniger bei Stormshield (156) oder Schilden mit niedrigeren Anforderungen. Mit Enigma oder Anni + Torch, die +Stats geben, kannst du das reduzieren. Plane um deine finale Ausrüstung herum."
+      },
+      "dexterity": {
+        "value": "Genug für Ausrüstung + Block",
+        "detail": "Bei Max Block mit Stormshield: investiere bis 75% Block (nutze einen Block-Rechner — es hängt von Level und Schild ab). Bei Spirit Monarch reicht genug für Titan's (109 Dex). Max Block wird für Hardcore empfohlen."
+      },
+      "vitality": {
+        "value": "Alles andere",
+        "detail": "Alle verbleibenden Punkte kommen hier rein. Javazons sind empfindlicher als Barbaren, daher zählt jeder Lebenspunkt. Mit BO von deinem Barbar-Partner erreichst du trotzdem 1500-2500 Leben, was sehr komfortabel ist."
+      },
+      "energy": {
+        "value": "Keine (0 Punkte)",
+        "detail": "Früh im Spiel verlockend, da Lightning Fury Mana kostet, aber tu es nicht. Silkweave Boots, Spirit-Schild und Mana-Leech von Titan's lösen alle Manaprobleme. Nutze im frühen Spiel Manatränke."
+      }
+    },
+    "notes": "Die Stat-Verteilung der Amazone ist flexibler als die des Barbaren. Entscheide früh, ob du Max Block anstrebst oder nicht — das verändert deine Dex-Investition massiv. Softcore: überspringe Max Block, pumpe Vita. Hardcore: Max Block lohnt sich."
+  },
+  "necro": {
+    "label": "Manfred der Nekromant",
+    "stats": {
+      "strength": {
+        "value": "Genug für Ausrüstung",
+        "detail": "Typischerweise 156 für einen Monarch-Schild (Spirit) oder nur 58 für Homunculus. Mit Enigma, das +Str gibt, kannst du die Basis-Stärke niedriger planen. Orientiere dich an deiner finalen Schildwahl und höre dort auf."
+      },
+      "dexterity": {
+        "value": "Minimal",
+        "detail": "Gerade genug, um Ausrüstung anzulegen — die meiste Summoner-Nekromanten-Ausrüstung hat keine Dex-Anforderung. Investiere nicht für Max Block; deine Skelettarmee ist deine Verteidigung, nicht die Blockchance eines Schildes."
+      },
+      "vitality": {
+        "value": "Alles andere",
+        "detail": "Stecke jeden verbleibenden Punkt hier rein. Summoner-Nekromanten haben kein Battle Orders, daher ist rohe Vitalität dein Haupt-Lebenpool. Mit Homunculus oder Spirit, die +Leben geben, und deinen Dienern als Schutzschild bist du bei 1500-2000+ Leben komfortabel unterwegs."
+      },
+      "energy": {
+        "value": "Keine (0 Punkte)",
+        "detail": "Investiere niemals in Energy. Spirit-Schild gibt +112 Mana, und zwischen Spirit, Silkweave Boots und Manatränken geht dir nie das Mana aus. Die Kosten von Corpse Explosion sind mit einfachem Mana-Sustain handhabbar."
+      }
+    },
+    "notes": "Summoner-Nekromanten haben eine einfache Stat-Verteilung. Erreiche deine Stärke-Anforderung für Spirit Monarch (156) oder Homunculus (58), ignoriere Dex und Energy, und stecke alles in Vitalität. Falls du später Enigma findest, kannst du dank des +Str umskillen und noch mehr Punkte in Vita verschieben."
+  }
+}

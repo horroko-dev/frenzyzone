@@ -47,6 +47,7 @@
     ]
   },
   "combined": {
+    "title": "Combined Strengths",
     "summary": "Battle Orders buffs both characters' survivability. The Barb tanks and kills bosses while the Zon devastates crowds. Together they cover physical and lightning damage types, only struggling against rare Physical + Lightning Immune combos.",
     "stats": [
       { "value": "2", "label": "Damage Types" },
@@ -56,6 +57,7 @@
     ]
   },
   "combined_affair": {
+    "title": "Unholy Union",
     "summary": "Lower Resist + Infinity Conviction obliterates lightning resistance, turning Lightning Fury into a nuke. The skeleton army creates endless corpses for Corpse Explosion chains while the Zon fires from safety. Curses amplify everything — nothing survives the storm of bones and lightning.",
     "stats": [
       { "value": "3", "label": "Damage Types" },
@@ -65,6 +67,7 @@
     ]
   },
   "combined_rainbow": {
+    "title": "Power of Love",
     "summary": "Amplify Damage doubles Frenzy's already massive physical output while Battle Orders turns the skeleton army into an unkillable meat wall. The Barb generates the first corpse, Corpse Explosion chains the rest — pure physical devastation from two directions. Curses, warcries, and an army of the dead make this duo an unstoppable force of bone and steel.",
     "stats": [
       { "value": "Amp", "label": "Damage Curse" },

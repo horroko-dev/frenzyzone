@@ -1,0 +1,145 @@
+[
+  {
+    "zone": "The Countess",
+    "location": "Akt I — Tower Cellar Level 5",
+    "difficulty": "Alle",
+    "icon": "tower",
+    "targets": [
+      { "name": "Runes up to Ist (Hell)", "rarity": "runeword", "note": "Wichtige Runen für Steel, Stealth, Lore, Spirit, Smoke, Treachery" },
+      { "name": "Runes for Grief (Lo)", "rarity": "runeword", "note": "Sehr selten, aber möglich von der Hell Countess" },
+      { "name": "Key of Terror", "rarity": "unique", "note": "Für Uber Tristram später" }
+    ],
+    "strategy": "Der Barb rennt voraus und tankt die Countess, während die Zon LF auf das Mob-Pack wirft, das sie bewacht. Die Countess stirbt schnell durch Frenzy. Wiederholt farmen, um früh Runen für die Runewords beider Charaktere zu sammeln.",
+    "strategy_affair": "Manfred schickt seine Skelettarmee voraus, um die Treffer im Turm abzufangen. Die Zon wirft LF auf das Mob-Pack, Corpse Explosion kettet den Rest. Amp Damage auf die Countess und sie ist erledigt. Runen für die Runewords beider Charaktere farmen.",
+    "strategy_rainbow": "Der Barb stürmt mit Frenzy durch die engen Turmkorridore, während Skelette als Rückendeckung folgen. Amp Damage auf das Countess-Pack, der Barb zerfetzt sie mit physischem Schaden, CE kettet den Rest. Battle Orders hält alle bei voller Stärke. Schnelles Runenfarmen für die Runewords beider Charaktere.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Andariel",
+    "location": "Akt I — Catacombs Level 4",
+    "difficulty": "Alptraum",
+    "icon": "boss",
+    "targets": [
+      { "name": "Titan's Revenge", "rarity": "unique", "note": "Beste Javazon-Waffe, droppt hier häufig" },
+      { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+1 Skills, FCR, Alle-Res-Rüstung" },
+      { "name": "Stormshield", "rarity": "unique", "note": "Bester Defensiv-Schild im Spiel" },
+      { "name": "The Stone of Jordan", "rarity": "unique", "note": "+1 Skills, massig Mana" }
+    ],
+    "strategy": "Quest-Bug bei Andariel auf Alptraum für garantiert bessere Drops. Barb tankt mit Frenzy + Life Leech, Zon nutzt Charged Strike im Nahkampf. Sie schmilzt in Sekunden. Zurücksetzen und wiederholen — das schnellste Unique-Farmen im Spiel.",
+    "strategy_affair": "Quest-Bug bei Andariel für garantiert bessere Drops. Skelette tanken, während die Zon Charged Strike im Nahkampf nutzt. Zuerst Lower Resist casten — Andariel schmilzt noch schneller mit reduziertem Blitzwiderstand. Zurücksetzen und wiederholen.",
+    "strategy_rainbow": "Quest-Bug bei Andariel für garantiert bessere Drops. Barb tankt direkt mit Frenzy und Life Leech, während Skelette von hinten draufhauen. Amp Damage auf Andariel macht jeden physischen Treffer verheerend. Decrepify, wenn sie zu hart zuschlägt. Sie schmilzt schnell — zurücksetzen und wiederholen.",
+    "who_benefits": "zon",
+    "priority": "essential"
+  },
+  {
+    "zone": "Mephisto",
+    "location": "Akt III — Durance of Hate Level 3",
+    "difficulty": "Hölle",
+    "targets": [
+      { "name": "Arreat's Face", "rarity": "unique", "note": "BiS-Barb-Helm — +2 Skills, Res, Leech" },
+      { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 Skills, IAS, Deadly Strike für beide" },
+      { "name": "Razortail", "rarity": "unique", "note": "33% Pierce — Pflicht für die Zon" },
+      { "name": "War Traveler", "rarity": "unique", "note": "MF-Stiefel für beide Charaktere" },
+      { "name": "Arachnid Mesh", "rarity": "unique", "note": "+1 Skills, FCR-Gürtel" }
+    ],
+    "strategy": "Der Moat-Trick funktioniert immer noch — der Barb kann ihn auch einfach direkt tanken mit Life Leech und guten Res. Die Zon wirft LF auf den Council auf dem Weg rein, dann entladen beide auf Mephisto. Schnellster Boss-Farm für mittelklassige Uniques.",
+    "strategy_affair": "Armee mit Enigma zu Mephisto teleportieren. Lower Resist + Charged Strike der Zon zerstört ihn. Skelette tanken den Council auf dem Weg rein, die Zon nutzt LF, CE-Ketten räumen den Raum auf. Schnellster Boss-Farm für mittelklassige Uniques.",
+    "strategy_rainbow": "Der Barb tankt den Council, während Skelette Mephisto umschwärmen. Amp Damage auf alles — Frenzy und Skelette zerfetzen den physischen Widerstand. Das erste gefallene Council-Mitglied löst CE-Ketten aus, die den Raum räumen. Barb tankt Mephisto direkt mit Life Leech, während Manfred Leichen detoniert. Schneller Boss-Farm für mittelklassige Uniques.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Secret Cow Level",
+    "location": "Akt I — Wirt's Leg + Tome of Town Portal",
+    "difficulty": "Hölle",
+    "icon": "cows",
+    "targets": [
+      { "name": "Rune drops (up to Ber)", "rarity": "runeword", "note": "Hohe Monsterdichte = hohe Chancen auf High Runes" },
+      { "name": "Runeword bases", "rarity": "rare", "note": "Monarchs, eth Elite-Rüstungen, 4os Flails" },
+      { "name": "Jewelery & charms", "rarity": "magic", "note": "Skillers, Small Charms, Crafting-Grundlagen" }
+    ],
+    "strategy": "Das ist das Javazon-Paradies. Ein Lightning Fury in ein Kuh-Pack tötet die ganze Herde durch Chain Lightning. Der Barb nutzt BO zum Buffen und kümmert sich dann um Nachzügler und sammelt Loot. Tötet nicht den Cow King, wenn ihr wieder rein wollt. Die mit Abstand schnellste Farmzone für dieses Duo.",
+    "strategy_affair": "Die Traumteam-Zone. Die Zon wirft ein LF ins Kuh-Pack, Leichen erscheinen, Manfreds CE kettet den ganzen Bildschirm. Lower Resist macht den Blitz noch tödlicher. Skelette räumen Überlebende auf. Tötet nicht den Cow King. Absurde Clear-Geschwindigkeit.",
+    "strategy_rainbow": "Knochen- und Stahlparadies. Der Barb stürmt mit Frenzy ins Kuh-Pack, tötet eine — Corpse Explosion kettet die ganze Herde. Amp Damage verdoppelt jeden physischen Treffer. Skelette treiben Nachzügler zusammen für weitere CE-Ketten. Battle Orders hält die ganze Armee gebufft. Tötet nicht den Cow King. Verheerende Clear-Geschwindigkeit.",
+    "who_benefits": "both",
+    "priority": "essential"
+  },
+  {
+    "zone": "Chaos Sanctuary",
+    "location": "Akt IV — River of Flame",
+    "difficulty": "Hölle",
+    "icon": "chaos",
+    "targets": [
+      { "name": "High runes (up to Zod)", "rarity": "runeword", "note": "Bestes Gebiet für HR-Farming neben Kühen" },
+      { "name": "Grand charms", "rarity": "magic", "note": "ilvl 85 — können +Skills würfeln" },
+      { "name": "Diablo drops", "rarity": "unique", "note": "Kann fast alles im Spiel droppen" }
+    ],
+    "strategy": "Zuerst alle drei Siegel-Boss-Packs besiegen. Der Barb tankt De Seis und Infector, die Zon räumt Viziers Pack mit LF auf. Für Diablo selbst: Barb tankt direkt mit max Res und Life Leech, Zon nutzt Charged Strike. Vorsicht vor Lightning Immunes — der Barb erledigt die mit physischem Schaden.",
+    "strategy_affair": "Armee durch die Siegel teleportieren. Skelette tanken De Seis und Infector, während die Zon Viziers Pack mit LF räumt. Amp Damage auf Lightning Immunes lässt Skelette sie erledigen. CE-Ketten räumen die Monsterdichte. Lower Resist auf Diablo, Zon nutzt Charged Strike — er fällt schnell.",
+    "strategy_rainbow": "Siegel methodisch abarbeiten — der Barb tankt die Siegel-Bosse, während Skelette Treffer vom umliegenden Pack abfangen. Amp Damage auf alles, Frenzy zerfetzt die Siegel-Bosse, CE-Ketten räumen die Monsterdichte. Für Diablo: Barb tankt direkt mit max Res und Life Leech, Decrepify verlangsamt seine Angriffe, Skelette häufen sich drauf. Pure physische Verwüstung.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "Baal Runs",
+    "location": "Akt V — Throne of Destruction",
+    "difficulty": "Hölle",
+    "icon": "boss",
+    "targets": [
+      { "name": "Experience (levels 85–99)", "rarity": "unique", "note": "Beste XP im Spiel" },
+      { "name": "Griffon's Eye", "rarity": "unique", "note": "BiS-Zon-Helm — droppt nur in TC87-Gebieten" },
+      { "name": "Death's Fathom, CoA", "rarity": "unique", "note": "Andere TC87-Uniques von Baal" }
+    ],
+    "strategy": "Wellen 1–4: Die Zon erledigt sie mit LF, der Barb kümmert sich um Reste und tankt. Welle 5 (Lister): Barb tankt, beide nutzen Single-Target. Baal selbst: Barb tankt direkt, der Frostwelle ausweichen. Beste XP-Zone im Spiel zum Leveln auf 99.",
+    "strategy_affair": "Wellen 1–4: Die Zon wirft LF auf die Wellen, die erste Leiche löst Manfreds CE-Kette aus — jede Welle stirbt in Sekunden. Skelette und Wiederbelebte tanken Welle 5 (Lister). Lower Resist auf Baal, Zon nutzt Charged Strike, während Skelette seine Angriffe abfangen. Beste XP im Spiel.",
+    "strategy_rainbow": "Wellen 1–4: Barb stürmt mit Frenzy in die Welle, tötet einen — CE-Kettenreaktion vernichtet den Rest. Amp Damage macht jede Welle trivial. Welle 5 (Lister): Skelette und Barb tanken zusammen, Decrepify verlangsamt das Pack, Frenzy mit Crushing Blow schmilzt Lister. Baal selbst: Barb tankt direkt, Skelette fangen seinen Klon ab, Amp + Frenzy erledigt ihn. Beste XP im Spiel.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "The Pit",
+    "location": "Akt I — Tamoe Highland",
+    "difficulty": "Hölle",
+    "icon": "dungeon",
+    "targets": [
+      { "name": "Any item in the game (TC87)", "rarity": "unique", "note": "Level-85-Gebiet — kann alles droppen" },
+      { "name": "Griffon's Eye, Death's Web", "rarity": "unique", "note": "Uniques der höchsten Stufe" },
+      { "name": "Grand charms", "rarity": "magic", "note": "ilvl 85 Skillers" }
+    ],
+    "strategy": "Einfache Monstertypen, in den meisten Spawns keine Lightning Immunes. Die Zon räumt mit unglaublicher Geschwindigkeit, der Barb erledigt physisch-resistente Packs. Guter früher Hölle-Farm, da die Monster relativ schwach zuschlagen. MF-Ausrüstung anlegen für maximalen Ertrag.",
+    "strategy_affair": "Einfache Monster, selten Lightning Immune. Die Zon räumt blitzschnell, Manfred kettet CE von jeder Leiche. Lower Resist macht LF noch tödlicher. Skelette erledigen Nachzügler. Guter früher Hölle-Farm — MF-Ausrüstung für maximalen Ertrag anlegen.",
+    "strategy_rainbow": "Einfache Monstertypen, perfekt für das physische Duo. Der Barb pflügt mit Frenzy durch Packs, während Skelette hinterher aufräumen. Amp Damage auf alles — nichts überlebt den kombinierten physischen Ansturm. CE-Ketten von Frenzy-Kills räumen Räume sofort. Guter früher Hölle-Farm mit geringer Gefahr. MF-Ausrüstung für maximalen Ertrag anlegen.",
+    "who_benefits": "both",
+    "priority": "high"
+  },
+  {
+    "zone": "Lower Kurast",
+    "location": "Akt III — Super Chests",
+    "difficulty": "Hölle",
+    "icon": "chest",
+    "targets": [
+      { "name": "Lem, Pul, Um, Mal, Ist, Gul, Vex, Ohm, Lo, Sur, Ber, Jah", "rarity": "runeword", "note": "Super Chests haben feste Drop-Muster" }
+    ],
+    "strategy": "Für Solo optimiert: funktioniert nur im Einzelspieler oder bei niedrigen Spielerzahlen. Die Super Chests in den zwei Feuerhütten-Gebäuden nahe dem Wegpunkt öffnen. Kein Kampf nötig — einfach Truhen öffnen und zurücksetzen. Der Barb kann das machen, während die Zon Cow Runs in einem separaten Spiel macht, oder zusammen laufen für Gesellschaft.",
+    "strategy_affair": "Für Solo optimiertes Truhenöffnen. Mit Enigma zu den Super Chests teleportieren. Kein Kampf nötig. Manfred kann das machen, während die Zon Cows läuft, oder zusammen laufen — Skelette sind gute Gesellschaft.",
+    "strategy_rainbow": "Für Solo optimiertes Truhenöffnen — kein Kampf nötig. Der Barb kann mit Increased Speed schnell zu den Super Chests beim Wegpunkt rennen. Manfred kann das mit Enigma-Teleport machen. Zusammen oder getrennt laufen — der Barb macht LK-Truhen, während Manfred mit seiner Skelettarmee Cows läuft.",
+    "who_benefits": "both",
+    "priority": "medium"
+  },
+  {
+    "zone": "Travincal Council",
+    "location": "Akt III — Travincal",
+    "difficulty": "Hölle",
+    "icon": "council",
+    "targets": [
+      { "name": "High runes (up to Cham)", "rarity": "runeword", "note": "Council-Mitglieder haben erhöhte Runen-Drops" },
+      { "name": "Jewelry", "rarity": "rare", "note": "Ringe, Amulette — der Council droppt viele Gold-Items" }
+    ],
+    "strategy": "Der Barb stürmt rein und tankt alle drei Council-Mitglieder. Sie sind feuerlastig, also Feuerwiderstand stapeln. Die Zon wirft LF — Chain Lightning springt zwischen der eng gepackten Gruppe. Schnelle Runs, hohes Runenpotenzial. Vorsicht vor Hydras.",
+    "strategy_affair": "Skelette in den Council schicken, um Hydras abzufangen. Amp Damage auf die Gruppe, die Zon wirft LF — Chain Lightning springt zwischen den eng gepackten Council-Mitgliedern. CE kettet vom ersten Kill. Feuerwiderstand stapeln, Vorsicht vor Hydras. Schnelles Runenfarmen.",
+    "strategy_rainbow": "Skelette zuerst reinschicken, um Hydras und Council-Angriffe abzufangen. Amp Damage auf die eng gepackte Gruppe, der Barb pflügt mit Frenzy durch sie mit verheerendem physischem Schaden. Das erste gefallene Council-Mitglied löst CE-Ketten aus, die den Rest auslöschen. Feuerwiderstand auf dem Barb stapeln, Decrepify wenn sie zu hart zuschlagen. Schnelles Runenfarmen mit minimalem Risiko.",
+    "who_benefits": "barb",
+    "priority": "medium"
+  }
+]

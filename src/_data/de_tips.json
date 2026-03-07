@@ -1,0 +1,116 @@
+{
+  "default": [
+    {
+      "numeral": "I",
+      "icon": "armor",
+      "title": "Der Barbar führt, die Zon räumt auf",
+      "body": "Lass den Barbarian vorauslaufen, um Aggro zu ziehen und zu tanken. Die Javazon folgt 1-2 Bildschirme dahinter und wirft Lightning Fury in die Gruppen, die den Barb umschwärmen. So wird die Zon nicht umzingelt."
+    },
+    {
+      "numeral": "II",
+      "icon": "crown",
+      "title": "Battle Orders ist Pflicht",
+      "body": "Immer BO erneuern, bevor ihr gefährliche Bereiche betretet. Die Javazon profitiert enorm — sie ist von Natur aus fragil, und BO kann ihren Life-Pool verdoppeln. Der Barb sollte zuerst BC casten, dann BO für maximale Dauer."
+    },
+    {
+      "numeral": "III",
+      "icon": "shield",
+      "title": "Immunitäten aufteilen",
+      "body": "Lightning Immune? Der Barb erledigt das mit physischem Schaden. Physical Immune? Extrem selten, aber der Blitz der Zon kommt durch. Der einzige Albtraum: doppelt immune Physical + Lightning. Die überspringt ihr."
+    },
+    {
+      "numeral": "IV",
+      "icon": "skull",
+      "title": "Boss-Kill-Protokoll",
+      "body": "Bei Akt-Bossen: Barb tankt und nutzt Frenzy mit Crushing Blow Ausrüstung. Die Zon setzt Charged Strike im Nahkampf ein — es ist der höchste Single-Target-DPS-Skill im Spiel. Bosse schmelzen in Sekunden."
+    },
+    {
+      "numeral": "V",
+      "icon": "map",
+      "title": "Optimale Farmzonen",
+      "body": "Cows: Zon-Paradies — LF killt ganze Herden mit einem Wurf. Chaos Sanctuary: Barb tankt Diablo, Zon räumt die Siegel. Baal-Wellen: perfekter Duo-Content, wechselt Tanken und Clearen je nach Wellentyp."
+    },
+    {
+      "numeral": "VI",
+      "icon": "star",
+      "title": "Erfahrungsteilungs-Strategie",
+      "body": "Bleibt innerhalb von 2 Bildschirmen voneinander für geteilte XP. In 2-Spieler-Games haben Monster 50% mehr HP, aber ihr bekommt volle XP. Die schnellere Cleargeschwindigkeit macht den HP-Anstieg mehr als wett."
+    }
+  ],
+  "affair": [
+    {
+      "numeral": "I",
+      "icon": "armor",
+      "title": "Skelette führen, die Zon nukt",
+      "body": "Teleportiere die Skelettarmee in Gruppen, um Aggro zu ziehen. Die Javazon folgt mit Lightning Fury — die Leichen von Skelett-Kills befeuern Corpse Explosion Kettenreaktionen. Manfred muss sich nie in Gefahr begeben."
+    },
+    {
+      "numeral": "II",
+      "icon": "crown",
+      "title": "Fluchrotation ist alles",
+      "body": "Beginne mit Lower Resist, um den Blitzschaden der Zon zu verstärken. Wechsle zu Amplify Damage in physisch-lastigen Bereichen oder wenn CE euer Hauptclear ist. Decrepify bei gefährlichen Bossen und Uniques. Meistere den Fluchwechsel."
+    },
+    {
+      "numeral": "III",
+      "icon": "shield",
+      "title": "Immunitäten brechen",
+      "body": "Lightning Immune? Amp Damage lässt Skelette und CE damit umgehen. Lower Resist + Infinity Conviction kann viele Lightning Immunes komplett brechen. Physical + Lightning doppelt immun? Extrem selten — überspringen."
+    },
+    {
+      "numeral": "IV",
+      "icon": "skull",
+      "title": "Boss-Kill-Protokoll",
+      "body": "Bei Akt-Bossen: Lower Resist casten, Skelette und Clay Golem zum Tanken schicken. Die Zon nutzt Charged Strike im Nahkampf. Decrepify, wenn der Boss zu hart zuschlägt. Skelette sind Verbrauchsmaterial — zwischen Versuchen neu beschwören."
+    },
+    {
+      "numeral": "V",
+      "icon": "map",
+      "title": "Optimale Farmzonen",
+      "body": "Cows: LF erzeugt Leichen, CE kettet die ganze Herde. Chaos Sanctuary: Skelette tanken Siegel, CE räumt Dichte auf. Baal-Wellen: LF + CE Combo vernichtet jede Welle in Sekunden. Dieses Duo glänzt überall."
+    },
+    {
+      "numeral": "VI",
+      "icon": "star",
+      "title": "Corpse Explosion Skalierung",
+      "body": "CE verursacht 60-100% der maximalen Monster-HP als Schaden in einem Radius. In 2-Spieler-Games haben Monster 50% mehr HP — das bedeutet, CE trifft sogar härter. Eine Leiche von einem Zon-LF-Kill kann eine Kettenreaktion über den ganzen Bildschirm auslösen. Dieses Duo skaliert hervorragend."
+    }
+  ],
+  "rainbow": [
+    {
+      "numeral": "I",
+      "icon": "armor",
+      "title": "Barbar tankt, Skelette schwärmen",
+      "body": "Der Frenzy Barbarian stürmt in Gruppen und zieht Aggro mit massivem Life, Defense und Life Leech. Während die Gegner sich auf den Barb konzentrieren, fällt Manfreds Skelettarmee von hinten ein und zerfetzt sie mit physischem Schaden. Zwei Wände aus Fleisch — eine lebendig, eine untot."
+    },
+    {
+      "numeral": "II",
+      "icon": "crown",
+      "title": "Battle Orders bufft die Toten",
+      "body": "Battle Orders bufft nicht nur euer Duo — es bufft die gesamte Skelettarmee, den Golem und Revives. Jeder Beschwörte bekommt verdoppeltes Life und Mana. Eine gebuffte Skelettarmee ist nahezu unzerstörbar. Zuerst BC für die +Skills casten, dann BO für maximalen Effekt."
+    },
+    {
+      "numeral": "III",
+      "icon": "shield",
+      "title": "Amplify Damage + Frenzy",
+      "body": "Amplify Damage entfernt 100% des physischen Widerstands des Gegners. Frenzy verursacht reinen physischen Schaden. Zusammen nimmt alles doppelten physischen Schaden von den Angriffen des Barbs UND der Skelettarmee. Sogar Physical Immunes können durch Amp gebrochen werden. Diese Kombo ist absurd stark."
+    },
+    {
+      "numeral": "IV",
+      "icon": "skull",
+      "title": "Boss-Kill: Crushing Blow + Corpse Explosion",
+      "body": "Bei Akt-Bossen: Barb tankt frontal mit Crushing Blow Ausrüstung (Goblin Toe, Guillaume's), um Boss-HP prozentual zu schreddern. Manfred castet Decrepify, um den Boss zu verlangsamen und physischen Schaden zu verstärken. Sobald Adds sterben, erledigt Corpse Explosion den Rest. Bosse haben keine Chance."
+    },
+    {
+      "numeral": "V",
+      "icon": "map",
+      "title": "Physische Verwüstung + CE-Ketten",
+      "body": "Frenzy tötet das erste Monster. Corpse Explosion kettet den Rest. Jede Zone spielt sich gleich: Barb erzeugt die erste Leiche mit roher physischer Kraft, Manfred sprengt sie für 60-100% der maximalen Monster-HP in einem Radius. In 2-Spieler-Games haben Monster 50% mehr HP — CE trifft sogar härter."
+    },
+    {
+      "numeral": "VI",
+      "icon": "star",
+      "title": "Erfahrungsteilungs-Strategie",
+      "body": "Bleibt innerhalb von 2 Bildschirmen für geteilte XP. In 2-Spieler-Games steigen Monster-HP um 50%, aber euer kombinierter physischer Output kompensiert das mehr als genug. Der Barb killt Bosse, der Nekromant räumt Dichte auf — beide Charaktere leveln mit maximaler Effizienz ohne Leerlauf."
+    }
+  ]
+}

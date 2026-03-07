@@ -1,0 +1,122 @@
+{
+  "barb": {
+    "label": "Frenzy Barbar",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 Skills, +10-20 Stats, +10-20 Res, +5-10% XP. Immer dabei haben." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Barbarian Torch", "rarity": "unique", "note": "+3 Barb Skills, +10-20 Stats, +10-20 Res. Massiver Kraftschub." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Warcries skillers", "rarity": "magic", "note": "Verbessert Battle Orders Dauer und Stärke für beide Charaktere" },
+          { "name": "+1 Combat skillers", "rarity": "magic", "note": "Steigert direkt den Synergieschaden von Frenzy und Double Swing" },
+          { "name": "+1 Masteries skillers", "rarity": "magic", "note": "Verbessert Weapon Mastery und natürliche Widerstände" },
+          { "name": "With +life suffix", "rarity": "magic", "note": "Bestes Suffix ist +40-45 Life. +FHR ist auch gut, bis du den 86% Breakpoint erreichst." }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "Der heilige Gral unter den Small Charms — fülle die restlichen Plätze damit" },
+          { "name": "20 life / 11 fire res (or other single res)", "rarity": "magic", "note": "Stapele den Widerstand, der bei dir am niedrigsten ist" },
+          { "name": "3 max / 20 AR / 20 life", "rarity": "magic", "note": "Schadens-Small-Charms, wenn du bereits Res-Cap erreicht hast" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "Bis du den 86% FHR Breakpoint erreichst" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Zum Wechseln für MF-Runs, wenn du keine Überlebensfähigkeit brauchst" }
+        ]
+      }
+    ],
+    "notes": "Priorität: Torch + Anni zuerst. Dann Warcries Skillers stapeln (BO hilft euch beiden). Restlichen Platz mit Life/Res Small Charms füllen. Halte ein zweites Set MF-Charms für einfache Farmzonen bereit."
+  },
+  "zon": {
+    "label": "Java Amazone",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 Skills, +10-20 Stats, +10-20 Res, +5-10% XP. Nicht verhandelbar." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Amazon Torch", "rarity": "unique", "note": "+3 Amazon Skills, +10-20 Stats, +10-20 Res. Enormer LF- und CS-Schadensboost." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Javelin & Spear skillers", "rarity": "magic", "note": "DIE Priorität — jeder einzelne fügt massiven Blitzschaden zu LF und CS hinzu" },
+          { "name": "With +life suffix", "rarity": "magic", "note": "+40-45 Life ist am besten. +FHR ist auch wertvoll, bis du den 48% oder 86% Breakpoint erreichst." },
+          { "name": "Aim for 7-9 Java skillers", "rarity": "magic", "note": "Fülle so viele Grand Charm Plätze wie möglich damit" }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "Bester Allround-Small-Charm für jeden Build" },
+          { "name": "20 life / 11 lightning res", "rarity": "magic", "note": "Lightning Res priorisieren, um Souls im WSK zu überleben" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "FHR ist wichtig — beim Speerwerfen in Hit-Lock zu geraten bedeutet den Tod" },
+          { "name": "3 max / 20 AR / 20 life", "rarity": "magic", "note": "Hilft beim Jab-Schaden gegen Lightning Immunes" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Wechselset für Cow-Runs und einfaches Farming" }
+        ]
+      }
+    ],
+    "notes": "Java Skillers sind deine oberste Priorität nach Torch + Anni. Jeder Skiller ist eine spürbare Schadenssteigerung für Lightning Fury. Stapele so viele wie möglich (bis zu 9). Fülle die restlichen Plätze mit Life/Res Small Charms. Die Zon profitiert mehr von +Skills als von jedem anderen Stat."
+  },
+  "necro": {
+    "label": "Manfred der Nekromant",
+    "inventory": [
+      {
+        "slot": "Annihilus",
+        "size": "Small Charm",
+        "items": [
+          { "name": "Annihilus", "rarity": "unique", "note": "+1 Skills, +10-20 Stats, +10-20 Res, +5-10% XP. Unverzichtbar für jeden Build." }
+        ]
+      },
+      {
+        "slot": "Hellfire Torch",
+        "size": "Large Charm",
+        "items": [
+          { "name": "Necromancer Torch", "rarity": "unique", "note": "+3 Necromancer Skills, +10-20 Stats, +10-20 Res. Verbessert Skelette, Revives, CE und Flüche auf einmal." }
+        ]
+      },
+      {
+        "slot": "Grand Charms",
+        "size": "Grand Charm",
+        "items": [
+          { "name": "+1 Summoning skillers", "rarity": "magic", "note": "Höchste Priorität — jeder einzelne erhöht Skelettschaden, Skelettleben und Revive-Anzahl. So viele wie möglich stapeln." },
+          { "name": "+1 Poison & Bone skillers", "rarity": "magic", "note": "Vergrößert den Corpse Explosion Radius. 1-2 davon verbessern die CE-Cleargeschwindigkeit spürbar." },
+          { "name": "With +life suffix", "rarity": "magic", "note": "+40-45 Life ist das beste Suffix. Nekromanten haben kein Battle Orders, also zählt extra Leben von Charms umso mehr." }
+        ]
+      },
+      {
+        "slot": "Small Charms",
+        "size": "Small Charm",
+        "items": [
+          { "name": "20 life / 5 all res", "rarity": "magic", "note": "Bester Allround-Small-Charm — restliches Inventar damit füllen" },
+          { "name": "20 life / 11 fire res (or other single res)", "rarity": "magic", "note": "Stapele den Widerstand, der dir in Hell noch zum Cap fehlt" },
+          { "name": "5 FHR / 11 res", "rarity": "magic", "note": "Faster Hit Recovery hält dich am Leben, falls etwas durch deine Armee durchkommt" },
+          { "name": "7 MF small charms", "rarity": "magic", "note": "Wechselset für einfaches Farming — als Summoner-Nekro kann man sicher MF farmen, da die Minions die Arbeit erledigen" }
+        ]
+      }
+    ],
+    "notes": "Torch + Anni zuerst, dann Summoning Skillers stapeln, um die Skelettarmee zu maximieren. 1-2 Poison & Bone Skillers einmischen, um den Corpse Explosion Radius für schnelleres Clearen zu vergrößern. Restlichen Platz mit Life/Res Small Charms füllen — ohne Battle Orders ist jeder Punkt Leben und Widerstand von Charms entscheidend."
+  }
+}

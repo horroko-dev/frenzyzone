@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ locale }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,47 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+<script>
+(function() {
+  var stored = localStorage.getItem('fz-lang');
+  var isDE = location.pathname.indexOf('/de') !== -1;
+  var current = isDE ? 'de' : 'en';
+  if (!stored) {
+    var lang = (navigator.language || '').toLowerCase().indexOf('de') === 0 ? 'de' : 'en';
+    if (lang !== current) {
+      localStorage.setItem('fz-lang', lang);
+      location.replace(lang === 'de' ? '{{ "/de/" | url }}' : '{{ "/" | url }}');
+      return;
+    }
+    localStorage.setItem('fz-lang', current);
+  } else if (stored !== current) {
+    location.replace(stored === 'de' ? '{{ "/de/" | url }}' : '{{ "/" | url }}');
+    return;
+  }
+})();
+</script>
 </head>
 <body>
 
 {% include "components/icons.njk" %}
 <canvas id="particles"></canvas>
 
+<div class="lang-switch">
+  <a href="{{ '/' | url }}" class="lang-link{{ ' active' if locale == 'en' }}" data-lang="en">EN</a>
+  <span class="lang-sep">|</span>
+  <a href="{{ '/de/' | url }}" class="lang-link{{ ' active' if locale == 'de' }}" data-lang="de">DE</a>
+</div>
+
 <nav class="nav" id="nav">
-  <a href="#synergy"><svg class="nav-icon"><use href="#icon-star"/></svg>Synergy</a>
-  <a href="#leveling"><svg class="nav-icon"><use href="#icon-scroll"/></svg>Leveling</a>
-  <a href="#gear"><svg class="nav-icon"><use href="#icon-weapon"/></svg>Gear</a>
-  <a href="#attributes"><svg class="nav-icon"><use href="#icon-strength"/></svg>Stats</a>
-  <a href="#mercs"><svg class="nav-icon"><use href="#icon-armor"/></svg>Mercs</a>
-  <a href="#charms"><svg class="nav-icon"><use href="#icon-charm"/></svg>Charms</a>
-  <a href="#farming"><svg class="nav-icon"><use href="#icon-map"/></svg>Farming</a>
-  <a href="#tips"><svg class="nav-icon"><use href="#icon-campfire"/></svg>Tips</a>
+  <a href="#synergy"><svg class="nav-icon"><use href="#icon-star"/></svg>{{ i18n[locale].nav.synergy }}</a>
+  <a href="#leveling"><svg class="nav-icon"><use href="#icon-scroll"/></svg>{{ i18n[locale].nav.leveling }}</a>
+  <a href="#gear"><svg class="nav-icon"><use href="#icon-weapon"/></svg>{{ i18n[locale].nav.gear }}</a>
+  <a href="#attributes"><svg class="nav-icon"><use href="#icon-strength"/></svg>{{ i18n[locale].nav.stats }}</a>
+  <a href="#mercs"><svg class="nav-icon"><use href="#icon-armor"/></svg>{{ i18n[locale].nav.mercs }}</a>
+  <a href="#charms"><svg class="nav-icon"><use href="#icon-charm"/></svg>{{ i18n[locale].nav.charms }}</a>
+  <a href="#farming"><svg class="nav-icon"><use href="#icon-map"/></svg>{{ i18n[locale].nav.farming }}</a>
+  <a href="#tips"><svg class="nav-icon"><use href="#icon-campfire"/></svg>{{ i18n[locale].nav.tips }}</a>
 </nav>
 
 {{ content | safe }}
@@ -32,8 +57,8 @@
 </div>
 
 <footer class="footer">
-  <p>FrenzyZone &mdash; A Diablo II Resurrected Duo Guide</p>
-  <p class="disclaimer">Not affiliated with Blizzard Entertainment. Diablo II is a trademark of Blizzard Entertainment, Inc.</p>
+  <p>{{ i18n[locale].footer.site | safe }}</p>
+  <p class="disclaimer">{{ i18n[locale].footer.disclaimer }}</p>
 </footer>
 
 <script type="application/json" id="mode-data">
@@ -47,7 +72,7 @@
     },
     "heroIcons": { "left": "barb", "right": null },
     "watermark": "watermark-axe",
-    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "tagline": "{{ i18n[locale].taglines.barb }}",
     "synergyHeader": {
       "label": "{{ synergy.header.default.label }}",
       "title": "{{ synergy.header.default.title }}",
@@ -65,7 +90,7 @@
     },
     "heroIcons": { "left": null, "right": "zon" },
     "watermark": "watermark-javelin",
-    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "tagline": "{{ i18n[locale].taglines.zon }}",
     "synergyHeader": {
       "label": "{{ synergy.header.default.label }}",
       "title": "{{ synergy.header.default.title }}",
@@ -83,7 +108,7 @@
     },
     "heroIcons": { "left": "barb", "right": "zon" },
     "watermark": "watermark-weapons",
-    "tagline": "&ldquo;Two weapons, one storm &mdash; nothing survives.&rdquo;",
+    "tagline": "{{ i18n[locale].taglines.default }}",
     "synergyHeader": {
       "label": "{{ synergy.header.default.label }}",
       "title": "{{ synergy.header.default.title }}",
@@ -92,7 +117,7 @@
     "synergyCards": ["barb", "zon"],
     "synergyBottom": true,
     "synergy": {
-      "title": "Combined Strengths",
+      "title": "{{ synergy.combined.title }}",
       "summary": "{{ synergy.combined.summary }}",
       "stats": [
         {%- for stat in synergy.combined.stats %}
@@ -131,7 +156,7 @@
     },
     "heroIcons": { "left": "necro", "right": "zon" },
     "watermark": "watermark-affair",
-    "tagline": "&ldquo;The dead rise, the lightning strikes &mdash; Manfred sends his regards.&rdquo;",
+    "tagline": "{{ i18n[locale].taglines.affair }}",
     "synergyHeader": {
       "label": "{{ synergy.header.affair.label }}",
       "title": "{{ synergy.header.affair.title }}",
@@ -140,7 +165,7 @@
     "synergyCards": ["necro", "zon"],
     "synergyBottom": true,
     "synergy": {
-      "title": "Unholy Union",
+      "title": "{{ synergy.combined_affair.title }}",
       "summary": "{{ synergy.combined_affair.summary }}",
       "stats": [
         {%- for stat in synergy.combined_affair.stats %}
@@ -179,7 +204,7 @@
     },
     "heroIcons": { "left": "barb", "right": "necro" },
     "watermark": "watermark-rainbow",
-    "tagline": "&ldquo;Two warriors, one battlefield &mdash; love is the deadliest weapon.&rdquo;",
+    "tagline": "{{ i18n[locale].taglines.rainbow }}",
     "synergyHeader": {
       "label": "{{ synergy.header.rainbow.label }}",
       "title": "{{ synergy.header.rainbow.title }}",
@@ -188,7 +213,7 @@
     "synergyCards": ["barb", "necro"],
     "synergyBottom": true,
     "synergy": {
-      "title": "Power of Love",
+      "title": "{{ synergy.combined_rainbow.title }}",
       "summary": "{{ synergy.combined_rainbow.summary }}",
       "stats": [
         {%- for stat in synergy.combined_rainbow.stats %}
@@ -220,6 +245,6 @@
   }
 }
 </script>
-<script src="js/main.js"></script>
+<script src="{{ '/js/main.js' | url }}"></script>
 </body>
 </html>

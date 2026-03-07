@@ -1,0 +1,320 @@
+{
+  "normal": {
+    "barb": {
+      "label": "Frenzy Barbar",
+      "slots": [
+        {
+          "name": "Waffen",
+          "items": [
+            { "name": "Steel (Tir + El)", "rarity": "runeword", "note": "frühestes Runeword, enormer Frühschaden" },
+            { "name": "Malice (Ith + El + Eth)", "rarity": "runeword", "note": "-100 Monsterverteidigung" },
+            { "name": "Crushflange", "rarity": "unique", "note": "Crushing Blow für Bosse" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "FHR, FRW, unverzichtbar" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Sigon's Visor", "rarity": "set-item", "note": "mit Handschuhen für IAS" },
+            { "name": "Tarnhelm", "rarity": "unique", "note": "+Skills, MF" }
+          ]
+        },
+        {
+          "name": "Sonstiges",
+          "items": [
+            { "name": "Sigon's Gloves + Belt combo", "rarity": "set-item", "note": "30 IAS, Lebensraub" },
+            { "name": "+life / +resist rings & amulet", "rarity": "magic" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazone",
+      "slots": [
+        {
+          "name": "Waffe",
+          "items": [
+            { "name": "+skills / +damage rare javelin", "rarity": "rare" },
+            { "name": "The Generals Tan Do Li Ga", "rarity": "unique", "note": "falls gefunden" },
+            { "name": "+3 javelin skills blue javelin", "rarity": "magic", "note": "bei Charsi/Fara kaufen" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "wie beim Barbar, beide brauchen das" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Ancients' Pledge (Ral + Ort + Tal)", "rarity": "runeword", "note": "kostenlose Runen aus der Akt-V-Quest" },
+            { "name": "Sigon's Guard", "rarity": "unique", "note": "Teil des Set-Bonus" }
+          ]
+        },
+        {
+          "name": "Sonstiges",
+          "items": [
+            { "name": "Sigon's set pieces", "rarity": "set-item", "note": "gute Budget-Option" },
+            { "name": "+mana / +resist jewelry", "rarity": "magic" }
+          ]
+        }
+      ]
+    },
+    "necro": {
+      "label": "Manfred der Nekromant",
+      "slots": [
+        {
+          "name": "Waffen",
+          "items": [
+            { "name": "Teeth wand / +Raise Skeleton wand", "rarity": "magic", "note": "bei Drognan kaufen für +Summoning Skills" },
+            { "name": "+skills wand", "rarity": "magic", "note": "jeder Stab mit +Skeleton Mastery oder +Amplify Damage" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Stealth (Tal + Eth)", "rarity": "runeword", "note": "FCR, FHR, FRW — unverzichtbar für alle Zauberer" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Rhyme (Shael + Eth)", "rarity": "runeword", "note": "Cannot Be Frozen, alle Widerstände, MF" },
+            { "name": "Preserved Head with +summoning skills", "rarity": "magic", "note": "Nekro-exklusive Schildbasis" }
+          ]
+        },
+        {
+          "name": "Sonstiges",
+          "items": [
+            { "name": "+skills / +mana gear", "rarity": "magic", "note": "alles mit +Nekro-Skills bevorzugen" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 Skills Helm, einfach herzustellen" }
+          ]
+        }
+      ]
+    }
+  },
+  "nightmare": {
+    "barb": {
+      "label": "Frenzy Barbar",
+      "slots": [
+        {
+          "name": "Waffen",
+          "items": [
+            { "name": "Honor (Amn + El + Ith + Tir + Sol)", "rarity": "runeword", "note": "+1 Skills, Deadly Strike" },
+            { "name": "Kings Grace (Amn + Ral + Thul)", "rarity": "runeword", "note": "gute Budget-Zweithand" },
+            { "name": "Butcher's Pupil", "rarity": "unique", "note": "Deadly Strike, Open Wounds" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "+50 alle Widerstände, enorm für NM" },
+            { "name": "Lionheart (Hel + Lum + Fal)", "rarity": "runeword", "note": "Attribute + Widerstände + Schaden" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Arreat's Face", "rarity": "unique", "note": "mit Glück, Endgame-Helm" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 Skills, Blitzwiderstand" }
+          ]
+        },
+        {
+          "name": "Gürtel / Handschuhe / Stiefel",
+          "items": [
+            { "name": "Goldwrap", "rarity": "unique", "note": "IAS, MF" },
+            { "name": "Laying of Hands", "rarity": "unique", "note": "350% Schaden gegen Dämonen" },
+            { "name": "Gore Rider", "rarity": "unique", "note": "CB, DS, OW Dreifachkombo" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazone",
+      "slots": [
+        {
+          "name": "Waffe",
+          "items": [
+            { "name": "Titan's Revenge", "rarity": "unique", "note": "DIE Javazon-Waffe, füllt sich auf" },
+            { "name": "+skills / +IAS rare ceremonial javelin", "rarity": "rare" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+Skills, FCR, alle Widerstände" },
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "Budget-Option" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Stormshield", "rarity": "unique", "note": "wenn man sich die Stärke leisten kann" },
+            { "name": "Rhyme (Shael + Eth)", "rarity": "runeword", "note": "Cannot Be Frozen, Widerstände, MF" }
+          ]
+        },
+        {
+          "name": "Helm / Sonstiges",
+          "items": [
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 Skills Budget" },
+            { "name": "Razortail", "rarity": "unique", "note": "33% Pierce, enorm für Lightning Fury" },
+            { "name": "Laying of Hands", "rarity": "set-item", "note": "20 IAS, Dämonenschaden" }
+          ]
+        }
+      ]
+    },
+    "necro": {
+      "label": "Manfred der Nekromant",
+      "slots": [
+        {
+          "name": "Waffe",
+          "items": [
+            { "name": "White (Dol + Io)", "rarity": "runeword", "note": "in +Raise Skeleton / +Skeleton Mastery Stabbasis — enormer Skill-Boost" },
+            { "name": "Arm of King Leoric", "rarity": "unique", "note": "+2-3 Summoning Skills, großartig für die Armee" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Smoke (Nef + Lum)", "rarity": "runeword", "note": "+50 alle Widerstände, hält dich am Leben" },
+            { "name": "Skin of the Vipermagi", "rarity": "unique", "note": "+1 Skills, FCR, alle Widerstände" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Homunculus", "rarity": "unique", "note": "+2 Nekro-Skills, Block, Manaregeneration" },
+            { "name": "Spirit (Tal + Thul + Ort + Amn)", "rarity": "runeword", "note": "+2 Skills in einem Monarch oder Nekro-Kopf" }
+          ]
+        },
+        {
+          "name": "Sonstiges",
+          "items": [
+            { "name": "Trang-Oul's Claws", "rarity": "set-item", "note": "25% FCR, +2 Curses" },
+            { "name": "Trang-Oul's Girth", "rarity": "set-item", "note": "Cannot Be Frozen, Lebensregeneration" },
+            { "name": "Lore (Ort + Sol)", "rarity": "runeword", "note": "+1 Skills Budget-Helm" }
+          ]
+        }
+      ]
+    }
+  },
+  "hell": {
+    "barb": {
+      "label": "Frenzy Barbar",
+      "slots": [
+        {
+          "name": "Waffen (Best in Slot)",
+          "items": [
+            { "name": "Grief (Eth + Tir + Lo + Mal + Ral)", "rarity": "runeword", "note": "Nr. 1 Nahkampfwaffe im Spiel" },
+            { "name": "Lawbringer (Amn + Lem + Ko)", "rarity": "runeword", "note": "Zweithand, Decrepify-Proc" },
+            { "name": "Breath of the Dying", "rarity": "runeword", "note": "Alternative für die Haupthand" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED, beste DPS-Rüstung" },
+            { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Budget, Fade-Proc = 60 alle Widerstände" }
+          ]
+        },
+        {
+          "name": "Helm",
+          "items": [
+            { "name": "Arreat's Face", "rarity": "unique", "note": "+2 Skills, 30 FHR, Widerstände, Lebensraub" },
+            { "name": "Guillaume's Face", "rarity": "runeword", "note": "35% CB für Bosskämpfe" }
+          ]
+        },
+        {
+          "name": "Weitere Slots",
+          "items": [
+            { "name": "Gore Rider", "rarity": "unique", "note": "CB + DS + OW" },
+            { "name": "Laying of Hands", "rarity": "unique", "note": "350% Dämonenschaden + 20 IAS" },
+            { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 Skills, IAS, Deadly Strike" },
+            { "name": "Verdungo's", "rarity": "unique", "note": "DR%, Vitalität, FHR" },
+            { "name": "Raven Frost + Dual Leech ring", "rarity": "unique" }
+          ]
+        }
+      ]
+    },
+    "zon": {
+      "label": "Java Amazone",
+      "slots": [
+        {
+          "name": "Waffe (Best in Slot)",
+          "items": [
+            { "name": "Titan's Revenge (Ethereal)", "rarity": "unique", "note": "füllt sich auf, daher ist Ethereal gratis Schaden" },
+            { "name": "Thunderstroke", "rarity": "unique", "note": "-15% feindlicher Blitzwiderstand" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Spirit (Tal + Thul + Ort + Amn) in Monarch", "rarity": "runeword", "note": "+2 Skills, FCR, Mana" },
+            { "name": "Stormshield", "rarity": "unique", "note": "für Hardcore/Überlebensfähigkeit" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Enigma (Jah + Ith + Ber)", "rarity": "runeword", "note": "Teleport für Positionierung" },
+            { "name": "Chains of Honor", "rarity": "unique", "note": "+2 Skills, Widerstände, DR" },
+            { "name": "Treachery", "rarity": "runeword", "note": "Budget, IAS + Fade" }
+          ]
+        },
+        {
+          "name": "Weitere Slots",
+          "items": [
+            { "name": "Griffon's Eye", "rarity": "unique", "note": "-% feindlicher Blitzwiderstand, BiS-Helm" },
+            { "name": "Razortail", "rarity": "unique", "note": "33% Pierce (100% mit Skills)" },
+            { "name": "War Traveler", "rarity": "unique", "note": "MF + Schaden" },
+            { "name": "Highlord's Wrath", "rarity": "unique", "note": "+1 Skills, IAS" },
+            { "name": "+2 java / 20 IAS gloves", "rarity": "magic", "note": "gecraftet oder gekauft" }
+          ]
+        }
+      ]
+    },
+    "necro": {
+      "label": "Manfred der Nekromant",
+      "slots": [
+        {
+          "name": "Waffe",
+          "items": [
+            { "name": "Heart of the Oak (Ko + Vex + Pul + Thul)", "rarity": "runeword", "note": "+3 Skills, FCR, Widerstände — beste Zauberer-Waffe" },
+            { "name": "Beast (Ber + Tir + Um + Mal + Lum)", "rarity": "runeword", "note": "Fanaticism-Aura lässt Skelette wahnsinnig schnell angreifen" },
+            { "name": "Arm of King Leoric", "rarity": "unique", "note": "Budget-Option, +Summoning Skills" }
+          ]
+        },
+        {
+          "name": "Schild",
+          "items": [
+            { "name": "Homunculus", "rarity": "unique", "note": "+2 Nekro-Skills, hoher Block, Manaregeneration" },
+            { "name": "Spirit (Tal + Thul + Ort + Amn) in Monarch", "rarity": "runeword", "note": "+2 Skills, FCR, Mana" }
+          ]
+        },
+        {
+          "name": "Rüstung",
+          "items": [
+            { "name": "Enigma (Jah + Ith + Ber)", "rarity": "runeword", "note": "Teleport positioniert deine gesamte Armee sofort um — spielverändernd" },
+            { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "+2 Skills, Widerstände, DR — falls kein Enigma" }
+          ]
+        },
+        {
+          "name": "Weitere Slots",
+          "items": [
+            { "name": "Mara's Kaleidoscope", "rarity": "unique", "note": "+2 Skills, +20-30 alle Widerstände" },
+            { "name": "Arachnid Mesh", "rarity": "unique", "note": "+1 Skills, 20% FCR" },
+            { "name": "Trang-Oul's Claws", "rarity": "set-item", "note": "25% FCR, +2 Curses, +Feuerwiderstand" },
+            { "name": "Shako (Harlequin Crest)", "rarity": "unique", "note": "+2 Skills, Leben, Mana, DR" },
+            { "name": "Marrowwalk", "rarity": "unique", "note": "+Skeleton Mastery Charges, Stärke, Geschick" }
+          ]
+        }
+      ]
+    }
+  }
+}

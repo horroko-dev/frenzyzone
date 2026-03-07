@@ -3,7 +3,7 @@
   <div class="stat-grid">
     {%- for key, stat in data.stats %}
     <div class="stat-row">
-      <div class="stat-name"><svg class="stat-icon {% if key == 'strength' %}str{% elif key == 'dexterity' %}dex{% elif key == 'vitality' %}vit{% else %}nrg{% endif %}"><use href="#icon-{% if key == 'strength' %}strength{% elif key == 'dexterity' %}dexterity{% elif key == 'vitality' %}vitality{% else %}energy{% endif %}"/></svg>{{ key | capitalize }}</div>
+      <div class="stat-name"><svg class="stat-icon {% if key == 'strength' %}str{% elif key == 'dexterity' %}dex{% elif key == 'vitality' %}vit{% else %}nrg{% endif %}"><use href="#icon-{% if key == 'strength' %}strength{% elif key == 'dexterity' %}dexterity{% elif key == 'vitality' %}vitality{% else %}energy{% endif %}"/></svg>{{ i18n[locale].stats[key] }}</div>
       <div class="stat-value">{{ stat.value }}</div>
       <div class="stat-detail">{{ stat.detail }}</div>
     </div>

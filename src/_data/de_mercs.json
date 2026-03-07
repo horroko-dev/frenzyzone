@@ -1,0 +1,124 @@
+{
+  "barb": {
+    "label": "Frenzy Barbar",
+    "recommended": "Akt II Alptraum — Might",
+    "why": "Die Might-Aura fügt deinen Frenzy-Treffern flachen physischen Schaden hinzu. Da du mit zwei Waffen kämpfst und extrem schnell schlägst, wird jeder Punkt Bonusschaden stark multipliziert. Das ist die #1-Söldner-Wahl für Frenzy Barbaren — nichts anderes kommt auch nur annähernd heran.",
+    "alternative": "Akt II Alptraum — Holy Freeze für Massenkontrolle, wenn du in Hell oft stirbst. Langsamerer Clear, aber deutlich sicherer.",
+    "gear": [
+      {
+        "slot": "Waffe",
+        "items": [
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "Conviction-Aura bricht Lightning Immunes für deine Zon-Partnerin — spielverändernd" },
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation-Aura = unendlich Mana für beide Charaktere. Unverzichtbar fürs Budget." },
+          { "name": "Reaper's Toll", "rarity": "unique", "note": "Decrepify-Proc — massive Schadensverstärkung + Verlangsamung. Großartig, bevor du dir Infinity leisten kannst." }
+        ]
+      },
+      {
+        "slot": "Rüstung",
+        "items": [
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED, enormer Söldner-Schaden und Überlebensfähigkeit" },
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade-Proc = 60 Alle Widerstände + 15% DR. Beste Budget-Option, hält den Söldner am Leben." },
+          { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "Widerstände + DR + Schaden. Alternative zu Fortitude." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + Life Leech + Str. Sockle mit Ral für Feuerwiderstand. BiS für Söldner-Schaden." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Doppel-Leech + DR%. Großartig, um den Söldner am Leben zu halten." },
+          { "name": "Tal Rasha's Horadric Crest", "rarity": "set-item", "note": "Doppel-Leech + Alle Widerstände. Solide Budget-Wahl." }
+        ]
+      }
+    ]
+  },
+  "zon": {
+    "label": "Java Amazone",
+    "recommended": "Akt II Alptraum — Might (oder Holy Freeze)",
+    "why": "Wenn der Söldner des Barbaren bereits Infinity hat, kann dein Söldner Insight für Meditation (unendlich Mana) verwenden oder Might für zusätzlichen Jab-Schaden gegen Lightning Immunes nutzen. Holy Freeze ist ebenfalls hervorragend — es verlangsamt alles und gibt dir Zeit, LF sicher zu werfen.",
+    "alternative": "Akt I Schurkin — Faith (Ohm + Jah + Lem + Eld) Bogen gibt Fanaticism-Aura, die dein IAS massiv erhöht. Teuer, aber extrem stark für maximale IAS-Breakpoints.",
+    "gear": [
+      {
+        "slot": "Waffe",
+        "items": [
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation-Aura löst alle Mana-Probleme. Höchste Priorität, wenn der Söldner des Barbaren Infinity hat." },
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "Falls der Söldner deines Barbar-Partners es nicht hat, sollte DEIN Söldner es tragen. Bricht LI." },
+          { "name": "The Reaper's Toll", "rarity": "unique", "note": "Decrepify hilft deinem Barbaren, mit Physical Immunes umzugehen, die Decrep bricht." }
+        ]
+      },
+      {
+        "slot": "Rüstung",
+        "items": [
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade-Proc hält den Söldner am Leben. IAS hilft, Insight/Infinity öfter auszulösen." },
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "Bester Schaden + Überlebensfähigkeit, wenn du es dir leisten kannst." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + Leech. Sockle mit Ral-Rune." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Hält den Söldner mit DR% und Leech am Leben." },
+          { "name": "Guillaume's Face", "rarity": "set-item", "note": "35% Crushing Blow hilft dem Söldner, Bosse zu töten." }
+        ]
+      }
+    ]
+  },
+  "necro": {
+    "label": "Manfred der Nekromant",
+    "recommended": "Akt II Alptraum — Might",
+    "why": "Die Might-Aura erhöht den Schaden deiner gesamten Skelettarmee und Wiederbelebten. Da über 10 Diener gleichzeitig von der Aura profitieren, ist der gesamte Schadenszuwachs enorm. Die Might-Aura stapelt sich zusätzlich mit dem Amplify Damage-Fluch für vernichtenden physischen Schaden.",
+    "alternative": "Akt II Alptraum — Holy Freeze für Massenkontrolle. Verlangsamt Gegner, damit deine Skelette länger überleben und Corpse Explosion Zeit hat, sich zu verketten. Hervorragend für Hardcore oder unterausgerüstete Progression.",
+    "gear": [
+      {
+        "slot": "Waffe",
+        "items": [
+          { "name": "Infinity (Ber + Mal + Ber + Ist)", "rarity": "runeword", "note": "Conviction-Aura stapelt sich mit Lower Resist-Fluch — zusammen vernichten sie Blitzwiderstand für die Zon-Partnerin. Spielverändernde Duo-Synergie." },
+          { "name": "Insight (Ral + Tir + Tal + Sol)", "rarity": "runeword", "note": "Meditation-Aura löst Mana-Probleme für Corpse Explosion-Spam. Unverzichtbare Budget-Option vor Infinity." },
+          { "name": "Reaper's Toll", "rarity": "unique", "note": "Decrepify-Proc stapelt sich mit deinen Flüchen. Gute Übergangswaffe, aber du willst Infinity für die Zon-Synergie." }
+        ]
+      },
+      {
+        "slot": "Rüstung",
+        "items": [
+          { "name": "Treachery (Shael + Thul + Lem)", "rarity": "runeword", "note": "Fade-Proc gibt 60 Alle Widerstände + 15% DR. Beste Budget-Option und hält den Söldner in Hell am Leben." },
+          { "name": "Fortitude (El + Sol + Dol + Lo)", "rarity": "runeword", "note": "300% ED und massive Verteidigung. Am besten, wenn die Söldner-Überlebensfähigkeit bereits gesichert ist." },
+          { "name": "Chains of Honor (Dol + Um + Ber + Ist)", "rarity": "runeword", "note": "Alle Widerstände + DR + Schaden. Luxus-Alternative." }
+        ]
+      },
+      {
+        "slot": "Helm",
+        "items": [
+          { "name": "Andariel's Visage", "rarity": "unique", "note": "IAS + Life Leech + Str. Sockle mit Ral für Feuerwiderstand. Bester Söldner-Schadenshelm." },
+          { "name": "Vampire Gaze", "rarity": "unique", "note": "Doppel-Leech + DR%. Hält den Söldner in gefährlichen Gebieten am Leben." },
+          { "name": "Tal Rasha's Horadric Crest", "rarity": "set-item", "note": "Doppel-Leech + Alle Widerstände. Solide Budget-Wahl." }
+        ]
+      }
+    ]
+  },
+  "duo_strategy": {
+    "title": "Söldner-Koordination",
+    "points": [
+      "Entscheidet, wer Infinity und wer Insight trägt. Ihr braucht beides — Infinity bricht Lightning Immunes für die Zon, Insight gibt beiden Charakteren unendlich Mana.",
+      "Bestes Setup: Der Söldner des Barbaren hat Infinity (Might + Conviction = irrer Schaden), der Söldner der Zon hat Insight (die Zon braucht das Mana mehr). So profitieren beide Spieler von beiden Auren.",
+      "Budget-Start: Beide Söldner nutzen Insight, bis ihr eure erste Ber-Rune findet. Die Mana-Versorgung ist anfangs wichtiger als das Brechen von Immunitäten.",
+      "Haltet eure Söldner am Leben! Sie sterben in Hell ständig, wenn sie schlecht ausgerüstet sind. Treachery-Rüstung ist günstig und der Fade-Proc macht sie überraschend widerstandsfähig. Priorisiert Söldner-Überlebensfähigkeit über Schaden."
+    ]
+  },
+  "duo_strategy_affair": {
+    "title": "Söldner-Koordination",
+    "points": [
+      "Manfreds Söldner sollte Infinity tragen — Conviction-Aura stapelt sich mit Lower Resist-Fluch für verheerende doppelte Blitzwiderstandsreduktion. Die Lightning Fury der Zon vernichtet selbst ehemalige Lightning Immunes.",
+      "Der Söldner der Zon nutzt Insight für Meditation-Aura — Corpse Explosion-Spam ist mana-hungrig, und das löst es für beide Charaktere.",
+      "Budget-Start: Beide Söldner nutzen Insight, bis ihr Ber-Runen findet. Mana-Versorgung für CE-Spam ist anfangs wichtiger als das Brechen von Immunitäten.",
+      "Die Skelettarmee des Nekromanten hilft tatsächlich, die Söldner am Leben zu halten — Monster greifen die Skelette statt den Söldner an. Trotzdem ist Treachery-Rüstung für den Hell-Schwierigkeitsgrad unverzichtbar."
+    ]
+  },
+  "duo_strategy_rainbow": {
+    "title": "Söldner-Koordination",
+    "points": [
+      "Sowohl der Barbar als auch Manfred wollen Might-Söldner — stapelt zwei Might-Auren mit dem eigenen Frenzy-Schaden des Barbaren und der Skelettarmee für überwältigenden physischen Schaden. Ein Söldner trägt Infinity nur, wenn ihr Physical Immunes über Amplify Damage + Conviction-Kombo brechen müsst.",
+      "Bestes Setup: Der Söldner des Barbaren trägt Insight für Meditation-Aura (Frenzy verbraucht mit BO-Aufrechterhaltung viel Mana), Manfreds Söldner trägt eine zweite Might-Aura zur doppelten Verstärkung der Skelettarmee. Zwei Might-Auren stapeln sich nicht, aber wenn ein Söldner stirbt, hält der andere die Aura aufrecht.",
+      "Budget-Start: Beide Söldner nutzen Insight, bis ihr euch Besseres leisten könnt. Die Mana-Versorgung ermöglicht Battle Orders-Erneuerung und Corpse Explosion-Spam — beides ist entscheidend, damit der Motor dieses Duos läuft.",
+      "Söldner-Überlebensfähigkeit ist bei diesem Duo kein Problem. Die Skelettarmee absorbiert fast allen eingehenden Schaden, sodass Söldner selten getroffen werden. Selbst schlecht ausgerüstete Söldner überleben problemlos — die Knochenmauer beschützt alle."
+    ]
+  }
+}

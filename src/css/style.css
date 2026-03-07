@@ -51,6 +51,38 @@ body {
   color: var(--gold-bright);
 }
 
+/* ========== LANGUAGE SWITCHER ========== */
+.lang-switch {
+  position: fixed;
+  top: 0.75rem;
+  right: 1rem;
+  z-index: 1001;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.lang-link {
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.2em 0.4em;
+  transition: color 0.3s;
+}
+
+.lang-link:hover {
+  color: var(--gold-bright);
+}
+
+.lang-link.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.lang-sep {
+  color: var(--stone-mid);
+  margin: 0 0.1em;
+}
+
 /* ========== WATERMARK ========== */
 .watermark {
   position: fixed;

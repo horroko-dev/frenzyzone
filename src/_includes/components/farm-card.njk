@@ -13,7 +13,7 @@
   </div>
   <div class="farm-body">
     <div class="farm-targets">
-      <h4><svg class="slot-icon"><use href="#icon-chest"/></svg>Target Drops</h4>
+      <h4><svg class="slot-icon"><use href="#icon-chest"/></svg>{{ i18n[locale].components.targetDrops }}</h4>
       <ul>
         {%- for item in farm.targets %}
         <li>
@@ -24,7 +24,7 @@
       </ul>
     </div>
     <div class="farm-strategy" data-farm-zone="{{ farm.zone }}">
-      <h4><svg class="slot-icon farm-icon-1"><use href="#icon-barb"/></svg><svg class="slot-icon farm-icon-2"><use href="#icon-zon"/></svg>Duo Strategy</h4>
+      <h4><svg class="slot-icon farm-icon-1"><use href="#icon-barb"/></svg><svg class="slot-icon farm-icon-2"><use href="#icon-zon"/></svg>{{ i18n[locale].components.duoStrategy }}</h4>
       <p>{{ farm.strategy }}</p>
     </div>
   </div>

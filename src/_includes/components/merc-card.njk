@@ -1,19 +1,19 @@
 <div class="merc-card {{ side }}-card">
   <span class="class-label"><svg class="class-icon"><use href="#icon-{{ side }}"/></svg>{{ data.label }}</span>
   <div class="merc-choice">
-    <h4><svg class="slot-icon"><use href="#icon-crown"/></svg>Recommended</h4>
+    <h4><svg class="slot-icon"><use href="#icon-crown"/></svg>{{ i18n[locale].components.recommended }}</h4>
     <div class="merc-pick">{{ data.recommended }}</div>
     <p class="merc-why">{{ data.why }}</p>
   </div>
   <div class="merc-alt">
-    <h4><svg class="slot-icon"><use href="#icon-shield"/></svg>Alternative</h4>
+    <h4><svg class="slot-icon"><use href="#icon-shield"/></svg>{{ i18n[locale].components.alternative }}</h4>
     <p>{{ data.alternative }}</p>
   </div>
   <div class="merc-gear">
-    <h4><svg class="slot-icon"><use href="#icon-chest"/></svg>Mercenary Gear</h4>
+    <h4><svg class="slot-icon"><use href="#icon-chest"/></svg>{{ i18n[locale].components.mercGear }}</h4>
     {%- for slot in data.gear %}
     <div class="gear-slot">
-      <div class="gear-slot-name"><svg class="slot-icon"><use href="#icon-{% if 'weapon' in slot.slot | lower %}weapon{% elif 'armor' in slot.slot | lower %}armor{% else %}helm{% endif %}"/></svg>{{ slot.slot }}</div>
+      <div class="gear-slot-name"><svg class="slot-icon"><use href="#icon-{% if 'weapon' in slot.slot | lower or 'waffe' in slot.slot | lower %}weapon{% elif 'armor' in slot.slot | lower or 'rüstung' in slot.slot | lower or 'rstung' in slot.slot | lower %}armor{% else %}helm{% endif %}"/></svg>{{ slot.slot }}</div>
       {%- for item in slot.items %}
       <div class="gear-item {{ item.rarity }}">{% if item.rarity == 'runeword' %}<svg class="slot-icon"><use href="#icon-rune"/></svg>{% endif %}{{ item.name }}{% if item.note %} <span class="note">&mdash; {{ item.note }}</span>{% endif %}</div>
       {%- endfor %}
